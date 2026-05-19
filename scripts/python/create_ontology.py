@@ -110,6 +110,11 @@ def extract_genera(rows: list[dict], cfg) -> list[str]:
         if genus not in seen:
             seen.add(genus)
             genera.append(genus)
+    for genus in getattr(cfg, "EXTRA_GENERA", []):
+        genus = genus.strip()
+        if genus and genus not in seen:
+            seen.add(genus)
+            genera.append(genus)
     return sorted(genera)
 
 
@@ -121,6 +126,11 @@ def extract_families(rows: list[dict], cfg) -> list[str]:
         if col_family and col_family not in seen:
             seen.add(col_family)
             families.append(col_family)
+    for family in getattr(cfg, "EXTRA_FAMILIES", []):
+        family = family.strip()
+        if family and family not in seen:
+            seen.add(family)
+            families.append(family)
     return sorted(families)
 
 
@@ -169,8 +179,10 @@ def build_taxon_options(rows: list[dict], cache: dict, cfg) -> list[dict]:
                 None,
             )
             gbif_id = prompt_manual_gbif_id(genus, "GENUS", example, cache)
-        if gbif_id is None or gbif_id in seen_ids:
+        if gbif_id is None:
             continue
+        if gbif_id in seen_ids:
+            logger.warning(f"Genus '{genus}' GBIF ID {gbif_id} already used by a species entry — adding also as genus")
         seen_ids.add(gbif_id)
         options.append({"type": "genus", "label": genus, "value": str(gbif_id)})
 
@@ -183,8 +195,10 @@ def build_taxon_options(rows: list[dict], cache: dict, cfg) -> list[dict]:
                 None,
             )
             gbif_id = prompt_manual_gbif_id(family, "FAMILY", example, cache)
-        if gbif_id is None or gbif_id in seen_ids:
+        if gbif_id is None:
             continue
+        if gbif_id in seen_ids:
+            logger.warning(f"Family '{family}' GBIF ID {gbif_id} already used by a prior entry — adding also as family")
         seen_ids.add(gbif_id)
         options.append({"type": "family", "label": family, "value": str(gbif_id)})
 
