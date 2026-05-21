@@ -3,9 +3,9 @@ import labelbox as lb
 import logging
 import os
 import sys
-import xml.etree.ElementTree as ET
 
 from dotenv import load_dotenv
+from pathlib import Path
 
 # Setup logging with timestamp
 logger = logging.getLogger()
@@ -28,61 +28,69 @@ logger.addHandler(stdout_handler)
 logger.addHandler(stderr_handler)
 
 # Load environment variables from .env file
-load_dotenv()
+project_root = Path(__file__).parent.parent.parent
+load_dotenv(dotenv_path=project_root / '.env')
 
-# Get environment variables
 LABELBOX_API_KEY = os.getenv("LABELBOX_API_KEY")
-
-# Verify environment variables are set
 if not LABELBOX_API_KEY:
     logger.error("LABELBOX_API_KEY environment variable is not set")
     raise ValueError("LABELBOX_API_KEY environment variable is not set")
 
 client = lb.Client(api_key=LABELBOX_API_KEY)
 
-# Parse command-line arguments
-parser = argparse.ArgumentParser(description="Send data rows to Labelbox project.")
-parser.add_argument("--mission_id", required=True, help="Mission ID to generate the dataset.")
-parser.add_argument("--project", required=True, help="Project name where the data rows are sent.")
-parser.add_argument("--prefix", help="Prefix for the dataset name.")
+parser = argparse.ArgumentParser(description="Send data rows to Labelbox project for annotation.")
+parser.add_argument("--mission_id", required=True, help="Mission ID to create a batch for annotation.")
+parser.add_argument("--project", required=True, help="Project/dataset name.")
 args = parser.parse_args()
 
 mission_id = args.mission_id
 project_name = args.project
 
-if args.prefix:
-    prefix = args.prefix
-else:
-    parts = mission_id.split('_')
-    if len(parts) >= 4:
-        site = parts[1]
-        if site.startswith('tbs'):
-            prefix = '2025_tiputini'
-        elif site.startswith('bci'):
-            prefix = '2024_bci'
-        else:
-            logger.error("Site in mission ID is not recognized, unable to extract prefix for Labelbox dataset.")
-            raise ValueError("Site in mission ID is not recognized, unable to extract prefix for Labelbox dataset. Please provide a prefix.")
-    else:
-        logger.error("Mission ID does not follow expected format, unable to extract prefix for Labelbox dataset.")
-        raise ValueError("Mission ID does not follow expected format, unable to extract prefix for Labelbox dataset. Please provide a prefix.")
-
-# Find the project by name
-projects = client.get_projects()
-project = next((p for p in projects if p.name == project_name), None)
-if not project:
-    logger.error(f"Project '{project_name}' not found.")
-
-# Send to annotate (create batch)
-dataset_name = f"{prefix}_{mission_id}"
+# Find dataset (name = project_name)
 datasets = client.get_datasets()
-dataset = next((ds for ds in datasets if ds.name == dataset_name), None)
+dataset = next((ds for ds in datasets if ds.name == project_name), None)
 if not dataset:
-    logger.warning(f"Dataset '{dataset_name}' not found. Skipping.")
-else:
-    batch = project.create_batches_from_dataset(
-        name_prefix=f"{mission_id}_",
-        dataset_id=dataset.uid,
-        priority=3
-    )
-    logger.info(f"Batch created for {mission_id}: {batch.result()}")
+    logger.error(f"Dataset '{project_name}' not found.")
+    sys.exit(1)
+
+# Find the Labelbox annotation project (name = project_name)
+projects = client.get_projects()
+lb_project = next((p for p in projects if p.name == project_name), None)
+if not lb_project:
+    logger.error(f"Labelbox project '{project_name}' not found.")
+    sys.exit(1)
+
+# Export data rows from the dataset with metadata, then filter by mission_id
+data_row_ids = []
+
+def handle_export(output: lb.BufferedJsonConverterOutput):
+    row = output.json
+    metadata_fields = row.get("metadata_fields", [])
+    if any(mf.get("name") == "mission" and mf.get("value") == mission_id
+           for mf in metadata_fields):
+        data_row_ids.append(row["data_row"]["id"])
+
+export_task = dataset.export_v2(params={"metadata_fields": True})
+export_task.wait_till_done()
+
+if export_task.errors:
+    logger.error(f"Export errors: {export_task.errors}")
+    sys.exit(1)
+
+export_task.get_buffered_stream(stream_type=lb.StreamType.RESULT).start(
+    stream_handler=handle_export
+)
+
+if not data_row_ids:
+    logger.error(f"No data rows found for mission '{mission_id}' in dataset '{project_name}'.")
+    sys.exit(1)
+
+logger.info(f"{len(data_row_ids)} data rows found for mission '{mission_id}' in dataset '{project_name}'.")
+
+# Create batch in the annotation project
+batch = lb_project.create_batch(
+    name=mission_id,
+    data_rows=data_row_ids,
+    priority=3
+)
+logger.info(f"Batch created for {mission_id}: {batch.name}")
