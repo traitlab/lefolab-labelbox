@@ -1,0 +1,11 @@
+{
+  "project": "2025_wa_roberge",
+  "embedding_name": "PlantNet-v7.4-1280px",
+  "version_slug": "v7.4",
+  "dataset_name": "2025_wa_roberge",
+  "dataset_id": "cmpef0eg101430766boualb4k",
+  "total_rows": 1830,
+  "completed_rows": 1830,
+  "all_complete": true,
+  "last_run": "2026-05-21T02:18:50.892408"
+}
