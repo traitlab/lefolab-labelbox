@@ -42,7 +42,7 @@ logger.addHandler(_stdout_handler)
 logger.addHandler(_stderr_handler)
 
 # Load environment variables from .env file
-project_root = Path(__file__).parent.parent
+project_root = Path(__file__).parent.parent.parent
 load_dotenv(dotenv_path=project_root / '.env')
 
 ALLIANCECAN_URL = os.getenv('ALLIANCECAN_URL')
