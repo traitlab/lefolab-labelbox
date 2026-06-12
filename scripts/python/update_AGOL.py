@@ -77,7 +77,7 @@ def update_layer(project_name, shp_path):
 
     logger.info(f"Overwriting layer with file: {update_shp}")
     try:
-        flc.manager.overwrite(update_shp)
+        flc.manager.overwrite(str(update_shp))
         logger.info("Layer updated successfully.")
     except Exception as e:
         logger.error(f"Failed to update layer: {e}")
