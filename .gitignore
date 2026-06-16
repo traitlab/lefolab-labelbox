@@ -97,8 +97,9 @@ temp*/
 # Data folder not to be shared
 projects/archive/2025_Manaus/data/
 
-# Test and output folders
+# Test, input and output folders
 test/
+input/
 output/
 
 # Heavy data files

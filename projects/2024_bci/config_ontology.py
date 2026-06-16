@@ -23,7 +23,7 @@ ORGAN_OPTIONS    = [
 ]
 
 OUTPUT_DIR       = "projects/2024_bci"
-GBIF_CACHE_FILE  = "projects/2024_bci/cache/gbif_cache.json"
+GBIF_CACHE_FILE  = "projects/2024_bci/cache/gbif_ontology_cache.json"
 
 GBIF_MATCH_URL   = "https://api.gbif.org/v1/species/match"
 GBIF_MAX_RETRIES = 3
