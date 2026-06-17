@@ -1,46 +1,11 @@
 import argparse
 import json
-import labelbox as lb
-import logging
 import os
-import sys
 
-from dotenv import load_dotenv
-from pathlib import Path
+from _common import get_client, setup_logging
 
-# Setup logging with timestamp
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-
-# Handler for INFO to stdout
-stdout_handler = logging.StreamHandler(sys.stdout)
-stdout_handler.setLevel(logging.INFO)
-stdout_handler.addFilter(lambda record: record.levelno == logging.INFO)
-stdout_handler.setFormatter(logging.Formatter('[%(asctime)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S'))
-
-# Handler for WARNING and ERROR to stderr
-stderr_handler = logging.StreamHandler(sys.stderr)
-stderr_handler.setLevel(logging.WARNING)
-stderr_handler.setFormatter(logging.Formatter('[%(asctime)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S'))
-
-# Remove default handlers and add custom ones
-logger.handlers = []
-logger.addHandler(stdout_handler)
-logger.addHandler(stderr_handler)
-
-# Load environment variables from .env file
-project_root = Path(__file__).parent.parent.parent
-load_dotenv(dotenv_path=project_root / '.env')
-
-# Get environment variables
-LABELBOX_API_KEY = os.getenv("LABELBOX_API_KEY")
-
-# Verify environment variables are set
-if not LABELBOX_API_KEY:
-    logger.error("LABELBOX_API_KEY environment variable is not set")
-    raise ValueError("LABELBOX_API_KEY environment variable is not set")
-
-client = lb.Client(api_key=LABELBOX_API_KEY)
+logger = setup_logging()
+client = get_client()
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description="Export data from Labelbox.")

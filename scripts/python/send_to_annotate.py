@@ -1,42 +1,11 @@
 import argparse
 import labelbox as lb
-import logging
-import os
 import sys
 
-from dotenv import load_dotenv
-from pathlib import Path
+from _common import get_client, resolve_project, setup_logging
 
-# Setup logging with timestamp
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-
-# Handler for INFO to stdout
-stdout_handler = logging.StreamHandler(sys.stdout)
-stdout_handler.setLevel(logging.INFO)
-stdout_handler.addFilter(lambda record: record.levelno == logging.INFO)
-stdout_handler.setFormatter(logging.Formatter('[%(asctime)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S'))
-
-# Handler for WARNING and ERROR to stderr
-stderr_handler = logging.StreamHandler(sys.stderr)
-stderr_handler.setLevel(logging.WARNING)
-stderr_handler.setFormatter(logging.Formatter('[%(asctime)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S'))
-
-# Remove default handlers and add custom ones
-logger.handlers = []
-logger.addHandler(stdout_handler)
-logger.addHandler(stderr_handler)
-
-# Load environment variables from .env file
-project_root = Path(__file__).parent.parent.parent
-load_dotenv(dotenv_path=project_root / '.env')
-
-LABELBOX_API_KEY = os.getenv("LABELBOX_API_KEY")
-if not LABELBOX_API_KEY:
-    logger.error("LABELBOX_API_KEY environment variable is not set")
-    raise ValueError("LABELBOX_API_KEY environment variable is not set")
-
-client = lb.Client(api_key=LABELBOX_API_KEY)
+logger = setup_logging()
+client = get_client()
 
 parser = argparse.ArgumentParser(description="Send data rows to Labelbox project for annotation.")
 parser.add_argument("--mission_id", required=True, help="Mission ID to create a batch for annotation.")
@@ -54,11 +23,7 @@ if not dataset:
     sys.exit(1)
 
 # Find the Labelbox annotation project (name = project_name)
-projects = client.get_projects()
-lb_project = next((p for p in projects if p.name == project_name), None)
-if not lb_project:
-    logger.error(f"Labelbox project '{project_name}' not found.")
-    sys.exit(1)
+lb_project = resolve_project(client, project_name)
 
 # Export data rows from the dataset with metadata, then filter by mission_id
 data_row_ids = []

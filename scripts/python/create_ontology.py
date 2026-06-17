@@ -3,32 +3,13 @@ import csv
 import importlib.util
 import json
 import labelbox as lb
-import logging
-import os
 import requests
-import sys
 
-from dotenv import load_dotenv
 from pathlib import Path
 
-project_root = Path(__file__).parent.parent.parent
-load_dotenv(dotenv_path=project_root / ".env")
+from _common import PROJECT_ROOT as project_root, get_client, setup_logging
 
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-
-stdout_handler = logging.StreamHandler(sys.stdout)
-stdout_handler.setLevel(logging.INFO)
-stdout_handler.addFilter(lambda record: record.levelno == logging.INFO)
-stdout_handler.setFormatter(logging.Formatter("[%(asctime)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S"))
-
-stderr_handler = logging.StreamHandler(sys.stderr)
-stderr_handler.setLevel(logging.WARNING)
-stderr_handler.setFormatter(logging.Formatter("[%(asctime)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S"))
-
-logger.handlers = []
-logger.addHandler(stdout_handler)
-logger.addHandler(stderr_handler)
+logger = setup_logging()
 
 
 def load_config(path):
@@ -283,12 +264,7 @@ def main() -> None:
         logger.info("Aborted.")
         return
 
-    LABELBOX_API_KEY = os.getenv("LABELBOX_API_KEY")
-    if not LABELBOX_API_KEY:
-        logger.error("LABELBOX_API_KEY environment variable is not set")
-        sys.exit(1)
-
-    client = lb.Client(api_key=LABELBOX_API_KEY)
+    client = get_client()
     ontology_builder = build_ontology(options, cfg)
 
     logger.info(f"Creating ontology '{cfg.ONTOLOGY_NAME}' in Labelbox…")
