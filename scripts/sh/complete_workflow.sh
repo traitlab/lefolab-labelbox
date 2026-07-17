@@ -70,7 +70,8 @@ for MISSION in "${MISSIONS[@]}"; do
     fi
 
     log_message "Copying data from lefodata to Arbutus for $MISSION"
-    rclone --config /etc/rclone.conf copy /mnt/nfs/lefodata/data/drone_missions/$YEAR/$MISSION/ AllianceCanBuckets:$BUCKET_WPT/$MISSION -c
+    PROJECT_BUCKET="${LABELBOX_PROJECT//_/-}"
+    rclone --config "${PROJECT_ROOT}/rclone_newArbutus.conf" copy /mnt/nfs/lefodata/data/drone_missions/$YEAR/$MISSION/ ArbutusBuckets:$PROJECT_BUCKET/drone_missions/$YEAR/$MISSION -c
     check_command "rclone copy for $MISSION"
     log_message "Data copied to Arbutus for $MISSION"
 

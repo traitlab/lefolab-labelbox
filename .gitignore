@@ -93,6 +93,7 @@ temp*/
 *.env
 .RData
 .Renviron
+rclone_newArbutus.conf
 
 # Data folder not to be shared
 projects/archive/2025_Manaus/data/

@@ -1,47 +1,22 @@
 import argparse
 import boto3
 import copy
-import labelbox as lb
 import logging
 import os
 import sys
 
 from botocore import UNSIGNED
 from botocore.client import Config
-from dotenv import load_dotenv
-from pathlib import Path
 
-# Setup logging with timestamp
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
+from _common import get_client, setup_logging
 
-# Handler for INFO to stdout
-stdout_handler = logging.StreamHandler(sys.stdout)
-stdout_handler.setLevel(logging.INFO)
-stdout_handler.addFilter(lambda record: record.levelno == logging.INFO)
-stdout_handler.setFormatter(logging.Formatter('[%(asctime)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S'))
-
-# Handler for WARNING and ERROR to stderr
-stderr_handler = logging.StreamHandler(sys.stderr)
-stderr_handler.setLevel(logging.WARNING)
-stderr_handler.setFormatter(logging.Formatter('[%(asctime)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S'))
-
-# Remove default handlers and add custom ones
-logger.handlers = []
-logger.addHandler(stdout_handler)
-logger.addHandler(stderr_handler)
+logger = setup_logging()
 
 # Suppress urllib3 connection pool warnings
 logging.getLogger('urllib3.connectionpool').setLevel(logging.ERROR)
 
-# Load environment variables from .env file
-project_root = Path(__file__).parent.parent.parent
-load_dotenv(dotenv_path=project_root / '.env')
-
 # Get environment variables
 ALLIANCECAN_URL = os.getenv("ALLIANCECAN_URL")
-LABELBOX_API_KEY = os.getenv("LABELBOX_API_KEY")
-BUCKET_WPT = os.getenv("BUCKET_WPT")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
@@ -49,16 +24,10 @@ AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 if not ALLIANCECAN_URL:
     logger.error("ALLIANCECAN_URL environment variable is not set")
     raise ValueError("ALLIANCECAN_URL environment variable is not set")
-if not LABELBOX_API_KEY:
-    logger.error("LABELBOX_API_KEY environment variable is not set")
-    raise ValueError("LABELBOX_API_KEY environment variable is not set")
-if not BUCKET_WPT:
-    logger.error("BUCKET_WPT environment variable is not set")
-    raise ValueError("BUCKET_WPT environment variable is not set")
 if not AWS_ACCESS_KEY_ID or not AWS_SECRET_ACCESS_KEY:
     logger.warning("AWS_ACCESS_KEY_ID and/or AWS_SECRET_ACCESS_KEY environment variables are not set. Assuming public bucket access.")
 
-client = lb.Client(api_key=LABELBOX_API_KEY)
+client = get_client()
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description="Import data rows into Labelbox.")
@@ -87,6 +56,12 @@ else:
 
 # List all pictures on Alliance Canada for a given mission
 
+# Per-project bucket (no underscores allowed) and object prefix on Arbutus:
+# <project-with-hyphens>/drone_missions/<yyyy>/<mission>/...
+project_bucket = project.replace("_", "-")
+year = mission[:4]
+prefix = f"drone_missions/{year}/{mission}"
+
 # Configure S3 client for Alliance Canada (S3-compatible storage)
 if AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY:
     # Use credentials if provided
@@ -108,7 +83,7 @@ else:
 # Use paginator to automatically handle pagination
 try:
     paginator = s3_client.get_paginator('list_objects_v2')
-    pages = paginator.paginate(Bucket=BUCKET_WPT, Prefix=mission)
+    pages = paginator.paginate(Bucket=project_bucket, Prefix=prefix)
 
     # Collect all file keys
     file_keys = []
@@ -123,7 +98,7 @@ except Exception as e:
     sys.exit(1)
 
 # Construct folder URL for generating asset URLs
-folder_url = f"{ALLIANCECAN_URL}/{BUCKET_WPT}"
+folder_url = f"{ALLIANCECAN_URL}/{project_bucket}"
 
 # Print the result
 logger.info(f"{len(file_keys)} pictures found for this mission : {mission}")
@@ -220,7 +195,7 @@ for i, closeup_file in enumerate(closeup_files):
     
     # Attach the map
     closeup_basename = os.path.basename(closeup_file)
-    map_url = f"{folder_url}/{mission}/labelbox/attachments/{closeup_basename.replace('.JPG', '.html')}"
+    map_url = f"{folder_url}/{prefix}/labelbox/attachments/{closeup_basename.replace('.JPG', '.html')}"
     
     asset["attachments"][1]["value"] = map_url
     
