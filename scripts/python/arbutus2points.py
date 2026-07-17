@@ -250,7 +250,7 @@ def process_closeup_file(args):
         }
     return None
 
-def main(output_dir, points_layer, project_qualifier, max_workers=8):
+def main(output_dir, points_layer, project_qualifiers, max_workers=8):
     os.makedirs(output_dir, exist_ok=True)
     points_layer_path = os.path.join(output_dir, points_layer)
     existing_gdf = None
@@ -276,8 +276,9 @@ def main(output_dir, points_layer, project_qualifier, max_workers=8):
     # base URL is just the endpoint, files are at {ALLIANCECAN_URL}/{bucket}/{file}
     legacy_base_url = ALLIANCECAN_URL
     all_buckets = [b['Name'] for b in s3_client.list_buckets().get('Buckets', [])]
-    legacy_folders = [b for b in all_buckets if project_qualifier.lower() in b.lower() and 'wpt' in b.lower()]
-    logger.info(f"Found {len(legacy_folders)} legacy bucket(s) matching '{project_qualifier}'.")
+    qualifiers_lower = [q.lower() for q in project_qualifiers]
+    legacy_folders = [b for b in all_buckets if any(q in b.lower() for q in qualifiers_lower) and 'wpt' in b.lower()]
+    logger.info(f"Found {len(legacy_folders)} legacy bucket(s) matching {project_qualifiers}.")
 
     for folder in legacy_folders:
         paginator = s3_client.get_paginator('list_objects_v2')
@@ -290,8 +291,8 @@ def main(output_dir, points_layer, project_qualifier, max_workers=8):
     prefix_paginator = s3_client.get_paginator('list_objects_v2')
     prefix_pages = prefix_paginator.paginate(Bucket=BUCKET_WPT, Delimiter='/')
     all_prefixes = [cp['Prefix'].rstrip('/') for page in prefix_pages for cp in page.get('CommonPrefixes', [])]
-    folders = [p for p in all_prefixes if project_qualifier.lower() in p.lower() and 'wpt' in p.lower()]
-    logger.info(f"Found {len(folders)} folder(s) in '{BUCKET_WPT}' matching '{project_qualifier}'.")
+    folders = [p for p in all_prefixes if any(q in p.lower() for q in qualifiers_lower) and 'wpt' in p.lower()]
+    logger.info(f"Found {len(folders)} folder(s) in '{BUCKET_WPT}' matching {project_qualifiers}.")
 
     for folder in folders:
         paginator = s3_client.get_paginator('list_objects_v2')
@@ -323,17 +324,22 @@ def main(output_dir, points_layer, project_qualifier, max_workers=8):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process Arbutus BCI image folders in parallel.")
     parser.add_argument("--output_dir", required=True, help="Output directory for logs and points layer.")
-    parser.add_argument("--project_qualifier", required=True, help="Project qualifier string.")
+    parser.add_argument("--project_qualifier", required=True, nargs="+", help="One or more project qualifier strings. Folders matching any qualifier are included.")
     parser.add_argument("--max_workers", type=int, default=8, help="Number of parallel workers.")
-    parser.add_argument("--points_layer", required=False, help="Points layer filename to use or create. Defaults to '<project_qualifier>_wpt.gpkg'.")
+    parser.add_argument("--points_layer", required=False, help="Points layer filename to use or create. Defaults to '<project_qualifier>_wpt.gpkg'. Required when multiple qualifiers are given.")
     args = parser.parse_args()
 
     # Set default points_layer if not provided
-    points_layer = args.points_layer if args.points_layer else f"{args.project_qualifier}_wpt.gpkg"
+    if args.points_layer:
+        points_layer = args.points_layer
+    elif len(args.project_qualifier) == 1:
+        points_layer = f"{args.project_qualifier[0]}_wpt.gpkg"
+    else:
+        parser.error("--points_layer is required when multiple project qualifiers are given.")
 
     main(
         output_dir=args.output_dir,
         points_layer=points_layer,
-        project_qualifier=args.project_qualifier,
+        project_qualifiers=args.project_qualifier,
         max_workers=args.max_workers
     )
