@@ -10,6 +10,8 @@ client = get_client()
 parser = argparse.ArgumentParser(description="Send data rows to Labelbox project for annotation.")
 parser.add_argument("--mission_id", required=True, help="Mission ID to create a batch for annotation.")
 parser.add_argument("--project", required=True, help="Project/dataset name.")
+parser.add_argument("--workflow_step", help="Task queue name to move data rows to (e.g. 'Initial labeling task').")
+parser.add_argument("--model_run_id", help="Model run ID whose predictions to send as prelabels.")
 args = parser.parse_args()
 
 mission_id = args.mission_id
@@ -59,3 +61,27 @@ batch = lb_project.create_batch(
     priority=3
 )
 logger.info(f"Batch created for {mission_id}: {batch.name}")
+
+if args.workflow_step:
+    queues = lb_project.task_queues()
+    queue = next((q for q in queues if q.name == args.workflow_step), None)
+    if not queue:
+        available = [q.name for q in queues]
+        logger.error(f"Task queue '{args.workflow_step}' not found. Available: {available}")
+        sys.exit(1)
+    lb_project.move_data_rows_to_task_queue(lb.UniqueIds(data_row_ids), task_queue_id=queue.uid)
+    logger.info(f"Data rows moved to task queue '{args.workflow_step}'.")
+
+if args.model_run_id:
+    import_job = lb.MEAToMALPredictionImport.create_for_model_run_data_rows(
+        client=client,
+        model_run_id=args.model_run_id,
+        data_row_ids=data_row_ids,
+        project_id=lb_project.uid,
+        name=mission_id,
+    )
+    import_job.wait_until_done()
+    if import_job.errors:
+        logger.error(f"Prediction import errors: {import_job.errors}")
+        sys.exit(1)
+    logger.info(f"Model predictions imported from run '{args.model_run_id}'.")
