@@ -12,7 +12,7 @@ Output (JSON array, one object per photo):
       "boxes": [{"top", "left", "height", "width",   # Labelbox-native pixels
                  "taxon": "<name>", "gbif_id": "<id>"}, ...],
       "main_species": "<taxon with the largest summed box area in the photo>",
-      "split": "train" | "val" | "test"
+      "split": "train" | "valid" | "test"
     }
 
 Split rules:
@@ -224,7 +224,7 @@ def stratified_split(photos, group_of):
             if i < n_train:
                 split_of_group[g] = "train"
             elif i < n_train + n_val:
-                split_of_group[g] = "val"
+                split_of_group[g] = "valid"
             else:
                 split_of_group[g] = "test"
 
