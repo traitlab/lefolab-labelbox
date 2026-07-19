@@ -111,7 +111,7 @@ for MISSION in "${MISSIONS[@]}"; do
     log_message "Maps generated for $MISSION and saved in $OUTPUT_DIR"
 
     log_message "Sending data rows for $MISSION to $LABELBOX_PROJECT"
-    python "${PROJECT_ROOT}/scripts/python/send_to_annotate.py" --mission_id "$MISSION" --project "$LABELBOX_PROJECT" $LABELBOX_PREFIX_ARG
+    python "${PROJECT_ROOT}/scripts/python/send_to_annotate.py" --mission_id "$MISSION" --project "$LABELBOX_PROJECT"
     check_command "send_to_annotate.py for $MISSION"
     log_message "Data rows sent for $MISSION to $LABELBOX_PROJECT"
 

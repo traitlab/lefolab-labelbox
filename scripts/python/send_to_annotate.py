@@ -33,15 +33,19 @@ data_row_ids = []
 def handle_export(output: lb.BufferedJsonConverterOutput):
     row = output.json
     metadata_fields = row.get("metadata_fields", [])
-    if any(mf.get("name") == "mission" and mf.get("value") == mission_id
+    if any(mf.get("schema_name") == "mission" and mf.get("value") == mission_id
            for mf in metadata_fields):
         data_row_ids.append(row["data_row"]["id"])
 
-export_task = dataset.export_v2(params={"metadata_fields": True})
+export_task = dataset.export(params={"metadata_fields": True})
 export_task.wait_till_done()
 
-if export_task.errors:
-    logger.error(f"Export errors: {export_task.errors}")
+if export_task.has_errors():
+    errors = []
+    export_task.get_buffered_stream(stream_type=lb.StreamType.ERRORS).start(
+        stream_handler=lambda output: errors.append(output.json)
+    )
+    logger.error(f"Export errors: {errors}")
     sys.exit(1)
 
 export_task.get_buffered_stream(stream_type=lb.StreamType.RESULT).start(

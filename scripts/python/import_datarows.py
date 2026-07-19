@@ -62,12 +62,17 @@ project_bucket = project.replace("_", "-")
 year = mission[:4]
 prefix = f"drone_missions/{year}/{mission}"
 
+# The S3 API lives at the bare host; ALLIANCECAN_URL also carries the Swift
+# object path (/swift/v1/...) used to build public asset URLs (folder_url).
+# Strip the Swift path for the boto3 endpoint.
+s3_endpoint = ALLIANCECAN_URL.split('/swift/')[0]
+
 # Configure S3 client for Alliance Canada (S3-compatible storage)
 if AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY:
     # Use credentials if provided
     s3_client = boto3.client(
         's3',
-        endpoint_url=ALLIANCECAN_URL,
+        endpoint_url=s3_endpoint,
         aws_access_key_id=AWS_ACCESS_KEY_ID,
         aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
         config=Config(signature_version='s3v4')
@@ -76,7 +81,7 @@ else:
     # Use anonymous access (public bucket)
     s3_client = boto3.client(
         's3',
-        endpoint_url=ALLIANCECAN_URL,
+        endpoint_url=s3_endpoint,
         config=Config(signature_version=UNSIGNED)
     )
 
@@ -175,7 +180,9 @@ for i, closeup_file in enumerate(closeup_files):
     asset["row_data"] = f"{folder_url}/{closeup_file}"
     
     # Use file name as unique global_key
-    file = closeup_file.split('/', 1)[-1]
+    # Strip the mission prefix so the key stays <folder>/<image> as before,
+    # not the full drone_missions/<year>/<mission>/<folder>/<image> path.
+    file = closeup_file[len(prefix) + 1:] if closeup_file.startswith(prefix + "/") else closeup_file.split('/', 1)[-1]
     asset["global_key"] = file
     
     # Metadata fields : mission
