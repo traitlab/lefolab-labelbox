@@ -4,8 +4,8 @@
   "version_slug": "v7.4",
   "dataset_name": "2024_bci",
   "dataset_id": "cmon3zoss00wu0705ertl0vd7",
-  "total_rows": 213,
-  "completed_rows": 213,
+  "total_rows": 5620,
+  "completed_rows": 5620,
   "all_complete": true,
-  "last_run": "2026-05-12T01:17:39.106881"
+  "last_run": "2026-07-23T15:45:14.435685"
 }
