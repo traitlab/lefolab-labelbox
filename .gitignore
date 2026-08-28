@@ -112,5 +112,6 @@ projects/*/*dtm*.tif
 # Generated maps
 projects/*/output_maps/
 
-# Cache folders (embeddings, GBIF lookups)
+# Cache folders (embeddings, GBIF lookups, ...)
 projects/*/cache/
+migration/arbutus/cache/
