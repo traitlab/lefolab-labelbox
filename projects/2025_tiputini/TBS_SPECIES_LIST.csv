@@ -1,0 +1,3340 @@
+﻿type;name;code1;code2;gbif_id
+species;(no identificado SSP3889);U3889;;3169095
+species;(unknown SSP 6598);U6598;;5386
+species;(unknown SSP4709);U4709;;3189948
+species;(unknown SSP5976);U5976;;2959589
+species;Abarema jupunba;ABARJU;;11784337
+species;Abarema laeta;ABARLA;;11798059
+species;Abuta grandifolia;ABUTGR;;3830518
+species;Abuta rufescens;ABUTRU;;3830210
+species;Abuta sp. D;ABUT_D;;7268654
+species;Abuta sp. E;ABUT_E;;7268654
+species;Abuta sp. GL;ABUTGL;;7268654
+species;Acacia tenuifolia;ACACTE;;2979126
+species;Acalypha cuneata;ACALCU;;3056769
+species;Acalypha stachyura;;;3056833
+species;Acanthosyris annonagustata;ACANAN;;3789565
+species;Acidoton nicaraguensis;ACIDNI;;9349506
+species;Adelobotrys klugii;;;3860722
+species;Adelobotrys scandens;ADELSC;;3860497
+species;Adelobotrys sp. B;ADEL_B;;3860441
+species;Adenaria floribunda;;;7286112
+species;Adenocalymma 'purpurascens';ADENPU;;10767005
+species;Adolphoduckea maynensis;;;11017680
+species;Aechmea 'amazonica';AECHAM;;2698292
+species;Aechmea zebrina;;;2698230
+species;Aegiphila 'memboscu';AEGIME;;9156446
+species;Aegiphila alba;;;3893622
+species;Aegiphila boliviana;;;3893437
+species;Aegiphila cordifolia;AEGICO;AEGIVI;8168968
+species;Aegiphila cuneata;;;7308014
+species;Aegiphila haughtii;AEGIHA;;3890246
+species;Aegiphila hoehnei;;;7784548
+species;Aegiphila integrifolia;;;2925468
+species;Aegiphila panamensis;;;3891222
+species;Aegiphila triflora;;;3890297
+species;Agonandra 'gordito';AGONGO;AGONSI;3658855
+species;Agonandra 'trespromin';AGONTR;SCHPLU;3685474
+species;Agonandra silvatica;AGONSI;AGONPE;3658897
+species;Agouticarpa velutina;;;2898477
+species;Aiouea grandifolia;;;4175896
+species;Aiouea montana;;;9671278
+species;Aiouea napoensis;;;10119470
+species;Aiphanes ulei;AIPHUL;;2738687
+species;Albizia niopoides;;;2973046
+species;Albizia subdimidiata;;;2973285
+species;Alchornea discolor;;;3055354
+species;Alchornea glandulosa;;;3055361
+species;Alchornea grandiflora;;;3055553
+species;Alchornea latifolia;;;3055359
+species;Alchornea pearcei;;;3055483
+species;Alchornea triplinervia;ALC1TR;;3055511
+species;Alchornea websteri;;;3055432
+species;Alchorneopsis floribunda;ALC2FL;;3055091
+species;Alibertia 'nuevadoris';ALIBNU;AGOUCU;2898485
+species;Alibertia bertierifolia;;;5335641
+species;Alibertia claviflora;;;5340527
+species;Alibertia edulis;;;5335670
+species;Alibertia occidentalis;;;7972649
+species;Alibertia verticillata;;;5340529
+species;Allantoma pluriflora;;;4161374
+species;Allophylus 'arcorden';ALLOAR;ALLOAM;7265045
+species;Allophylus 'glabra';ALLOGL;;3189992
+species;Allophylus 'scabrid';ALLOSC;;7264975
+species;Allophylus angustatus;;;7265039
+species;Allophylus floribundus;;;5577602
+species;Allophylus incanus;;;5577479
+species;Allophylus leucoclados;;;5577386
+species;Allophylus paniculatus;;;7696898
+species;Allophylus peruvianus;;;5577109
+species;Allophylus pilosus;ALLOPI;;5577089
+species;Allophylus punctatus;;;5577068
+species;Allophylus scrobiculatus;;;5576985
+species;Allophylus stenodictyus;;;5576928
+species;Alseis 'comun';ALSECO;;5334883
+species;Alseis eggersii;;;5334880
+species;Alseis labatioides;;;5334870
+species;Alsophila cuspidata;;;5529620
+species;Alsophila erinacea;;;5530413
+species;Alsophila incana;;;5529958
+species;Amaioua guianensis;;;2901121
+species;Amanoa guianensis;;;3080049
+species;Ammandra decasperma;;;2733624
+species;Ampelocera edentula;AMPEED;;4160141
+species;Ampelocera longissima;AMPELO;;4160051
+species;Amphilophium paniculatum;AMPHPA;;3172589
+species;Amphilophium sp. A;AMPH_A;;3172588
+species;Amyris amazonica;;;8168057
+species;Amyris macrocarpa;;;5594907
+species;Anacardium occidentale;;;5421368
+species;Anaxagorea brevipes;ANAXBR;;3156884
+species;Anaxagorea crassipetala;;;3156858
+species;Anaxagorea dolichocarpa;;;3156852
+species;Anaxagorea phaeocarpa;;;3156862
+species;Andira inermis;;;2952214
+species;Andira macrocarpa;;;3965577
+species;Andira macrothyrsa;;;2952147
+species;Andira multistipula;;;2952159
+species;Andira surinamensis;;;2952202
+species;Anemopaegma chrysoleucum;ANEMCH;;3172463
+species;Angostura alipes;;;3837011
+species;Aniba guianensis;ANIBGU;;3034090
+species;Aniba hostmanniana;ANIBHO;;4181158
+species;Aniba megaphylla;;;4180892
+species;Aniba panurensis;;;4180762
+species;Aniba puchury-minor;;;7304533
+species;Aniba riparia;ANIBRI;;4180474
+species;Aniba taubertiana;;;4180312
+species;Aniba williamsii;;;4180088
+species;Annona 'mosaic';ANNOMO;;3155252
+species;Annona amazonica;;;5407080
+species;Annona ambotay;ANNOAM;;5407112
+species;Annona asplundiana;;;5407233
+species;Annona centrantha;;;5541655
+species;Annona cuspidata;;;5541649
+species;Annona duckei;;;5407170
+species;Annona helosioides;;;5541636
+species;Annona hispida;;;5541633
+species;Annona hypoglauca;;;5407060
+species;Annona montana;;;5407165
+species;Annona mucosa;;;5407571
+species;Annona muricata;;;5407273
+species;Annona neglecta;;;5407073
+species;Annona neoecuadoarensis;;;5541618
+species;Anthodiscus amazonicus;ANTHAM;;5592414
+species;Anthodiscus klugii;;;5592415
+species;Anthodiscus peruanus;;;5592408
+species;Anthodon sp. O;ANT1_O;;5579479
+species;Anthurium bonplandii;ANTHBO;;2872628
+species;Anthurium griseum;ANTHGR;;8023409
+species;Anthurium sinuatum;ANTHSI;;2872356
+species;Anthurium sp. D;ANTH_D;;2872218
+species;Anthurium sp. H;ANTH_H;;2872218
+species;Anthurium sp. J ('palmata');ANTH_J;;2872218
+species;Aparisthmium cordatum;APARCO;;3072468
+species;Apeiba menbranacea;APEIME;;4260481
+species;Apeiba tibourbou;APEITI;;3152052
+species;Aphandra natalia;;;2738044
+species;Apocynaceae sp. AD;APO_AD;;6701
+species;Apocynaceae sp. AQ;APO_AQ;;7311668
+species;Apocynaceae sp. OF;APO_OF;;7316765
+species;Apocynaceae sp. Z;APO_Z;;6701
+species;Aptandra tubicina;APTATU;;3685770
+species;Apuleia leiocarpa;APULLE;;5353578
+species;Araceae sp. AC;ARA_AC;;6979
+species;Araceae spp. (partes indet. a sp.);ARA_PIN;;6979
+species;Arawakia weddelliana;;;10648384
+species;Ardisia 'semibulada';ARDISE;;3169458
+species;Ardisia loretensis;;;5557652
+species;Aristolochia sp. A;ARIS_A;;2873978
+species;Aristolochia sp. H;ARIS_H;;2873978
+species;Aristolochia sp. K;ARIS_K;;2873978
+species;Aristolochia sp. L;ARIS_L;;2873978
+species;Aristolochia sp. M;ARIS_M;;2873978
+species;Arrabidaea sp. A;ARRA_A;;3233562
+species;Arrabidaea sp. B;ARRA_B;;3233562
+species;Asclepiadaceae sp. A (2);ASCL_A;;3170354
+species;Aspidosperma 'blancimpreso';ASPIBL;;7316607
+species;Aspidosperma 'grandis';ASPIGR;ASPIME;7316950
+species;Aspidosperma darienense;ASPIDA;;10398357
+species;Aspidosperma desmanthum;;;3618792
+species;Aspidosperma excelsum;;;3618555
+species;Aspidosperma inundatum;;;3618282
+species;Aspidosperma rigidum;ASPIRI;;3616924
+species;Aspidosperma sandwithianum;;;3616872
+species;Aspidosperma schultesii;;;3616833
+species;Aspidosperma spruceanum;;;3616705
+species;Asplundia sp. A;ASPL_A;;2860937
+species;Asplundia sp. B;ASPL_B;;2860937
+species;Asplundia sp. J;ASPL_J;;5327022
+species;Asplundia sp. L;ASPL_L;;2860937
+species;Asplundia sp. N;ASPL_N;;2860937
+species;Asplundia sp. S;ASPL_S;;2860937
+species;Asplundia vaupesiana;ASPLVA;;2861069
+species;Asteraceae sp. B;AST_B;;7722389
+species;Asteraceae sp. C;AST_C;;3065
+species;Asteraceae sp. D;AST_D;;3065
+species;Asteraceae sp. G;AST_G;;3065
+species;Asteraceae sp. H;AST_H;;3065
+species;Asteraceae sp. Q;AST_Q;;3065
+species;Asteraceae sp. R;AST_R;;3065
+species;Asteraceae sp. S;AST_S;;3065
+species;Astrocaryum chambira;AST1CH;ASTCCH;2738064
+species;Astrocaryum jauari;;;2738136
+species;Astrocaryum murumuru;AST1MU;ASTCMU;2738111
+species;Astronium 'comun';AST2CO;ASTRGR;7321588
+species;Attalea butyracea;;;2732721
+species;Attalea insignis cf.;ATTAIN;;2732824
+species;Attalea maripa;ATTAMA;;2732686
+species;Bactris coloniata;;;2733315
+species;Bactris concinna;;;2733151
+species;Bactris corossilla;BACTCO;;2733242
+species;Bactris maraja;BACTMA;;2732946
+species;Bactris setulosa;;;2733141
+species;Bactris simplicifrons;BACTSI;;2733215
+species;Balizia pedicellaris;;;2973151
+species;Banara nitida;;;3879623
+species;Banisteriopsis erianthera;BANIER;;3983714
+species;Banisteriopsis lucida cf.;BANILU;;3191472
+species;Banisteriopsis sp. A;BANI_A;;7618041
+species;Banisteriopsis sp. B;BANI_B;;7618041
+species;Banisteriopsis sp. J;BANI_J;;7618041
+species;Batocarpus 'obmembra';BATOOB;BATOAM;3763869
+species;Batocarpus 'ramaroja';BATORA;BATOCO;3763858
+species;Batocarpus orinocensis;BATOOR;;3763838
+species;Bauhinia 'magenta';BAUHMA;;7431595
+species;Bauhinia arborea;;;3931406
+species;Bauhinia brachycalyx;BAUHBR;;2953223
+species;Bauhinia glabra;BAUHGL;;2953170
+species;Bauhinia guianensis;BAUHGU;;4929144
+species;Bauhinia rutilans;BAUHRU;;7278572
+species;Bauhinia sp. AD;BAUH_AD;;7278569
+species;Bauhinia sp. AE;BAUH_AE;;7278569
+species;Bauhinia sp. G;BAUH_G;;7278569
+species;Bauhinia sp. S;BAUH_S;;7278569
+species;Bauhinia sp. T;BAUH_T;;7278569
+species;Bauhinia sp. W;BAUH_W;;7278569
+species;Bauhinia tarapotensis;;;2953235
+species;Begonia sp. B;BEGO_B;;2874710
+species;Beilschmiedia pendula;BEILPE;;3034073
+species;Beilschmiedia sulcata;;;4183033
+species;Bellucia pentamera;BELLPE;;3866517
+species;Besleria aggregata;;;6365263
+species;Besleria quadrangulata;BESLQU;;3824140
+species;Bignoniaceae sp. AE;BIG_AE;;6655
+species;Bignoniaceae sp. AJ;BIG_AJ;;7933875
+species;Bignoniaceae sp. AK;BIG_AK;;6655
+species;Bignoniaceae sp. AM;BIG_AM;;6655
+species;Bignoniaceae sp. AO;BIG_AO;;6655
+species;Bignoniaceae sp. AP;BIG_AP;;6655
+species;Bignoniaceae sp. AS;BIG_AS;;6655
+species;Bignoniaceae sp. AW;BIG_AW;;6655
+species;Bignoniaceae sp. AZ;BIG_AZ;;6655
+species;Bignoniaceae sp. B;BIG_B;;6655
+species;Bignoniaceae sp. BA;BIG_BA;;6655
+species;Bignoniaceae sp. BB;BIG_BB;;6655
+species;Bignoniaceae sp. BL;BIG_BL;;6655
+species;Bignoniaceae sp. BM;BIG_BM;;6655
+species;Bignoniaceae sp. BO;BIG_BO;;3172598
+species;Bignoniaceae sp. BQ;BIG_BQ;;6655
+species;Bignoniaceae sp. C;BIG_C;;6655
+species;Bignoniaceae sp. F;BIG_F;;3172559
+species;Bignoniaceae sp. G;BIG_G;;6655
+species;Bignoniaceae sp. S;BIG_S;;6655
+species;Bignoniaceae sp. V;BIG_V;;6655
+species;Bignoniaceae sp. W;BIG_W;;6655
+species;Bignoniaceae sp. X;BIG_X;;6655
+species;Bignoniaceae sp. Y;BIG_Y;;7930324
+species;Billia rosea;;;3672305
+species;Bixa arborea;;;4087208
+species;Bixa orellana;;;2874863
+species;Bixa platycarpa;;;4087172
+species;Bixa urucurana;;;4087112
+species;Blakea asplundii;;;8113873
+species;Blakea glandulosa;;;5600394
+species;Blakea hirsuta;;;7273020
+species;Blakea hispida;;;6634891
+species;Blakea induta;;;7418016
+species;Blakea sp. A;BLAK_A;;3231475
+species;Blakea sp. B;BLAK_B;BLAKRO;5600155
+species;Blakea sp. C;BLAK_C;;3231475
+species;Boehmeria caudata;;;7610513
+species;Boehmeria pavonii;;;7300891
+species;Boehmeria ulmifolia;;;4100595
+species;Bombacaceae sp. A;BOM_A;;6685
+species;Borojoa 'axiglab';BOROA1;AGOUIS;2898482
+species;Borojoa 'axipub';BOROA2;BOROCL;7469198
+species;Bromeliaceae sp. A;BRO_A;;2697812
+species;Bromeliaceae sp. B;BRO_B;;3740
+species;Bromeliaceae sp. C;BRO_C;;3740
+species;Bromeliaceae sp. D;BRO_D;;3740
+species;Bromeliaceae sp. E;BRO_E;;3740
+species;Bromeliaceae sp. F;BRO_F;;3740
+species;Bromeliaceae sp. H;BRO_H;;3740
+species;Bromeliaceae sp. I;BRO_I;;3740
+species;Bromeliaceae sp. J;BRO_J;;3740
+species;Bromeliaceae sp. L;BRO_L;;3740
+species;Bromeliaceae sp. M;BRO_M;;3740
+species;Bromeliaceae sp. N;BRO_N;;3740
+species;Brosimum acutifolium;BRO1AC;BROSAC;7262461
+species;Brosimum alicastrum;;;2984660
+species;Brosimum guianense;BRO1GU;BROSGU;7374879
+species;Brosimum lactescens;BRO1LA;BROSLA;3763127
+species;Brosimum multinervium;;;3763023
+species;Brosimum potabile;BRO1PO;BROSPO;3762892
+species;Brosimum rubescens;;;3762826
+species;Brosimum utile;;;8042591
+species;Brosimum utile;BRO1UT;BROSUT;3762702
+species;Brownea grandiceps;BRO2GR;BROWGR;2970463
+species;Brownea macrophylla;;;8170495
+species;Browneopsis 'lore';BRO3LO;BROWLO;8875403
+species;Browneopsis ucayalina;;;2970452
+species;Brunfelsia chiricaspi;BRUNCH;;2932912
+species;Buchenavia 'cilipunto';BUCHCI;BUCHPU;3699032
+species;Buchenavia 'elegante';BUCHEL;BUCHGR;9392612
+species;Buchenavia parvifolia;BUCHPA;;9455981
+species;Bunchosia 'myrt';BUNCMY;;7404976
+species;Bunchosia argentea;;;3984105
+species;Bunchosia armeniaca;;;8398507
+species;Bunchosia cauliflora;;;3983942
+species;Bunchosia hookeriana;;;3983583
+species;Byrsonima 'dorada';BYRSDO;BYRSPU;3984820
+species;Byrsonima 'juanito';BYRSJU;;3191347
+species;Byrsonima arthropoda;;;3982744
+species;Byrsonima japurensis;;;7285639
+species;Byrsonima krukoffii;;;3985604
+species;Byttneria sp. A;BYTT_A;;7441533
+species;Byttneria sp. B;BYTT_B;;3670201
+species;Cabralea canjerana;CABRCA;;7271502
+species;Caesalpinia pulcherrima;;;2958715
+species;Calatola costaricensis;;;3597030
+species;Calliandra carbonaria;CAL1CA;CALLCA;2982050
+species;Calliandra trinervia;;;2982031
+species;Callicarpa acuminata;;;8121164
+species;Callichlamys latifolia;CAL2LA;;8338389
+species;Calophyllum brasiliense;CAL3BR;CALOBR;5421069
+species;Calophyllum longifolium;;;8223607
+species;Calycolpus aequatorialis;;;3177650
+species;Calycophyllum megistocaulum;CAL4ME;CALCME;2903996
+species;Calycophyllum spruceanum;;;2904000
+species;Calyptranthes 'pseudospeciosa';CALYPS;CALPPS;10802852
+species;Calyptranthes 'punctote';CALYP3;CALPPC;10681855
+species;Calyptranthes 'sedosa';CALYSE;CALPSE;10851138
+species;Calyptranthes plicata;CALYPL;CALPPL;10785938
+species;Calyptranthes speciosa;CALYSP;CALPSP;10825908
+species;Campomanesia lineatifolia;;;3181134
+species;Capirona decorticans;CAPIDE;;10910620
+species;Capparis detonsa;CAPPDE;;7790974
+species;Capparis osmantha;CAPPOS;;7379306
+species;Capparis sola;CAPPSO;;8405416
+species;Capparis sp. A;CAPP_A;;3054191
+species;Caraipa 'comun';CAR1CO;CARACO;7330048
+species;Carica microcarpa;CARIMI;;7269680
+species;Carpotroche longifolia;CAR3LO;CARPLO;7274065
+species;Caryocar glabrum;CAR4GL;CARYGL;3826026
+species;Caryocar villosum;;;3826009
+species;Caryodaphnopsis fosteri;;;4180147
+species;Caryodaphnopsis theobromifolia;;;4180063
+species;Caryodaphnopsis tomentosa;;;4180043
+species;Caryodendron orinocense;CAR6OR;CARDOR;3055897
+species;Casearia 'a-tomen'-Casearia arborea;CAS1AT;CASEAE;5331149
+species;Casearia 'argut';CAS1AR;CASEAR;2874105
+species;Casearia 'prunicerob';CAS1P1;CASEPR;2874105
+species;Casearia 'sylvepub';CAS1S1;CASESP;2874105
+species;Casearia aculeata;;;5331145
+species;Casearia acuminata;;;8353057
+species;Casearia bicolor-Laetia procera;;;5331156
+species;Casearia bracteifera;CAS1BR;CASEBR;7723868
+species;Casearia corymbulosa;;;10710471
+species;Casearia decandra;;;5331147
+species;Casearia javitensis;CAS1JA;CASEJA;3878690
+species;Casearia mariquitensis;;;8087441
+species;Casearia maynacarpa;;;8997274
+species;Casearia nigricans;CAS1NI;CASENI;7526781
+species;Casearia obovalis;;;8004155
+species;Casearia pitumba;CAS1PI;CASEPI;7499281
+species;Casearia prunifolia;CAS1P2;CASEPF;7423546
+species;Casearia singularis;;;7702402
+species;Casearia suaveolens;;;10824398
+species;Casearia sylvestris;;;5331148
+species;Casearia uleana;;;8169626
+species;Casearia ulmifolia;;;8205521
+species;Cassia cowanii;;;5357101
+species;Cassia swartzioides;;;5357171
+species;Cassipourea peruviana;;;3873906
+species;Castilla ulei;CAS3UL;CASTUL;2984559
+species;Cathedra acuminata;CATHAC;;8137356
+species;Catostemma digitata;;;4073091
+species;Cavanillesia hylogeiton;;;4073291
+species;Cayaponia '1-punto' (plantula);CAYA1P;;2874613
+species;Cayaponia '3 puntos' (plantula);CAYA3P;;3623226
+species;Cayaponia 'tubulosa' cf.;CAYATU;;2874613
+species;Cayaponia macrocalyx;CAYAMA;;3623402
+species;Cayaponia sp. C ('5 puntos' plantula);CAYA_C;;2874613
+species;Cayaponia sp. D;CAYA_D;;2874613
+species;Cecropia 'membra'-Cecropia membranacea;CECRME;;4013609
+species;Cecropia 'scabhert';CECRS1;CECREN;4013581
+species;Cecropia distachya;;;4013607
+species;Cecropia ficifolia;;;4013542
+species;Cecropia ficifolia;CECRFI;;8173870
+species;Cecropia herthae;CECRHE;;4013414
+species;Cecropia idroboi;;;4013314
+species;Cecropia latiloba;;;4013210
+species;Cecropia litoralis;;;4013144
+species;Cecropia marginalis;CECRMA;;4013650
+species;Cecropia putumayonis;;;4013126
+species;Cecropia sciadophylla;CECRS2;CECRSC;7316424
+species;Cedrela fissilis;;;7107974
+species;Cedrela fissilis;CED1FI;CEDAOD;3190511
+species;Cedrelinga cateniformis;CED2CA;CEDGCA;2976174
+species;Ceiba insignis;;;5663215
+species;Ceiba pentandra;CEIBPE;;5406697
+species;Ceiba samauma;CEIBSA;;7981929
+species;Celtis iguanaea;CELTIG;;2984498
+species;Celtis schippii;CELTSC;;4159734
+species;Centrolobium paraense;;;2945579
+species;Centronia laurifolia;;;5601663
+species;Centropogon loretensis;CENTLO;;5412643
+species;Cespedesia spathulata;;;3695801
+species;Cestrum megalophyllum;;;3802352
+species;Cestrum microcalyx;;;3802311
+species;Cestrum racemosum;;;7299919
+species;Cestrum reflexum;;;7299914
+species;Cestrum strigillatum;;;7299866
+species;Chaunochiton kappleri;;;3686060
+species;Cheiloclinium cognatum;CHEICO;;3790743
+species;Chelyocarpus ulei;;;2731953
+species;Chimarrhis 'jacob';CHI1JA;CHIMJA;2918950
+species;Chimarrhis glabriflora;;;2918977
+species;Chimarrhis hookeri;;;2918965
+species;Chiococca alba;;;2907406
+species;Chionanthus implicatus;;;3682197
+species;Chlorocardium venenosum;;;4178433
+species;Chomelia 'comun';CHOMCO;;5337295
+species;Chomelia malaneoides;;;5337281
+species;Chomelia polyantha;;;5337333
+species;Chrysochlamys 'medio';CHR1ME;CHRCFR;3231115
+species;Chrysochlamys bracteolata;;;5555777
+species;Chrysochlamys macrophylla;;;5555731
+species;Chrysochlamys membranacea;;;5555729
+species;Chrysochlamys tenuifolia;CHR1TE;CHRCTE;5555698
+species;Chrysochlamys weberbaueri;;;5555691
+species;Chrysophyllum 'baeo';CHR2BA;CHRYOV;2885929
+species;Chrysophyllum 'lucent';CHR2LU;CHRYAM;2885635
+species;Chrysophyllum 'minor';CHR2MI;CHRYMI;2885576
+species;Chrysophyllum 'vero';CHR2V2;CHRYMA;2885648
+species;Chrysophyllum argenteum;CHR2AR;CHRYAR;2885742
+species;Chrysophyllum bombycinum;;;2885904
+species;Chrysophyllum colombianum;CHR2CO;CHRYCU;2885711
+species;Chrysophyllum lucentifolium;;;2885688
+species;Chrysophyllum pomiferum;;;2885722
+species;Chrysophyllum sanguinolentum;;;2885779
+species;Chrysophyllum venezuelanense;CHR2V1;CHRYVE;2885671
+species;Ciliosemina pedunculata;;;2898328
+species;Cinchona pubescens;;;2901294
+species;Cinchonopsis amazonica;;;2891954
+species;Cissampelos sp. A;CIS1_A;;3033936
+species;Cissus 'viformifolia';CIS2VI;;3039160
+species;Cissus microcarpa;CIS2MI;;11150913
+species;Cissus sp. A;CIS2_A;;3039160
+species;Cissus sp. J;CIS2_J;;4054813
+species;Citharexylum macrochlamys;;;4083818
+species;Citharexylum poeppigii;;;7297664
+species;Citharexylum reticulatum;;;4086429
+species;Citharexylum subflavescens;;;4085930
+species;Citharexylum svensonii;;;4085818
+species;Citronella incarum;;;3597099
+species;Citronella melliodora;;;3597033
+species;Clarisia biflora;CLARBI;;7262852
+species;Clarisia racemosa;CLARRA;;5572170
+species;Clavija 'granbril';CLAVGR;CLAVPR;3585576
+species;Clavija ornata;;;7313219
+species;Clavija weberbaueri;CLAVWE;;3585486
+species;Clidemia dimorphica;CLIDDI;;10773334
+species;Clidemia sp. A;CLID_A;;3188558
+species;Clitoria 'palida';CLITPA;;2946499
+species;Clitoria arborea;;;2946503
+species;Clusia 'amarilla';CLUSAM;;3189424
+species;Clusia amazonica;;;7329960
+species;Clusia decussata;;;5555505
+species;Clusia hammeliana;;;5556419
+species;Clusia lineata;;;5556331
+species;Clusia loranthacea;;;7330299
+species;Clusia loretensis;;;5556314
+species;Clusia mamillata;;;5556290
+species;Clusia mocoensis;;;5556243
+species;Clusia nigrolineata;;;7527517
+species;Clusia octandra;;;5556187
+species;Clusia pallida;;;5556151
+species;Clusia penduliflora;;;5556124
+species;Clusia radicans;;;5556045
+species;Clusia sp. A;CLUS_A;;3189424
+species;Clusia sp. D;CLUS_D;;3189424
+species;Clusia sp. DD;CLUS_DD;;3189424
+species;Clusia sp. F;CLUS_F;;5556500
+species;Clusia sp. HH;CLUS_HH;;3189424
+species;Clusia sp. I;CLUS_I;;3189424
+species;Clusia sp. JJ;CLUS_JJ;;3189424
+species;Clusia sp. LL;CLUS_LL;;3189424
+species;Clusia sp. N;CLUS_N;;3189424
+species;Clusia sp. P;CLUS_P;;3189424
+species;Clusia sp. RR;CLUS_RR;;3189424
+species;Clusia sp. X;CLUS_X;;3189424
+species;Clusia sp. Y;CLUS_Y;;3189424
+species;Clusia sp. ZZ;CLUS_ZZ;;3189424
+species;Clusia spp. (partes indet. a sp.);CLUS_PIN;;3189424
+species;Clusia viscida;;;5555837
+species;Coccoloba 'lancifuzz';COCCLA;;2888822
+species;Coccoloba 'ninfi';COCCNI;;2888822
+species;Coccoloba 'puntoblanco';COCCP1;COCCPB;2888822
+species;Coccoloba acuminata;;;7291417
+species;Coccoloba coronata;;;4033276
+species;Coccoloba densifrons;COCCDE;;4032930
+species;Coccoloba fallax;;;4032678
+species;Coccoloba latifolia;;;4038161
+species;Coccoloba lehmannii;;;4038099
+species;Coccoloba mollis;;;4037525
+species;Coccoloba obovata;;;4037016
+species;Coccoloba peruviana;;;4036490
+species;Coccoloba sp. B;COCC_B;;2888822
+species;Cochlospermum orinocense;;;4927630
+species;Colubrina amazonica;;;7977416
+species;Colubrina arborescens;;;5372463
+species;Colubrina glandulosa;;;5372466
+species;Colubrina spinosa;;;7273863
+species;Columnea tenensis;COLUTE;;5592006
+species;Combretum 'subsesil';COMBSU;;2986357
+species;Combretum sp. I;COMB_I;;2986357
+species;Combretum sp. J;COMB_J;;2986357
+species;Combretum sp. K;COMB_K;;2986357
+species;Compsoneura capitellata;COMPCA;;5564567
+species;Compsoneura lapidiflora;;;5564505
+species;Compsoneura sprucei;;;5564457
+species;Compsoneura ulei;;;8267213
+species;Compsoneura ulei;COMPUL;;5564439
+species;Conceveiba guianensis;;;3074956
+species;Conceveiba guianensis;CONCGU;CONCRH;3074954
+species;Conceveiba martiana;;;3074934
+species;Conceveiba terminalis;;;3074941
+species;Condaminea corymbosa;;;2908496
+species;Connarus 'amazonicum';CONNAM;;7971794
+species;Connarus 'comun';CONNCO;;3686580
+species;Connarus erianthus;;;3686370
+species;Connarus fasciculatus;;;7326642
+species;Connarus patrisii;;;3686917
+species;Connarus ruber;;;7326561
+species;Connarus sp. C;CONN_C;;3032531
+species;Convolvulaceae sp. A;CONV_A;;5549216
+species;Corchorus orinocensis;;;3152087
+species;Cordia 'aspera';CORDA1;CORDCO;5341261
+species;Cordia alliodora;;;7649215
+species;Cordia chamissoniana;CORDCH;;7294411
+species;Cordia eriostigma;;;5662350
+species;Cordia hebeclada;CORDHE;;5661992
+species;Cordia kingstoniana;;;5661797
+species;Cordia lomatoloba;;;5661672
+species;Cordia mexiana;;;5661522
+species;Cordia nodosa;CORDNO;;7295069
+species;Cordia sericicalyx;;;5660706
+species;Cordia sp. A;CORD_A;;2900865
+species;Cordia sp. B;COR_B;;2900865
+species;Cordia tetrandra;;;5660556
+species;Cordia trachyphylla;;;5660496
+species;Cordia ucayaliensis;;;5660461
+species;Cordiera macrophylla;;;5335622
+species;Cornutia odorata;;;3881426
+species;Cornutia pyramidata;;;2925663
+species;Cossarea 'crassa';COU5CR;RUDGBR;2910863
+species;Costus sp. B;COST_B;;2756771
+species;Costus sp. D;COST_D;;2756771
+species;Costus sp. E;COST_E;;2756771
+species;Couepia  obovata;COU1OB;COUEOB;2984827
+species;Couepia chrysocalyx;;;7968116
+species;Couepia guianensis;;;2984823
+species;Couepia macrophylla;;;7581304
+species;Couepia subcordata;;;8062405
+species;Couma guianensis;;;3614987
+species;Couma macrocarpa;;;3614969
+species;Couratari guianensis;COU3GU;COUTGU;3083111
+species;Couratari oligantha;;;3083145
+species;Couroupita guianensis;;;3082562
+species;Coussapoa 'billosa';COU4BI;;7316389
+species;Coussapoa asperifolia;COU4AS;COSSAS;7316403
+species;Coussapoa crassivenosa;;;4013140
+species;Coussapoa jatun-sachensis;;;4013473
+species;Coussapoa longepedunculata;;;4013395
+species;Coussapoa orthoneura;COU4OR;COSSOR;4013222
+species;Coussapoa ovalifolia;;;4013216
+species;Coussapoa parvifolia;;;4013182
+species;Coussapoa sp. B;COU4_B;;7316389
+species;Coussapoa sp. G;COU4_G;;7316389
+species;Coussapoa trinervia;;;4013550
+species;Coussapoa villosa;;;7316428
+species;Coussarea albescens;;;2904864
+species;Coussarea brevicaulis;;;2904822
+species;Coussarea dulcifolia;COU5DU;COUSDU;2904851
+species;Coussarea ecuadorensis;;;2904829
+species;Coussarea flava;;;2904927
+species;Coussarea klugii;;;2904863
+species;Coussarea latifolia;;;2904768
+species;Coussarea longiflora;;;2904887
+species;Coussarea macrocalyx;;;2904777
+species;Coussarea macrophylla;;;2904928
+species;Coussarea obliqua;;;2904772
+species;Coussarea paniculata;;;2898203
+species;Coussarea pilosiflora;;;2904786
+species;Coussarea pilosula;;;2904760
+species;Coussarea resinosa;;;2904824
+species;Coussarea spiciformis;;;2904773
+species;Coussarea tenuiflora;;;2904905
+species;Coutarea hexandra;;;2893703
+species;Cremastosperma 'brilla';CREMBR;CREMCA;3154030
+species;Cremastosperma bullatum;;;3154035
+species;Cremastosperma gracilipes;CREMGR;;3154032
+species;Cremastosperma longicuspe;;;3154062
+species;Cremastosperma monospermum;;;3154054
+species;Cremastosperma napoense;;;3154052
+species;Crepidospermum rhoifolium;CREPRH;;3992648
+species;Croton cuneatus;;;3057939
+species;Croton lechleri;;;3057776
+species;Croton matourensis;;;3058007
+species;Croton olivaceus;;;3058081
+species;Croton sampatik;;;3058287
+species;Croton tessmannii;;;3058161
+species;Crudia glaberrima;;;2974609
+species;Cryptocarya 'nori';CRYPNO;;8132198
+species;Cryptocarya aschersoniana;;;4178482
+species;Cuatresia riparia;;;7299700
+species;Cuatresia trianae;;;3800134
+species;Cucurbitaceae sp. C;CUC_C;;6634
+species;Cucurbitaceae sp. E;CUC_E;;2874613
+species;Cucurbitaceae sp. I;CUC_I;;6634
+species;Cucurbitaceae sp. K;CUC_K;;6634
+species;Cucurbitaceae sp. O;CUC_O;;6634
+species;Cucurbitaceae sp. R;CUC_R;;7317515
+species;Cucurbitaceae sp. S;CUC_S;;6634
+species;Cucurbitaceae sp. U;CUC_U;;2874613
+species;Cucurbitaceae sp. V;CUC_V;;6634
+species;Cupania cinerea;CUPACI;;3785984
+species;Cupania livida;CUPALI;;3785240
+species;Cupania macrostylis;;;7523047
+species;Cupania scrobiculata;;;7802452
+species;Cyathea andina;;;2650304
+species;Cyathea bradei;;;3600149
+species;Cyathea lasiosora;;;3598409
+species;Cyathea leucolepismata;;;3598153
+species;Cyathea multiflora;;;3599637
+species;Cyathea pilosissima;;;3598321
+species;Cyathea poeppigii;;;3598161
+species;Cyathea pungens;;;2650287
+species;Cybianthus anthuriophyllus;CYBIAN;;3718992
+species;Cybianthus cenepensis;;;3718748
+species;Cybianthus condorensis;;;9924760
+species;Cybianthus guyanensis;;;7331157
+species;Cybianthus kayapii;;;3722687
+species;Cybianthus occigranatensis;;;3722244
+species;Cybianthus peruvianus;;;3722165
+species;Cybianthus poeppigii;;;3722131
+species;Cybianthus schlimii;;;3721950
+species;Cybianthus simplex;;;3721908
+species;Cybianthus sprucei;;;3721830
+species;Cybianthus timanae;;;3721726
+species;Cymbopetalum aequale;;;3157869
+species;Cymbopetalum coriaceum;CYM1CO;CYMBCO;3157862
+species;Cymbopogon citratus;;;2705275
+species;Cyperus surinamensis;;;2715295
+species;Dacryodes 'gorda';DACRGO;;3190454
+species;Dacryodes acutipyrena;;;3992606
+species;Dacryodes belemensis;;;3992541
+species;Dacryodes chimantensis;;;3992494
+species;Dacryodes cupularis;;;3992416
+species;Dacryodes olivifera;;;3993867
+species;Dacryodes peruviana;DACRPE;;7286858
+species;Dacryodes ramosa;;;10811333
+species;Dacryodes sclerophylla;;;3993686
+species;Dacryodes uruts-kunchae;;;7897853
+species;Dahlstedtia hylobia;;;10691071
+species;Dalbergia frutescens;;;2968824
+species;Dalbergia monetaria;DALBMO;;8743558
+species;Dalbergia nigrescens;;;2968399
+species;Dalbergia riedelii;;;2968670
+species;Damburneya purpurea;;;9503920
+species;Daphnopsis equatorialis;;;3568065
+species;Daphnopsis zamorensis;;;3570087
+species;Davilla sp. A;DAVI_A;;7303996
+species;Deguelia utilis;;;3979782
+species;Dendrobangia boliviana;DEN1BO;DENBBO;3596663
+species;Dendropanax 'grande';DEN2GR;DENDCA;3035067
+species;Dendropanax 'quercetorum';DEN2QU;DENDQU;3034993
+species;Dendropanax arboreus;DEN2AR;DENDAR;3035093
+species;Dendropanax macropodus;;;3035201
+species;Dendropanax umbellatus;;;3035070
+species;Desmoncus orthacanthos;DESMOR;;2738830
+species;Dialium guianense;DIALGU;;2971008
+species;Dicella julianii;DICEJU;;5634579
+species;Dichapetalum sp. A;DICH_A;;7309866
+species;Dichapetalum sp. B;DICH_B;;7309866
+species;Dichorisandra hexandra;DIC1HE;;8326180
+species;Dichorisandra sp. A;DIC1_A;;2764389
+species;Diclinanona calycina;;;3158301
+species;Dicranostyles holostyla;DICRHO;;3680604
+species;Dicranostyles sp. C;DICR_C;;7324361
+species;Dicranostyles sp. I;DICR_I;;3680625
+species;Dicranostyles sp. J;DICR_J;;7324361
+species;Dictyoloma vandellianum;;;3831395
+species;Dieffenbachia sp. A;DIEF_A;;2869330
+species;Dilkea parviflora;DILKP1;DILKPA;3586537
+species;Dilkea sp. H;DILK_H;;7313332
+species;Dimerocostus sp. A;DIME_A;;2756979
+species;Dioclea sp. A;DIOC_A;;10954319
+species;Dioclea sp. C;DIOC_C;;2974376
+species;Dioclea sp. G;DIOC_G;;2974376
+species;Dioclea sp. H;DIOC_H;;2974376
+species;Dioscorea sp. A;DIO1_A;;2754367
+species;Dioscorea sp. B;DIO1_B;;2754367
+species;Diospyros 'simibrachy';DIO2SI;DIOSSU;4070210
+species;Diospyros artanthifolia;;;7848675
+species;Diospyros capreifolia;;;5832390
+species;Diospyros ekodul;;;4070018
+species;Diospyros poeppigiana;;;4070633
+species;Diospyros pseudoxylopia;DIO2PS;DIOSPS;4070387
+species;Diploon cuspidatum;;;2883950
+species;Diplotropis martiusii;;;5355620
+species;Diplotropis purpurea;;;5355625
+species;Diplotropis sp. B;DIPL_B;;2960676
+species;Dipteryx micrantha;;;2947131
+species;Disciphania sp. A;DISP_A;;7268753
+species;Disciphania sp. B;DISP_B;;7268753
+species;Disciphania sp. V;DISP_V;;3830628
+species;Discophora guianensis;DISCGU;;8066826
+species;Distictella sp. A;DIS1_A;;3172588
+species;Doliocarpus sp. A;DOLI_A;;3083497
+species;Dracontium longipes;DRACLO;;5330705
+species;Drymonia coccinea;DRYMCO;;5591185
+species;Drypetes amazonica;DRYPAM;;3075969
+species;Drypetes fanshawei;;;3075650
+species;Drypetes variabilis;DRYPVA;;3075850
+species;Duguetia 'cortaten';DUGUCO;;3157467
+species;Duguetia flagellaris;;;3157546
+species;Duguetia hadrantha;DUGUHA;;3157624
+species;Duguetia macrophylla;;;3157622
+species;Duguetia odorata;;;3157626
+species;Duguetia quitarensis;DUGUQU;;3157592
+species;Duguetia spixiana;DUGUSP;;3157492
+species;Duguetia surinamensis;;;3157522
+species;Dulacia candida;DULACA;;3685635
+species;Duroia duckei;;;2892122
+species;Duroia hirsuta;DUROHI;;2892105
+species;Duroia petiolaris;;;2892109
+species;Duroia triflora;;;2892126
+species;Dussia 'delgada';DUSSDE;;2968226
+species;Dussia 'pelosblancos';DUSSPE;;2968226
+species;Dussia sp. A-Dussia tessmannii;DUSS_A;DUSSTE;2968237
+species;Dystovomita paniculata;;;3711673
+species;Ecclinusa guianensis;;;2887376
+species;Ecclinusa lanceolata;;;2887358
+species;Ecclinusa ramiflora;;;2887362
+species;Ectopopterys soejartoi;ECTOSO;;3986363
+species;Elaeoluma glabrescens;ELA2GL;ELAEGL;2886343
+species;Endlicheria 'burbujas';ENDLBU;;7304104
+species;Endlicheria 'dori';ENDLDO;;7304104
+species;Endlicheria 'else';ENDLEL;ENDLFO;4176428
+species;Endlicheria 'falsadyso';ENDLFA;;7304104
+species;Endlicheria 'platagigante';ENDLPL;;7304104
+species;Endlicheria acuminata;;;4176881
+species;Endlicheria anomala;;;7969929
+species;Endlicheria bracteata;;;4176746
+species;Endlicheria canescens;;;4176663
+species;Endlicheria chalisea;;;4176647
+species;Endlicheria dysodantha;;;4176477
+species;Endlicheria gracilis;;;4176329
+species;Endlicheria klugii;;;4176133
+species;Endlicheria krukovii;;;4176111
+species;Endlicheria lhotzkyi;;;4176075
+species;Endlicheria lorastemon;;;4176027
+species;Endlicheria metallica;;;4175940
+species;Endlicheria paniculata;;;4175860
+species;Endlicheria pyriformis;;;7775672
+species;Endlicheria robusta;;;4175705
+species;Endlicheria rubriflora;;;4175667
+species;Endlicheria ruforamula;;;4175656
+species;Endlicheria sericea;;;4175646
+species;Endlicheria sprucei;;;4175627
+species;Endlicheria tessmannii;;;4175594
+species;Endlicheria tessmannii;ENDLTE;;4176500
+species;Endlicheria tschudyana;ENDLTS;;4183476
+species;Entada sp. A;ENTA_A;;2976278
+species;Enterolobioum barnebianum;ENTEBA;;2961143
+species;Epiphyllum sp. A;EPIP_A;;5384030
+species;Eriotheca globosa;ERIOGL;;4073732
+species;Eriotheca longitubulosa;;;4073697
+species;Eriotheca macrophylla;;;7296185
+species;Erisma uncinatum;ERISUN;;5650915
+species;Ertela trifolia;;;3832240
+species;Erythrina amazonica;;;5349510
+species;Erythrina peruviana;;;5349562
+species;Erythrina poeppigiana;;;5349755
+species;Erythrina ulei;;;5349570
+species;Erythrochiton trichanthus;;;5593238
+species;Erythroxylum 'ecuadorense';ERY2EC;ERYOMA;3693986
+species;Erythroxylum citrifolium;;;7284809
+species;Erythroxylum fimbriatum;;;3694373
+species;Erythroxylum gracilipes;;;7284849
+species;Erythroxylum macrophyllum;;;7870294
+species;Erythroxylum macrophyllum;ERY2MA;ERYOMA;7284812
+species;Erythroxylum mucronatum;;;7284878
+species;Erythroxylum squamatum;ERY2SQ;ERYOSQ;7284874
+species;Erythroxylum ulei;;;3694437
+species;Eschweilera 'cori';ESCHCO;;3083231
+species;Eschweilera 'giga';ESCHG1;ESCHGI;3083183
+species;Eschweilera 'kim';ESCHKI;ESCHGG;3083314
+species;Eschweilera 'purpura';ESCHP2;ESCHAN;3083184
+species;Eschweilera bracteosa;ESCHBR;;3083420
+species;Eschweilera chartaceifolia;;;3083413
+species;Eschweilera decolorans;;;3083328
+species;Eschweilera grandiflora;;;3083408
+species;Eschweilera itayensis;;;3083253
+species;Eschweilera juruensis;;;3083251
+species;Eschweilera laevicarpa;;;3083332
+species;Eschweilera ovalifolia;;;3083227
+species;Eschweilera parvifolia;;;3083262
+species;Eschweilera rufifolia;ESCHRU;;3083381
+species;Eschweilera tessmannii;;;3083383
+species;Esenbeckia amazonica;ESENAM;;5593203
+species;Esenbeckia pentaphylla;;;7268828
+species;Eugenia 'graneschweil';EUGEG2;EUGEGR;6306443
+species;Eugenia 'granplata';EUGEG3;EUGEYA;5416992
+species;Eugenia 'granvariable';EUGEG1;EUGEGV;3177662
+species;Eugenia 'margot';EUGEMG;EUGEMA;3177662
+species;Eugenia 'medioperp-verde';EUGEM3;EUGEMV;3177662
+species;Eugenia 'minicomun';EUGEM7;EUGEMI;6306444
+species;Eugenia 'panosadorada';EUGEPA;;3177662
+species;Eugenia 'ramamarilla';EUGERA;;3177662
+species;Eugenia 'smedbrosimoid';EUGES1;;3177662
+species;Eugenia 'smedcomun';EUGES7;ZZMYSC;3177662
+species;Eugenia anastomosans;;;5417902
+species;Eugenia biflora;;;5417812
+species;Eugenia cuspidifolia;;;5416264
+species;Eugenia dittocrepis;;;5417951
+species;Eugenia egensis;;;5416834
+species;Eugenia feijoi;EUGEFE;;5417684
+species;Eugenia florida;EUGEFL;;5417919
+species;Eugenia galalonensis;;;5416878
+species;Eugenia heterochroma;;;5417237
+species;Eugenia lambertiana;EUGELA;;5416727
+species;Eugenia macrocalyx;EUGEM4;EUGEMC;8275691
+species;Eugenia marowynensis;;;5417025
+species;Eugenia mimus;;;5417081
+species;Eugenia multirimosa;;;5417165
+species;Eugenia multirimosa;EUGEM9;EUGEMU;10607461
+species;Eugenia muricata;;;5417226
+species;Eugenia myrobalana;;;5416815
+species;Eugenia oerstediana;;;5418017
+species;Eugenia patens;;;5417216
+species;Eugenia patrisii;;;5417187
+species;Eugenia polystachya;;;5418042
+species;Eugenia schunkei;;;5416462
+species;Eugenia schunkei;EUGESC;;10330019
+species;Eugenia sericifolia;;;5938292
+species;Eugenia speciosa;;;5416629
+species;Eugenia stipitata;;;5417551
+species;Eugenia subterminalis;;;5416514
+species;Euterpe catinga;;;5293412
+species;Euterpe precatoria;EUTEPR;;5293425
+species;Evodianthus sp. A;EVO1_A;;2861089
+species;Fabaceae sp. CC;FAB_CC;;2968358
+species;Faramea 'crasa';FARACR;FARATO;2898072
+species;Faramea anisocalyx;;;2898050
+species;Faramea axillaris;;;2897937
+species;Faramea capillipes;FARACA;;2898189
+species;Faramea exemplaris;;;2897893
+species;Faramea glandulosa;;;2898063
+species;Faramea multiflora;;;8295089
+species;Faramea parvibractea;;;3848244
+species;Faramea quinqueflora;FARAQU;;2898037
+species;Faramea spathacea;;;2898105
+species;Faramea tamberlikiana;;;2898191
+species;Faramea verticillata;;;2897896
+species;Ferdinandusa chlorantha;;;2907990
+species;Ferdinandusa elliptica;;;2908030
+species;Ferdinandusa guainiae;;;2908017
+species;Fevillea cordifolia;FEVICO;;2874555
+species;Ficus 'perecose'-Ficus pertusa;FICUP2;;7944396
+species;Ficus 'subapiculata';FICUSU;;5572316
+species;Ficus acreana;;;5569593
+species;Ficus albert-smithii;;;5572480
+species;Ficus americana;;;5361926
+species;Ficus brevibracteata;;;5571209
+species;Ficus brevibracteata;FICUBR;;5572614
+species;Ficus broadwayi;;;5361918
+species;Ficus caballina;;;5571084
+species;Ficus casapiensis;;;5570874
+species;Ficus castellviana;;;5570828
+species;Ficus ceronii;;;8381457
+species;Ficus citrifolia;;;5361938
+species;Ficus coerulescens;;;5570348
+species;Ficus crocata;;;5569828
+species;Ficus donnell-smithii;;;5572269
+species;Ficus ecuadorensis;;;5572086
+species;Ficus gomelleira;FICUGO;;5571029
+species;Ficus guianensis;;;7821690
+species;Ficus insipida;;;6358534
+species;Ficus jacobii;;;7262391
+species;Ficus macbridei;;;5571803
+species;Ficus mathewsii;;;5571405
+species;Ficus membranacea;;;5571303
+species;Ficus nymphaeifolia;FICUNY;;5570630
+species;Ficus obtusifolia;FICUOB;;5361910
+species;Ficus ocoana;;;5570509
+species;Ficus padifolia;;;5570153
+species;Ficus paraensis;FICUPA;;5569960
+species;Ficus puchella;;;5571905
+species;Ficus schippii;FICUSC;FICUBA;5570840
+species;Ficus sp. BB;FICU_BB;;2984588
+species;Ficus sp. CC;FICU_CC;;2984588
+species;Ficus sp. DD;FICU_DD;;5571772
+species;Ficus sp. EE;FICU_EE;;2984588
+species;Ficus sp. GG-Ficus piresiana;FICU_GG;FICUPI;5569865
+species;Ficus sp. KK;FICU_KK;;2984588
+species;Ficus sp. S1 (semillas);FICU_S1;;2984588
+species;Ficus sp. S2 (semillas);FICU_S2;;2984588
+species;Ficus sp. S4 (semillas);FICU_S4;;2984588
+species;Ficus sp. S5 (semillas);FICU_S5;;2984588
+species;Ficus sp.D;FICU_D;;2984588
+species;Ficus sp.G;FICU_G;;2984588
+species;Ficus sp.H;FICU_H;;2984588
+species;Ficus sp.K;FICU_K;;2984588
+species;Ficus sp.S;FICU_S;;2984588
+species;Ficus sphenophylla;;;5570374
+species;Ficus spp. (partes indet. a sp.);FICU_PIN;;2984588
+species;Ficus tonduzii;;;5572425
+species;Ficus trigona;FICUT1;FICUTR;7930239
+species;Ficus trigonata;;;5361896
+species;Ficus ursina;;;5571847
+species;Ficus yoponensis;;;5571280
+species;Fosteronia acouci;FOSTAC;;3618404
+species;Fosteronia affinis;FOSTAF;;3618369
+species;Froesia diffusa;;;3986477
+species;Fusaea longifolia;;;3158137
+species;Fusaea peruviana;;;3158136
+species;Fusispermum laxiflorum;;;4075338
+species;Galipea maxima;;;3834532
+species;Garcinia brasiliensis;GAR2BR;GARCBR;7329866
+species;Garcinia intermedia;;;3714243
+species;Garcinia macrophylla;GAR2M1;GARCMC;7727026
+species;Garcinia madruno;GAR2M2;GARCMA;3713863
+species;Gaulettia parillo;;;8975055
+species;Geissanthus ambigua;;;7362167
+species;Genipa americana;GENIAM;;2895593
+species;Genipa spruceana;;;2895592
+species;Geonoma 'comun';GEONCO;;2734141
+species;Geonoma brongniartii;GEONBR;;2734168
+species;Geonoma interrupta;;;2734323
+species;Geonoma maxima;GEONMA;;2734176
+species;Geonoma sp. A;GEON_A;;2734267
+species;Geonoma stricta;GEONST;;7394764
+species;Geonoma triglochin;GEONTR;;2734265
+species;Gesneriaceae sp. A;GESN_A;;5590850
+species;Gesneriaceae sp. B;GSN_B;;6654
+species;Gesneriaceae sp. G;GES_G;;6654
+species;Gesneriaceae sp. H;GESN_H;;6654
+species;Gesneriaceae sp. I;GESN_I;;6654
+species;Gloeospermum crassicarpum;;;8052841
+species;Gloeospermum equatoriense;GLOEEQ;;4075162
+species;Gloeospermum longifolium;GLOELO;;4075066
+species;Gloeospermum sclerophyllum;;;4074973
+species;Gloeospermum sphaerocarpum;;;7296361
+species;Glycydendron amazonicum;;;3061260
+species;Gmelina arborea;;;8247889
+species;Gnetum sp. A;GNET_A;;2653091
+species;Gonzalagunia affinis;;;2896533
+species;Gonzalagunia bunchosioides;;;2896507
+species;Gonzalagunia cornifolia;;;2896475
+species;Gordonia fruticosa;;;5528227
+species;Gouania colombiana;GOUACO;;5603088
+species;Gouania lupuloides;GOUALU;;3039434
+species;Graffenrieda galeottii;;;5600054
+species;Graffenrieda gracilis;;;5600046
+species;Graffenrieda intermedia;;;5600029
+species;Grias neuberthii;GRIANE;;3082343
+species;Grias peruviana;;;3082328
+species;Guadua angustifolia;;;4155017
+species;Guadua superba;;;4128212
+species;Guadua weberbaueri;;;4127578
+species;Guapira 'clasica';GUAPCL;;3086054
+species;Guapira 'granclasica';GUAPGR;;3086054
+species;Guarea 'fuzzydelgada';GUARFU;GUARCA;3849565
+species;Guarea 'gigakunth';GUARG1;GUARGI;3190499
+species;Guarea 'macrophylla#1';GUARM1;GUARMA;3851437
+species;Guarea 'macrophylla#2';GUARM2;GUARMA;7271393
+species;Guarea 'macrophylla#3';GUARM3;GUARMA;7271393
+species;Guarea carapoides;;;3849579
+species;Guarea cinnamomea;;;3852792
+species;Guarea cristata;;;3852641
+species;Guarea ecuadoriensis;GUAREC;;3852441
+species;Guarea fistulosa;GUARFI;;3852308
+species;Guarea glabra;;;3190505
+species;Guarea gomma;GUARG3;GUARGO;3852128
+species;Guarea grandifolia;GUARG4;GUARGR;3190500
+species;Guarea guentheri;GUARG5;GUARGU;3852025
+species;Guarea kunthiana;GUARKU;;3851727
+species;Guarea pterorhachis;GUARPT;;3850629
+species;Guarea pubescens;GUARP1;GUARPB;7846271
+species;Guarea purusana;GUARP2;GUARPU;3850489
+species;Guarea silvatica;GUARSI;;3850192
+species;Guatteria 'cachorro';GUATCA;GUATCI;3155931
+species;Guatteria 'grande';GUATG1;GUATGR;3155688
+species;Guatteria 'gransmoothie';GUATG2;GUATGS;5541644
+species;Guatteria 'pulvinada';GUATP1;GUATPU;3155628
+species;Guatteria 'punctomarron';GUATP2;GUATPC;3155604
+species;Guatteria 'rolin';GUATRO;GUATRE;3155658
+species;Guatteria 'tipica';GUATT2;GUATGL;3155844
+species;Guatteria blepharophylla;;;3154197
+species;Guatteria chrysophylla;;;3155736
+species;Guatteria citriodora;;;3155788
+species;Guatteria decurrens;;;3155665
+species;Guatteria duodecima;;;3648380
+species;Guatteria liesneri;;;3158188
+species;Guatteria longicuspis;;;3155660
+species;Guatteria megalophylla;;;3155955
+species;Guatteria multivenia;GUATMU;;3155818
+species;Guatteria olivacea;;;3155760
+species;Guatteria pastazae;;;3155697
+species;Guatteria ramiflora;;;3648893
+species;Guatteria schomburgkiana;;;3155905
+species;Guatteria sp. E;GUAT_E;;3155604
+species;Guatteria sp. J;GUAT_J;;3155604
+species;Guatteria sp. R;GUAT_R;;3155604
+species;Guatteria tomentosa;;;3155933
+species;Guazuma ulmifolia;;;3152195
+species;Gurania acuminata;GURAAC;;3624188
+species;Gurania sp. S;GURA1_S;;7317515
+species;Gustavia hexapetala;GUSTHE;;5383835
+species;Gustavia hubbardiorum;;;9037320
+species;Gustavia longifolia;GUSTLO;;5383753
+species;Gustavia macarenensis;;;5383764
+species;Gustavia terminaliflora;;;5383852
+species;Gyranthera amphibiolepis;;;8249191
+species;Hamelia axillaris;;;2902047
+species;Handroanthus chrysanthus;;;6401337
+species;Handroanthus serratifolius;;;4092017
+species;Hasseltia floribunda;HASSFL;;7760145
+species;Haydenoxylon urbanianum;;;7743395
+species;Heisteria 'grande';HEISGR;;3232590
+species;Heisteria acuminata;HEISAC;;7222047
+species;Heisteria latifolia;;;8323858
+species;Heisteria nitida;HEISNI;;7737421
+species;Heisteria scandens;HEISSC;;7369183
+species;Heisteria spruceana;;;7944805
+species;Heliconia sp. B;HELI_B;;2760545
+species;Heliconia sp. C;HELI_C;;2760545
+species;Heliconia sp. D;HELI_D;;2760545
+species;Heliconia sp. E;HELI_E;;2760545
+species;Heliconia stricta;HELIST;;2760548
+species;Helicostylis elegans;;;3764964
+species;Helicostylis heterotricha;;;3764948
+species;Helicostylis scabra;;;3764842
+species;Helicostylis tomentosa;HEL1TO;HELITO;3764831
+species;Helicostylis turbinata;;;3764804
+species;Heliocarpus americanus;;;4259460
+species;Heliotropium glabrum;;;10928821
+species;Henriettea lasiostylis;;;3860882
+species;Henriettea stellaris;;;3860536
+species;Herrania 'asperoide';HERRAS;HERRNI;7322898
+species;Herrania balaensis;;;3668417
+species;Herrania cuatrecasana;HERRCU;;8611392
+species;Herrania mariae;;;7322902
+species;Herrania nycterodendron;;;3668149
+species;Heteropsis sp. A;HETE2_A;;5330225
+species;Heteropsis sp. B;HETE2_B;;2867803
+species;Heteropterys aureosericea;HET1AU;;7655793
+species;Hevea brasiliensis;;;3071171
+species;Hevea guianensis;HEVEGU;;3071199
+species;Hieronyma oblonga;;;3079119
+species;Hillia illustris;;;5339997
+species;Himatanthus bracteatus;;;7317391
+species;Himatanthus sucuuba;HIMASU;;3621740
+species;Hippocratea volubilis;HIPPVO;;3169012
+species;Hippotis albiflora;;;2901978
+species;Hippotis ecuatoriana;;;10750240
+species;Hippotis mollis;;;2901969
+species;Hiraea sp. F;HIRA_F;;3191288
+species;Hirtella aequatoriensis;;;2985222
+species;Hirtella americana;;;2985148
+species;Hirtella bicornis;;;2985124
+species;Hirtella elongata;;;2985171
+species;Hirtella excelsa;HIRTEX;;7701308
+species;Hirtella gracilipes;;;2985186
+species;Hirtella macrophylla;;;7827492
+species;Hirtella pilosissima;;;2985224
+species;Hirtella racemosa;;;2985122
+species;Hirtella triandra;;;2985089
+species;Homalium racemosum;;;5331157
+species;Huberodendron swietenioides;;;4073137
+species;Huertea glandulosa;HUERGL;;3686262
+species;Hura crepitans;;;5380015
+species;Hydrangea sp. U5676;U5676;;3645317
+species;Hydrochorea corymbosa;;;2977475
+species;Hyeronima alchorneoides;HYERAL;HIERAL;3079092
+species;Hylenaea comosa;HYLECO;ZZHISE;3792999
+species;Hymenaea oblongifolia;HYM1OB;HYMAOB;2950738
+species;Hymenolobium 'stipsericea';HYM2ST;HYMEST;7783451
+species;Hymenolobium heterocarpum;;;2951895
+species;Hymenopus arachnoideus;;;10863253
+species;Hymenopus heteromorphus;;;10451142
+species;Hymenopus intrapetiolaris;;;10477239
+species;Hymenopus krukovii;;;10677998
+species;Hymenopus reticulatus;;;9931046
+species;Hyospathe elegans;HYOSEL;;2736706
+species;Ilex guayusa;;;5534620
+species;Ilex inundata;;;5534043
+species;Ilex laureola;;;7315694
+species;Ilex magnifructa;;;7315851
+species;Inga '3crasa';INGA3C;;2965936
+species;Inga '3oscura'-Inga laurina;INGA3O;;5358039
+species;Inga '4alitarco';INGA4A;;2965936
+species;Inga '6cuadra';INGA6C;;11373193
+species;Inga 'stelaeglabra';INGAS5;INGASB;2965936
+species;Inga acreana;INGAAC;;5357584
+species;Inga acrocephala;;;5357674
+species;Inga acuminata;;;5357542
+species;Inga alata;INGAAA;INGAAL;5357817
+species;Inga alba;;;5358137
+species;Inga auristellae;INGAAU;;5357701
+species;Inga bourgonii;INGABO;;5580442
+species;Inga brachyrhachis;INGABR;;5357846
+species;Inga capitata;INGAC1;INGACA;5358094
+species;Inga cayennensis;INGAC2;INGACY;5357789
+species;Inga chartacea;;;5357658
+species;Inga ciliata;;;5357813
+species;Inga ciliata;INGAC4;INGACI;5357889
+species;Inga cinnamomea;INGAC5;INGACN;5358132
+species;Inga cordatoalata;INGAC6;INGACO;5357823
+species;Inga coruscans;;;5357627
+species;Inga cylindrica;;;5357876
+species;Inga densiflora;;;5357837
+species;Inga edulis;;;5357677
+species;Inga glomeriflora;;;5357873
+species;Inga gracilior;;;5357555
+species;Inga heterophylla;INGAHE;;5357852
+species;Inga ilta;;;5358131
+species;Inga leiocalycina;INGALE;;5629065
+species;Inga macrophylla;;;5357784
+species;Inga marginata;INGAMA;;7546887
+species;Inga microcoma;;;5357932
+species;Inga multijuga;;;5357635
+species;Inga multinervis;INGAMU;;5358136
+species;Inga nobilis;;;5357519
+species;Inga oerstediana;INGAOE;;5358014
+species;Inga paraensis;;;5357798
+species;Inga pezizifera;;;5357576
+species;Inga pilosula;;;5358111
+species;Inga poeppigiana;INGAPO;;5357812
+species;Inga pruriens;;;5357609
+species;Inga psittacorum;;;5358090
+species;Inga punctata;INGAPU;;5357665
+species;Inga ruiziana;INGAR1;INGARU;5357975
+species;Inga rusbyi;;;5357939
+species;Inga sapindoides;;;5357706
+species;Inga sarayacuensis;INGAS2;INGASR;5357630
+species;Inga sertulifera;;;5357619
+species;Inga spectabilis;INGAS4;INGASB;5357491
+species;Inga splendens;;;5358104
+species;Inga spp. (semillas indet. a sp.);INGA_SIN;;2965936
+species;Inga stenoptera;;;5357558
+species;Inga stipulacea;;;5358071
+species;Inga striata;INGAS7;INGAST;5358084
+species;Inga striolata;;;5357920
+species;Inga suaveolens;;;5357951
+species;Inga tenuistipula;INGATE;;5357513
+species;Inga tessmannii;;;5358126
+species;Inga thibaudiana;;;5357991
+species;Inga thibaudiana;INGATH;;7225525
+species;Inga tocacheana;INGATO;;5357540
+species;Inga umbellifera;INGAU1;INGAUE;5358027
+species;Inga umbratica;INGAU2;INGAUM;5358034
+species;Inga velutina;;;5357985
+species;Inga venusta;;;5357881
+species;Inga vera;;;5357680
+species;Inga vismiifolia;INGAVI;;5357608
+species;Inga yacoana;INGAYA;;5358012
+species;Inga yasuniana;;;5357777
+species;Iochroma gesnerioides;;;7300028
+species;Ipomoea phyllomega;IPOMPH;;7926928
+species;Iriartea deltoidea;IRIADE;;2739059
+species;Iryanthera 'alta';IRYAAL;IRYAGR;3743999
+species;Iryanthera crassifolia;;;3744069
+species;Iryanthera juruensis;IRYAJU;;3743957
+species;Iryanthera laevis;;;3743937
+species;Iryanthera lancifolia;;;3743924
+species;Iryanthera macrophylla;;;3743885
+species;Iryanthera paraensis;IRYAPA;IRYAHO;3743981
+species;Iryanthera tessmannii;;;3743197
+species;Isertia laevis;;;2903546
+species;Isertia pittieri;;;2903519
+species;Isertia rosea;;;2903522
+species;Ixora acuminatissima;IXORAC;;2905481
+species;Ixora froelichiana;;;10808513
+species;Ixora killipii;IXORKI;;2905346
+species;Ixora moskovitsiana;;;10840154
+species;Ixora panurensis;IXORPA;;2906015
+species;Ixora peruviana;;;2905468
+species;Ixora rudasiana;;;10757302
+species;Ixora rudgeoides;;;10758117
+species;Ixora sparsifolia;;;2905760
+species;Ixora yavitensis;;;2905864
+species;Jacaranda copaia;JAC1CO;JACACO;7298763
+species;Jacaranda glabra;JAC1GL;JACAGL;4094115
+species;Jacaratia digitata;JAC2DI;JACTDI;3838792
+species;Jacaratia spinosa;;;7269688
+species;Joosia longisepala;;;2901110
+species;Jubelina uleana;JUBEUL;;3982973
+species;Jupunba adenophora;;;11667647
+species;Jupunba ferruginea;;;11509664
+species;Jupunba microcalyx;;;11452662
+species;Jupunba trapezifolia;;;2977861
+species;Klarobelia lucida;;;3157875
+species;Klarobelia megalocarpa;;;3157873
+species;Klarobelia napoensis;;;3157886
+species;Kotchubaea semisericea;KOTCSE;;2893791
+species;Kutchubaea montana;;;2893777
+species;Kutchubaea oocarpa;;;3845414
+species;Kutchubaea sericantha;;;2893782
+species;Lacistema 'med';LACIME;;3075381
+species;Lacistema aggregatum;;;3075397
+species;Lacistema macbridei;;;3075428
+species;Lacmellea  'ramalada';LACMRA;LACMOB;3617848
+species;Lacmellea floribunda;;;3618032
+species;Lacmellea lactescens;LACMLA;;3618040
+species;Lacmellea macrantha;;;3617882
+species;Lacmellea speciosa;;;3617727
+species;Lacunaria crenata;;;7919991
+species;Ladenbergia amazonensis;;;2908718
+species;Ladenbergia heterophylla;;;2908728
+species;Ladenbergia muzonensis;;;2908664
+species;Ladenbergia oblongifolia;;;2908758
+species;Lafoensia acuminata;;;3989776
+species;Lafoensia punicifolia;;;3989500
+species;Lafoensia sp. A;LAFO_A;;7286250
+species;Lauraceae sp. (1212);U1212;;5685367
+species;Lauraceae sp. AJ;LAU_AJ;;3034076
+species;Lauraceae sp. H;LAU_H;;6688
+species;Laxoplumeria tessmannii;;;3615153
+species;Lecointea peruviana;;;2965105
+species;Lecythis zabucajo;;;3082500
+species;Leonia crassa;LEONCR;;5664263
+species;Leonia cymosa;;;5664258
+species;Leonia glycycarpa;LEONGL;;7296446
+species;Leonia occidentalis;LEONOC;;7565511
+species;Leptobalanus apetalus;;;10289996
+species;Leptobalanus granvillei;;;9998215
+species;Leptobalanus latus;;;10383454
+species;Leptobalanus longistylus;;;10299697
+species;Leptobalanus octandrus;;;10148673
+species;Leretia 'reticbril';LERERE;;3597442
+species;Licania 'glablanca';LIC1G2;LICAUR;2985481
+species;Licania 'hipofuzzy';LIC1H2;LICAHI;2985250
+species;Licania 'intermedia';LIC1IN;LICACA;9988535
+species;Licania 'nervifina';LIC1NE;LICANE;2985250
+species;Licania 'opaca';LIC1OP;LICAOP;2985250
+species;Licania 'zigzag';LIC1ZI;LICAZI;2985250
+species;Licania arborea;LIC1AR;LICAAR;10248926
+species;Licania blackii;;;2985542
+species;Licania canescens;;;2985371
+species;Licania condoriensis;;;9116846
+species;Licania cuyabenensis;;;2985506
+species;Licania elliptica;;;2985396
+species;Licania harlingii;LIC1H1;LICAHA;2985470
+species;Licania hypoleuca;;;2985272
+species;Licania kunthiana;;;2985361
+species;Licania longipedicellata;LIC1LO;LICALG;10226841
+species;Licania micrantha;;;2985424
+species;Licania pallida;;;7439292
+species;Licania velutina;;;2985561
+species;Licaria armeniaca;;;4183187
+species;Licaria aurea;;;4183168
+species;Licaria cannella;LIC2CA;LICRCA;7304725
+species;Licaria exserta;;;4182552
+species;Licaria guianensis;;;4182465
+species;Licaria triandra;;;3033970
+species;Lindackeria paludosa;LINDPA;;3879608
+species;Lippia alba;;;2925385
+species;Lonchocarpus 'guil';LONCGU;LONCSE;3907967
+species;Lonchocarpus heptaphyllus;;;2969089
+species;Lonchocarpus spiciflorus;;;2969127
+species;Loranthaceae sp. A;LOR_A;;2889864
+species;Loranthaceae sp. AA;LOR_AA;;7772421
+species;Loranthaceae sp. AE;LOR_AE;;4000517
+species;Loranthaceae sp. G;LOR_G;;6663
+species;Loranthaceae sp. N;LOR_N;;7288086
+species;Loranthaceae sp. Z;LOR_Z;;3232632
+species;Lozania 'mediana';LOZAME;LACINE;3075394
+species;Lozania klugii;LOZAKL;;3075435
+species;Lozania mutisiana;;;3075444
+species;Luehea cymulosa;;;5706143
+species;Lueheopsis hoehnei;;;4260551
+species;Lunania parviflora;LUNAPA;;3879038
+species;Lycianthes sprucei;;;3798852
+species;Mabea 'comun';MABECO;;3071743
+species;Mabea 'superbrondu';MABESU;;3071743
+species;Mabea arenicola;;;3071846
+species;Mabea elata;;;3071779
+species;Mabea klugii;;;3071778
+species;Mabea macbridei;;;3071847
+species;Mabea nitida;;;3071812
+species;Mabea occidentalis;;;3071832
+species;Mabea piriri;;;3071818
+species;Mabea speciosa;;;3071803
+species;Mabea standleyi;;;3071850
+species;Mabea subsessilis;;;3071764
+species;Macbrideina peruviana;;;2904938
+species;Macfadyena sp. A;MACF_A;;6401165
+species;Machaerium 'finiparalel';MACHFI;;2959589
+species;Machaerium aristulatum;MACHAR;;5355151
+species;Machaerium cuspidatum;MACHCU;;5355114
+species;Machaerium floribundum;MACHFL;;5354927
+species;Machaerium isadelphum;;;7932857
+species;Machaerium kegelii;MACHKE;;5355165
+species;Machaerium leiophyllum;;;5354986
+species;Machaerium mutisii;;;5354946
+species;Machaerium sp. G;MACH_G;;2959589
+species;Maclura tinctoria;;;2984583
+species;Macrocnemum roseum;MAC2RO;MACNRO;2895641
+species;Macrolobium 'yasuni';MAC1YA;MACRYA;7743878
+species;Macrolobium acaciifolium;;;2948882
+species;Macrolobium angustifolium;MAC1AN;MACRAN;2948867
+species;Macrolobium archeri;;;2948900
+species;Macrolobium colombianum;;;7933627
+species;Macrolobium gracile;;;2948817
+species;Macrolobium ischnocalyx;;;2948830
+species;Macrolobium limbatum;;;2948901
+species;Macrolobium microcalyx;;;2948803
+species;Macrolobium multijugum;;;2948758
+species;Macrolobium stenocladum;;;2948810
+species;Macrolobium suaveolens;;;2948857
+species;Magnolia equatorialis;;;9058332
+species;Magnolia neillii;;;3153490
+species;Magnolia rimachii;;;3153132
+species;Malanea 'ciliata';MALACI;;2906381
+species;Malouetia flavescens;;;3620090
+species;Malouetia virescens;;;3619535
+species;Mandevilla sp. A;MAN_A;;3169658
+species;Mandevilla sp. B;MAN_B;;3169658
+species;Manihot brachyloba;MANIBR;;3061115
+species;Manilkara bidentata;;;2885366
+species;Manilkara inundata;;;2885025
+species;Mansoa parvifolia;MANSPA;;4094378
+species;Maprounea guianensis;;;3054658
+species;Maquira calophylla;MAQUCA;;3763735
+species;Maquira guianensis;MAQUGU;;3763686
+species;Maranta amazonica;;;2761398
+species;Marcgravia sp. A;MARC_A;;3189414
+species;Marcgravia sp. F;MARC_F;;3189414
+species;Marcgravia sp. M;MARC_M;;6643
+species;Marcgraviaceae sp. H;MARC_H;;6643
+species;Margaritaria nobilis;MARGNO;;5383279
+species;Marila 'comun';MAR1CO;MARICO;3189554
+species;Marila alternifolia;;;8362864
+species;Marila cespedesiana;;;8114121
+species;Marila grandiflora;;;5421079
+species;Marila laxiflora;;;7656893
+species;Marila plumbaginea;;;8307325
+species;Marila podantha;;;7963111
+species;Marila spiciformis;;;10305078
+species;Marila tomentosa;;;8161335
+species;Maripa sp. B;MAR2_B;;3234444
+species;Markea sp. A;MARK_A;;7299864
+species;Marmaroxylon basijugum;MARMBA;;5580511
+species;Mascagnia sp. A;MASC_A;;7284941
+species;Mascagnia sp. B;MASC_B;;7284941
+species;Mascagnia sp. D;MASC_D;;7285093
+species;Matayba 'ocho';MATA8;MATAOC;3190011
+species;Matayba adenanthera;;;3784506
+species;Matayba elegans;;;3784371
+species;Matayba inelegans;;;3784315
+species;Matisia arteagensis;;;4073049
+species;Matisia bracteolosa;MATIBR;;4073984
+species;Matisia cordata;MATICO;;4073924
+species;Matisia idroboi;;;4073793
+species;Matisia inaequilatera;;;4073775
+species;Matisia lasiocalyx;;;4073753
+species;Matisia lomensis;;;4073723
+species;Matisia longiflora;;;4073716
+species;Matisia longiflora;MATILO;;4073800
+species;Matisia malacocalyx;MATIMA;;4073678
+species;Matisia obliquifolia;MATIO1;MATIOQ;4073657
+species;Matisia oblongifolia;MATIO2;MATIOB;4073648
+species;Matisia ochrocalyx;;;4073635
+species;Matisia uberrima;;;4073487
+species;Mauria heterophylla;;;5544309
+species;Mauritia flexuosa;MAURFL;;5294777
+species;Mauritiella armata;;;5293366
+species;Mayna 'anelio';MAYNAN;;10864684
+species;Mayna grandifolia;;;3878802
+species;Mayna odorata;MAYNOD;;3878638
+species;Maytenus 'cilindrica';MAYTCI;;3169095
+species;Maytenus 'cuadliso';MAYTCU;;3169095
+species;Melia azedarach;;;5914287
+species;Melicoccus oliviformis;;;7265169
+species;Melinis minutiflora;;;2702503
+species;Meliosma 'doly';MELIDO;;3033959
+species;Meliosma boliviensis;;;3838438
+species;Meliosma glabrata;;;3838526
+species;Meliosma herbertii;;;3033961
+species;Meliosma loretoyacuensis;;;3838406
+species;Meliosma palaciosii;;;3838404
+species;Meliosma vasquezii;MELIVA;;3838328
+species;Memora cladotricha;MEMOCL;;7452137
+species;Mendoncia 'rug';MENDRU;;3772033
+species;Mendoncia sp. C;MEND_C;;8924185
+species;Mendoncia sp. D;MEND_D;;7263432
+species;Mendoncia sp. G;MEND_G;;7263432
+species;Mendoncia sp. H;MEND_H;;7263432
+species;Mendoncia sp. M;MEND_M;;7263432
+species;Mendoncia sp. O;MEND_O;;7263432
+species;Mendoncia sp. S;MEND_S;;7263432
+species;Mendonica sp. N;MEND_N;;7263432
+species;Mendonicia glomerata;MENDGL;;8929320
+species;Menispermaceae sp. T;MEN_T;;2411
+species;Menispermaceae sp. U;MEN_U;;2411
+species;Menispermaceae sp. W;MEN_W;;3829928
+species;Mespilodaphne cymbarum;;;10913611
+species;Mespilodaphne quixos;;;11020082
+species;Metalepis albiflora;METAAL;;3574537
+species;Metteniusa edulis;;;3597478
+species;Metteniusa tessmanniana;;;7314445
+species;Mezilaurus campaucola;;;4182358
+species;Mezilaurus ita-uba;;;4182249
+species;Mezilaurus opaca;;;9833843
+species;Mezilaurus triunca;;;4181903
+species;Miconia 'elatita';MICOE2;MICOET;3188558
+species;Miconia 'grancordata';MICOG1;MICOGC;3188558
+species;Miconia 'henrietella';MICOHE;HENRAS;3188527
+species;Miconia 'nerviblanco';MICON2;MICONE;3188558
+species;Miconia 'peqdorada';MICOP1;MICOPE;3188558
+species;Miconia 'purpono';MICOP6;MICOPU;3188558
+species;Miconia 'tipica';MICOT2;MICOTI;3188558
+species;Miconia affinis;;;3188559
+species;Miconia amazonica;;;3860547
+species;Miconia ampla;;;3860460
+species;Miconia appendiculata;;;3860036
+species;Miconia astroplocama;;;8379034
+species;Miconia aulocalyx;;;3859544
+species;Miconia baillonii;;;3859310
+species;Miconia biglandulosa;;;3858854
+species;Miconia brachybotrya;;;3858486
+species;Miconia brevitheca;;;3858219
+species;Miconia bubalina;MICOBU;;8776463
+species;Miconia calvescens;;;3188585
+species;Miconia candelabrum;;;10768751
+species;Miconia cannabina;;;3857596
+species;Miconia carassana;;;3871147
+species;Miconia centrodesma;;;3870706
+species;Miconia cercophora;;;3870454
+species;Miconia chrysophylla;;;3870061
+species;Miconia conocentronioides;;;10743804
+species;Miconia decurrens;MICOD2;MICODE;3868105
+species;Miconia dodecandra;;;3867434
+species;Miconia egensis;;;3867110
+species;Miconia elata;MICOE1;MICOEL;3866980
+species;Miconia fosteri;MICOFO;;3865941
+species;Miconia glaucescens;;;3865400
+species;Miconia grandifolia;MICOG2;MICOGR;8345499
+species;Miconia heterochaeta;;;3864543
+species;Miconia hylophila;;;3864040
+species;Miconia insularis;;;3863544
+species;Miconia lamprophylla;MICOLA;;3862893
+species;Miconia lateriflora;;;3862739
+species;Miconia laxivenula;;;8265629
+species;Miconia longifolia;;;3862134
+species;Miconia lugonis;;;3861930
+species;Miconia matthaei;;;3861216
+species;Miconia mazanana;;;3861142
+species;Miconia minutiflora;;;10932080
+species;Miconia multispicata;MICOMU;;3860116
+species;Miconia napoana;MICON1;MICONA;3859967
+species;Miconia nervosa;MICON3;MICONV;3859839
+species;Miconia ortiziae;;;12223690
+species;Miconia pastazana;;;3858629
+species;Miconia phaeochaeta;;;3857970
+species;Miconia pilgeriana;MICOP7;MICOPI;3867377
+species;Miconia poeppigii;MICOP2;MICOPO;3871048
+species;Miconia prasina;;;3188562
+species;Miconia pterocaulon;MICOP4;MICOPT;3870290
+species;Miconia punctata;;;7661791
+species;Miconia quadripora;;;3869562
+species;Miconia rivalis;;;3868679
+species;Miconia schunkei;MICOSC;;3867489
+species;Miconia sciurea;;;3867424
+species;Miconia serrulata;;;3188588
+species;Miconia splendens;;;3188561
+species;Miconia subspicata;;;3865478
+species;Miconia ternatifolia;;;3864992
+species;Miconia tococapitata;;;10850887
+species;Miconia tomentosa;;;8335424
+species;Miconia triangularis;;;3863975
+species;Miconia trinervia;;;3863803
+species;Miconia triplinervis;;;3863767
+species;Miconia venulosa;;;3863234
+species;Miconia zubenetana;;;3862625
+species;Micrandra elata;;;5378816
+species;Micrandra rossiana;;;5378815
+species;Micrandra spruceana;;;5378809
+species;Microchloa kunthii;;;2703589
+species;Micropholis 'carlos';MICRCA;POUTRB;2884675
+species;Micropholis 'mini';MICRMI;MICRBR;5333921
+species;Micropholis guyanensis;MICRGU;MICRDU;5333948
+species;Micropholis melinoniana;;;5333923
+species;Micropholis melinoniana;MICRME;MICREG;5333916
+species;Micropholis sanctae-rosae;;;5333926
+species;Micropholis venulosa;MICRVE;;5333937
+species;Mikania 'anchaliza';MIKAAN;;7722389
+species;Mikania 'dorata';MIKADO;;7722389
+species;Mimosa myriadenia;MIMOMY;;7266010
+species;Mimosa pudica;MIMOPU;;2969284
+species;Minquartia guianensis;MINQGU;;3686157
+species;Mollia gracilis;MOL1GR;MOLIGR;5705981
+species;Mollia lepidota;;;7311030
+species;Mollinedia 'spinilarga';MOL2SP;MOLLSP;3034105
+species;Mollinedia killipii;MOL2KI;MOLLKI;3782326
+species;Mollinedia longifolia;;;3783128
+species;Mollinedia ovata;;;3782703
+species;Mollinedia repanda;;;3782385
+species;Mollinedia tomentosa;MOL2TO;MOLLTO;3783010
+species;Monolena sp. J;MONO_J;;3863124
+species;Monstera obliqua;MONSOB;;2868185
+species;Monteverdia macrocarpa;;;9772192
+species;Moquilea angustata;;;10211730
+species;Moquilea brittoniana;;;9832761
+species;Moquilea celiae;;;10783557
+species;Moquilea durifolia;;;10799534
+species;Moquilea egleri;;;9983111
+species;Moquilea guianensis;;;2985572
+species;Moquilea magnifructa;;;10684093
+species;Moronobea coccinea;;;7329980
+species;Mosannona papillosa;;;3158169
+species;Mouriri 'grancoala';MOURG1;MOURGC;3188623
+species;Mouriri 'intermedia';MOURIN;;3188623
+species;Mouriri 'opaquita';MOUROP;MOURAC;3871067
+species;Mouriri floribunda;;;3870644
+species;Mouriri grandiflora;MOURG2;MOURGR;3870549
+species;Mouriri guianensis;;;3870514
+species;Mouriri huberi;;;3870475
+species;Mouriri laxiflora;;;3870418
+species;Mouriri myrtifolia;;;5938526
+species;Mouriri myrtilloides;MOURMY;;3870233
+species;Mouriri nervosa;;;3870198
+species;Mouriri nigra;;;3870171
+species;Mouriri oligantha;;;3870133
+species;Mouriri peruviana;;;3870029
+species;Mouriri vernicosa;;;5938541
+species;Moutabea aculeata;MOUTAC;;4051535
+species;Mucuna sp. A;MUCU_A;;2951351
+species;Mucuna sp. B;MUCU_B;;2951351
+species;Myrcia 'platatomen';MYR1P2;MYRCPL;3173889
+species;Myrcia 'rosadita';MYR1RO;MYRCSP;3174691
+species;Myrcia aequatoriensis;;;6306296
+species;Myrcia aliena;;;3174394
+species;Myrcia amazonica;;;3175173
+species;Myrcia aulomyrcioides;;;9208293
+species;Myrcia bracteata;;;3174487
+species;Myrcia brevispicata;;;10687479
+species;Myrcia densiflora;;;10840607
+species;Myrcia forsteri;;;12199081
+species;Myrcia guianensis;;;3174923
+species;Myrcia maxima;;;10694317
+species;Myrcia megapaniculata;;;10893807
+species;Myrcia mollis;;;3173898
+species;Myrcia neoaequatoriensis;;;10898476
+species;Myrcia neomacrophylla;;;9398705
+species;Myrcia nervata;;;10686603
+species;Myrcia obumbrans;;;10040902
+species;Myrcia pulchella;;;10692890
+species;Myrcia ruiziana;;;10773731
+species;Myrcia simulata;;;10812455
+species;Myrcia sparsiflora;;;10671345
+species;Myrcia telephylla;;;10817380
+species;Myrcia tessmannii;;;10846528
+species;Myrcia umbraticola;;;9276829
+species;Myrcia websteri;;;10898559
+species;Myrciaria 'intermed';MYR2IN;MYRRIN;3186407
+species;Myrciaria amazonica;MYR2AM;MYRRAM;3186420
+species;Myrciaria dubia;;;10342163
+species;Myriocarpa stipitata;;;7300728
+species;Myroxylon peruiferum;;;5357189
+species;Myroxylum balsamum;MYR3BA;MYROBA;5357190
+species;Naucleopsis 'kv-krukovii';NAUCK2;NAUCKR;3767133
+species;Naucleopsis 'kv-roja';NAUCK3;NAUCKR;3767133
+species;Naucleopsis glabra;;;3767226
+species;Naucleopsis herrerensis;;;3764179
+species;Naucleopsis humilis;;;3764205
+species;Naucleopsis imitans;;;3767179
+species;Naucleopsis oblongifolia;;;3767082
+species;Naucleopsis ulei;NAUCUL;;7262829
+species;Nealchornea yapurensis;;;3062051
+species;Nectandra 'largibrachi';NECTL1;NECTLA;3034018
+species;Nectandra canescens;;;5685384
+species;Nectandra cissiflora;;;5685370
+species;Nectandra crassiloba;;;5685357
+species;Nectandra dasystyla;;;9700476
+species;Nectandra globosa;;;7304240
+species;Nectandra gracilis;;;5685278
+species;Nectandra lineata;NECTL3;NECTLI;5685105
+species;Nectandra longifolia;;;7304145
+species;Nectandra maynensis;;;5685061
+species;Nectandra membranacea;NECTME;;5371736
+species;Nectandra microcarpa;;;5685035
+species;Nectandra oppositifolia;NECTOP;;7304727
+species;Nectandra parviflora;;;5686139
+species;Nectandra paucinervia;;;5686131
+species;Nectandra pearcei;;;5686125
+species;Nectandra pulverulenta;;;5686055
+species;Nectandra viburnoides;NECTVI;;5685707
+species;Nectandra villosa;;;7304555
+species;Nectandra yarinensis cf;NECTYA;NECTGR;3034018
+species;Neea 'altomini';NEEAAL;;3086079
+species;Neea 'angostintersec';NEEAA2;NEEAAG;3086079
+species;Neea 'aniboid';NEEAA3;NEEAAN;3086079
+species;Neea 'bajio';NEEABA;;3086079
+species;Neea 'comun';NEEACO;;3086079
+species;Neea 'garci';NEEAGA;;3086079
+species;Neea 'granredonda';NEEAGR;;3086079
+species;Neea 'mini';NEEAM2;NEEAMI;3086079
+species;Neea 'paty';NEEAPA;;3086079
+species;Neea 'popular';NEEAPO;;3086079
+species;Neea 'supercrasa';NEEASU;;3086079
+species;Neea 'tela';NEEATE;NEEACL;3086079
+species;Neea divaricata;;;3701568
+species;Neea floribunda;;;3701462
+species;Neea laxa;;;3701239
+species;Neea macrophylla;;;7970415
+species;Neea ovalifolia;;;3701042
+species;Neea parviflora;;;3701003
+species;Neea spruceana;;;3700680
+species;Neea tristis;;;3700553
+species;Neea verticillata;;;7757729
+species;Neosprucea grandiflora;;;8586425
+species;Neosprucea melastomatoides;;;3879954
+species;Norantea guianensis;NORAGU;;7275886
+species;Notopleura macrophylla;NOTOMA;;5336711
+species;Oblivia mikanioides;;;3104408
+species;Ochroma pyramidale;OCHRPY;;3152240
+species;Ocotea 'alamembra';OCOTAL;;3034076
+species;Ocotea 'bayelshmi';OCOTBA;;3034076
+species;Ocotea 'luis';OCOTLU;;3034076
+species;Ocotea 'minialata';OCOTMI;OCOTOB;7304263
+species;Ocotea 'yasuni';OCOTYA;NECTLA;3034076
+species;Ocotea aciphylla;;;7304296
+species;Ocotea amazonica;;;4177837
+species;Ocotea argyrophylla;;;4177527
+species;Ocotea bofo;OCOTBO;;7359337
+species;Ocotea cernua;OCOTCE;;4179703
+species;Ocotea cuneifolia;;;4183149
+species;Ocotea floribunda;OCOTFL;;3034082
+species;Ocotea hirtandra;;;4180903
+species;Ocotea hirtostyla;;;4180888
+species;Ocotea javitensis;;;7424176
+species;Ocotea lenitae;;;4179760
+species;Ocotea leucoxylon;;;7586130
+species;Ocotea longifolia;OCOTLO;;4183107
+species;Ocotea neblinae;;;4178068
+species;Ocotea obovata;;;4177633
+species;Ocotea olivacea;;;4177509
+species;Ocotea pauciflora;;;4177066
+species;Ocotea scalariformis;;;4182908
+species;Ocotea tessmannii;;;4181677
+species;Ocotea ucayalensis;;;4181367
+species;Odontadenia puncticulosa;ODONPU;;3616386
+species;Odontocarya cf. sp. C;ODO1_C;;7268633
+species;Odontocarya sp. A;ODO1_A;;7268633
+species;Odontodenia sp. A;ODON_A;;7316739
+species;Odontodenia sp. B;ODON_B;;7316739
+species;Oenocarpus bataua;OENOBA;;2735462
+species;Oenocarpus mapora;OENOMA;;2735446
+species;Olmedia aspera;;;7954917
+species;Omphalea sp. A;OMPH_A;;3062246
+species;Ophiocaryon heterophyllum;OPHIHE;;3838457
+species;Ophiocaryon klugii;;;3838449
+species;Ophiocaryon manausense;;;3838522
+species;Orchidaceae sp. A;ORC_A;;7689
+species;Orchidaceae sp. B;ORC_B;;7689
+species;Orchidaceae sp. C;ORC_C;;7689
+species;Orchidaceae sp. D;ORC_D;;7689
+species;Orchidaceae sp. D2;ORC_D2;;7689
+species;Orchidaceae sp. D3;ORC_D3;;7689
+species;Orchidaceae sp. E;ORC_E;;7689
+species;Orchidaceae sp. F;ORC_F;;7689
+species;Orchidaceae sp. F2;ORC_F2;;7689
+species;Orchidaceae sp. G;ORC_G;;7689
+species;Orchidaceae sp. H;ORC_H;;7689
+species;Orchidaceae sp. I;ORC_I;;7689
+species;Orchidaceae sp. J;ORC_J;;7689
+species;Orchidaceae sp. K;ORC_K;;7689
+species;Orchidaceae sp. L;ORC_L;;7689
+species;Orchidaceae sp. M;ORC_M;;7689
+species;Orchidaceae sp. N;ORC_N;;7689
+species;Orchidaceae sp. O;ORC_O;;7689
+species;Orchidaceae sp. P;ORC_P;;7689
+species;Orchidaceae sp. Q;ORC_Q;;7689
+species;Orchidaceae sp. R;ORC_R;;7689
+species;Orchidaceae sp. S;ORC_S;;7689
+species;Orchidaceae sp. T;ORC_T;;7689
+species;Orchidaceae sp. U;ORC_U;;7689
+species;Orchidaceae sp. V;ORC_V;;7689
+species;Ormosia amazonica;;;5355607
+species;Ormosia elata;;;5355515
+species;Ormosia grandiflora;;;5355578
+species;Ormosia macrophylla;;;5355598
+species;Ormosia paraensis;ORMOPA;;5355583
+species;Ormosia sp. B;ORMO_B;;2960439
+species;Ossaea boliviensis;OSSABO;;10759109
+species;Osteophloeum platyspermum;;;7333716
+species;Otoba glycycarpa;OTOBGL;;3743774
+species;Otoba parvifolia;;;8645517
+species;Ouratea 'flaquita';OURAFL;;3189667
+species;Ouratea amplifolia;;;3695232
+species;Ouratea aromatica;;;3695044
+species;Ouratea iquitosensis;;;3696306
+species;Ouratea pendula;;;3696131
+species;Ouratea weberbaueri;;;3695296
+species;Ouratea williamsii;;;3695227
+species;Oxandra euneura;;;3154785
+species;Oxandra mediocris;OXANME;;3154783
+species;Oxandra riedeliana;OXANRI;;3154743
+species;Oxandra sphaerocarpa;;;3154742
+species;Oxandra xylopioides;;;3154746
+species;Pachira aquatica;;;3152235
+species;Pachira aquatica;PACHAQ;PACHPU;4073636
+species;Pachira insignis;PACHIN;;3152236
+species;Pachira rupicola;;;4073578
+species;Palicourea anianguana;;;2899157
+species;Palicourea arenosa;;;9270022
+species;Palicourea crocea;;;2899248
+species;Palicourea fusiformis;;;10967112
+species;Palicourea grandiceps;;;9172901
+species;Palicourea grandiflora;PALIGR;;2898941
+species;Palicourea guianensis;PALIGU;;2898772
+species;Palicourea hebeclada;;;7486068
+species;Palicourea lagesii;;;8045885
+species;Palicourea lasiantha;;;2898948
+species;Palicourea longicuspis;;;10980924
+species;Palicourea luteonivea;;;2899342
+species;Palicourea nautensis;;;11002438
+species;Palicourea nigricans;PALINI;;2898690
+species;Palicourea punicea;;;2898728
+species;Palicourea vellerea;;;10938677
+species;Palicourea violacea;;;2921742
+species;Parablechnum cordatum;;;8788742
+species;Paradrymonia darienensis cf;PARADA;;10809954
+species;Paradrypetes 'brillaspin';PARABR;PARASU;3917295
+species;Parahancornia peruviana;;;3621140
+species;Parathesis adenanthera;;;3723195
+species;Parathesis palaciosii;;;3722217
+species;Parinari klugii;;;2984967
+species;Parinari parilis;;;2984991
+species;Parkia balslevii;PARKBA;;5348841
+species;Parkia multijuga;PARKMU;;5348884
+species;Parkia nitida;PARKNI;;5348833
+species;Parkia pectinata;;;5348878
+species;Parkia pendula;;;5348857
+species;Parkia velutina;PARKVE;;5348846
+species;Passiflora auriculata;PASSAU;;3587589
+species;Passiflora sp. C;PASS_C;;2874172
+species;Passiflora spinosa;PASSSP;;3588360
+species;Patinoa paraensis;PATIPA;;4073396
+species;Patinoa sphaerocarpa;;;4073385
+species;Paullinia 'canal' cf;PAULCA;;3189948
+species;Paullinia 'delgado';PAULDE;;3189948
+species;Paullinia 'pseudoalsmithii';PAULPS;;3189948
+species;Paullinia bracteosa;PAULB1;;7264749
+species;Paullinia cuneata;;;3784899
+species;Paullinia gigantea;;;3784363
+species;Paullinia granatensis;;;3784326
+species;Paullinia microneura;PAULMI;;3788401
+species;Paullinia pachycarpa;PAULPA;;3788116
+species;Paullinia pterocarpa;;;3787941
+species;Paullinia reticulata (sp. G);PAULRE;;3787866
+species;Paullinia rufescens;PAULRU;;3787753
+species;Paullinia simulans;PAULSI;;3787608
+species;Paullinia sp. B;PAUL_B;;3785287
+species;Paullinia sp. D;PAUL_D;;7898345
+species;Paullinia sp. E;PAUL_E;;3784478
+species;Paullinia sp. H;PAUL_H;;3189948
+species;Paullinia sp. M;PAUL_M;;3189948
+species;Paullinia sp. R;PAUL_R;;3189948
+species;Paullinia sp. S;PAUL_S;;3784576
+species;Paullinia sp. T;PAUL_T;;3189948
+species;Paullinia sp. U;PAUL_U;;3189948
+species;Paullinia sp. V;PAUL_V;;3189948
+species;Paullinia sp. Z;PAUL_Z;;3785522
+species;Paullinia spucei;PAULSP;;3787501
+species;Paullinia tricornis;PAULTR;;3787216
+species;Paullinia xestophylla;;;3786877
+species;Pausandra trianae;PAUSTR;;3075100
+species;Pentagonia 'mediana';PEN1ME;PENTWU;5334752
+species;Pentagonia 'subauric';PEN1SU;PENTSU;2893500
+species;Pentagonia macrophylla;;;5334728
+species;Pentagonia microcarpa;;;5334741
+species;Pentagonia parvifolia;PEN1PA;PENTPA;5334738
+species;Pentagonia villosula;;;5334764
+species;Pentagonia williamsii;;;5334743
+species;Pentaplaris huaoranica;;;4073338
+species;Peperomia macrostachya;PEPEMA;;7787466
+species;Peperomia serpens;PEPESE;;7727798
+species;Peperomia sp. O;PEPE_O;;3086367
+species;Peperomia sp. P;PEPE_P;;3086367
+species;Pera 'duguet';PERADU;;3231319
+species;Pera benensis;;;5614967
+species;Pera bicolor;;;5614965
+species;Pera decipiens;;;5614954
+species;Perebea angustifolia;PEREAN;;3765858
+species;Perebea guianensis;PEREGU;;7262696
+species;Perebea humilis;;;3765663
+species;Perebea mollis;PEREMO;;7262684
+species;Perebea rubra;;;7262674
+species;Perebea tessmannii;PERETE;;7262670
+species;Perebea xanthochyma;PEREXA;;3765422
+species;Peritassa 'mab';PERIMA;;3793233
+species;Perrottetia distichophylla;;;7761528
+species;Perrottetia sessiliflora;;;8031734
+species;Persea areolatocostae;;;4176300
+species;Persea pseudofasciculata;PERSPS;;7304434
+species;Petrea maynensis;PETRMA;;4085225
+species;Petrea pubescens;;;7297303
+species;Philodendron 'platypodium';PHILPL;;2861312
+species;Philodendron sp. A;PHIL_A;;2861312
+species;Philodendron sp. B;PHIL_B;;2861312
+species;Pholidostachys synanthera;;;2735624
+species;Phragmotheca amazonica;;;7736965
+species;Phragmotheca ecuadorensis;;;7546189
+species;Phragmotheca leucoflora;;;7642454
+species;Phyllanthus acuminatus;;;5381441
+species;Phyllanthus anisolobus;;;5381905
+species;Phyllanthus attenuatus;;;5382615
+species;Phyllanthus juglandifolius;;;5382401
+species;Phyllanthus stipulatus;;;5382197
+species;Phyllanthus urinaria;;;5382780
+species;Phytelephas macrocarpa;;;2736300
+species;Phytelephas tenuicaulis;PHYTTE;;2736286
+species;Phytyolacca rivenoides;PHY2RI;;3084014
+species;Picramnia 'mini';PICRMI;;8118842
+species;Picramnia juniniana;;;3708958
+species;Picramnia latifolia;;;3708918
+species;Picramnia magnifolia;;;3708842
+species;Picramnia sellowii;;;7329631
+species;Picramnia sellowii;PICRSE;;3709163
+species;Picrasma excelsa;;;3190672
+species;Piper 'bellidi';PIPEBE;;3075433
+species;Piper 'fuzicort';PIPEFU;;3075433
+species;Piper 'minibroqui';PIPEMI;;3075433
+species;Piper 'nervi';PIPENE;;3075433
+species;Piper 'obchic';PIPEO1;PIPEOC;3075433
+species;Piper 'obvil';PIPEO5;PIPEOV;3075433
+species;Piper 'renato';PIPER2;PIPERE;3075433
+species;Piper 'scab';PIPESC;;3086355
+species;Piper 'sesivil';PIPESE;;3075433
+species;Piper arboreum;;;7304860
+species;Piper augustum;PIPEAU;;7305990
+species;Piper bellidifolium;PIPEB2;PIPEBF;4189329
+species;Piper reticulatum;;;3086330
+species;Piptadenia 'arbol';PIPTAR;PIPTPT;2951808
+species;Piptadenia anolidurus;PIPTAN;;2951816
+species;Piptadenia sp. A;PIPT_A;;2951753
+species;Piptadenia sp. D;PIPT_D;;2951753
+species;Piptadenia sp. E;PIPT_E;;2951753
+species;Piptadenia uaupensis;PIPTUA;;2951819
+species;Piptocoma discolor;;;3122128
+species;Pithecoctinium sp. A;PITH_A;;4931838
+species;Pizona coriacea;PINZCO;;3083490
+species;Platymiscium pinnatum;;;2944742
+species;Platymiscium stipulare;PLA1ST;PLATST;2944751
+species;Pleuranthodendron lindenii;;;4261405
+species;Pleurothyrium 'glabiflorum';PLEUGL;;5685796
+species;Pleurothyrium bifidum;PLEUBI;;5685848
+species;Pleurothyrium cinereum;;;5685828
+species;Pleurothyrium cuneifolium;PLEUCU;;5685814
+species;Pleurothyrium insigne;;;5685759
+species;Pleurothyrium parviflorum;;;5685691
+species;Pleurothyrium poeppigii;;;7859388
+species;Pleurothyrium tomentellum;;;5685651
+species;Pleurothyrium trianae;;;5685645
+species;Pleurothyrium vasquezii;;;5685640
+species;Pleurothyrium williamsii;;;5685627
+species;Plinia 'cortezablanca';PLINCO;;7982334
+species;Plinia 'pseudomouriri';PLINPS;;3173680
+species;Plinia inflata;;;5415643
+species;Plinia pinnata;;;5415600
+species;Plinia yasuniana;;;9325309
+species;Plukenetia sp. A;PLUK_A;;3070698
+species;Poaceae sp. A;POA1_A;;3073
+species;Podocalyx loranthoides;;;3075159
+species;Porcelia mediocris;;;3156212
+species;Posoqueria coriacea;;;2893883
+species;Posoqueria latifolia;POSOLA;;2893899
+species;Posoqueria longiflora;;;2893927
+species;Potalia resinifera;POTARE;;4019684
+species;Poulsenia armata;POULAR;;5570848
+species;Pourouma 'deeplob';POURDE;;7316388
+species;Pourouma 'persecta';POURPE;POURTO;4013326
+species;Pourouma 'wintergreen';POURWI;POURGU;7316407
+species;Pourouma acuminata;;;7350779
+species;Pourouma bicolor;POURBI;;7316430
+species;Pourouma cecropiifolia;;;4013508
+species;Pourouma cucura;;;4013430
+species;Pourouma floccosa;;;4013344
+species;Pourouma melinonii;;;7316396
+species;Pourouma minor;POURMI;;4013658
+species;Pourouma mollis;;;7316440
+species;Pourouma napoensis;;;4013604
+species;Pourouma petiolulata;;;4013569
+species;Pourouma tomentosa;;;7316411
+species;Pourouma tomentosa;POURTO;;7316412
+species;Pouteria  'angostacili';POUTA4;POUTAC;2884510
+species;Pouteria 'ancharoja';POUTA3;POUTDU;2884848
+species;Pouteria 'angostaloopy';POUTA5;POUTAP;2884049
+species;Pouteria 'dullmed';POUTDU;POUTGR;2884662
+species;Pouteria 'falsacraselip';POUTFA;POUTBI;2884964
+species;Pouteria 'peciolote';POUTP1;POUTPE;2884049
+species;Pouteria 'platafina';POUTP2;POUTGM;2884079
+species;Pouteria 'redondita';POUTRE;POUTRD;2884049
+species;Pouteria 'smedobov';POUTSM;;2884049
+species;Pouteria 'tortachica';POUTT1;POUTTO;2884049
+species;Pouteria 'tortachicorden';POUTT2;POUTTC;2884049
+species;Pouteria 'tortagrande';POUTT3;POUTTU;2884510
+species;Pouteria 'tuberculata';POUTT6;POUTTU;2884813
+species;Pouteria aubrevillei;;;2884997
+species;Pouteria baehniana;POUTBA;;2884661
+species;Pouteria bangii;;;2884402
+species;Pouteria caimito;;;2884788
+species;Pouteria calistophylla;;;2884569
+species;Pouteria campechiana;;;2884309
+species;Pouteria coriacea;;;2884437
+species;Pouteria ephedrantha;;;2884147
+species;Pouteria filipes;;;2884362
+species;Pouteria glauca;;;2884159
+species;Pouteria jariensis;;;2884503
+species;Pouteria juruana;;;2884365
+species;Pouteria krukovii;POUTKR;;2884893
+species;Pouteria laevigata;;;2884670
+species;Pouteria lucumifolia;;;2884994
+species;Pouteria macrophylla;;;2884481
+species;Pouteria multiflora;;;2884744
+species;Pouteria nemorosa;;;2884308
+species;Pouteria nudipetala;;;2884954
+species;Pouteria oblanceolata;;;2884862
+species;Pouteria petiolata;;;2884723
+species;Pouteria platyphylla;POUTP3;POUTPL;2884374
+species;Pouteria procera;POUTP4;POUTPR;2884909
+species;Pouteria pubescens;;;2884526
+species;Pouteria reticulata;;;2884054
+species;Pouteria rostrata;POUTRO;;2884141
+species;Pouteria scabritesta;;;2884900
+species;Pouteria sclerocarpa;;;2884932
+species;Pouteria simulans;;;2884128
+species;Pouteria sp. V;POUT_V;;2884049
+species;Pouteria sp. Y;POUT_Y;;2884049
+species;Pouteria torta;;;2884812
+species;Pouteria trilocularis;;;2884359
+species;Pouteria venosa;;;2884608
+species;Pouteria vernicosa;POUTVE;;2884494
+species;Pradosia grisebachii;;;2883828
+species;Prestoea ensiformis;;;2738943
+species;Prestoea schultzeana;PRESSC;;2738938
+species;Pristimera nervosa;PRISNE;;3791376
+species;Protium 'brillanodu';PROTBR;;7286732
+species;Protium 'grannodu';PROTGR;;7286732
+species;Protium aidanianum;;;3992631
+species;Protium amazonicum;PROTAM;;3992544
+species;Protium apiculatum;;;3992474
+species;Protium aracouchini;PROTAR;;7286738
+species;Protium divaricatum;;;7286827
+species;Protium ecuadorense;;;3993416
+species;Protium gallosum;;;3993289
+species;Protium glabrescens;PROTGL;;3993224
+species;Protium guianense;PROTGU;;3993081
+species;Protium meridionale;;;3992406
+species;Protium nodulosum;PROTNO;;3994070
+species;Protium opacum;;;7286876
+species;Protium polybotryum;;;7286824
+species;Protium puncticulatum;;;3993357
+species;Protium robustum;;;3993264
+species;Protium rubrum;;;3993235
+species;Protium sagotianum;PROTSA;;3993226
+species;Protium spruceanum;;;3993127
+species;Protium subserratum;;;3993075
+species;Protium tenuifolium;;;7286790
+species;Protium trifoliolatum;;;3992925
+species;Protium unifoliolatum;;;7286772
+species;Protium vestitum;;;3992796
+species;Prunus debilis;PRUNDE;;3022573
+species;Prunus herthae;;;3023123
+species;Pseudobombax munguba;;;4073645
+species;Pseudobombax septenatum;;;4073614
+species;Pseudolmedia laevigata;PSE1L1;PSEULA;3764182
+species;Pseudolmedia laevis;PSE1L2;PSEULS;3764170
+species;Pseudolmedia macrophylla;PSE1MC;PSEUMA;3764164
+species;Pseudolmedia rigida;;;7262528
+species;Pseudolmedia rigida;PSE1RI;PSEURI;3764033
+species;Pseudomalmea diclina;PSE2DI;PSEDDI;3153991
+species;Pseudopiptadenia suaveolens;PSE3SU;PSEPSU;3795236
+species;Pseudosamanea guachapele;;;2972923
+species;Pseudosenefeldera inclinata;;;3071114
+species;Pseudoxandra polyphleba;;;3158209
+species;Psychotria 'baijo';PSYCBA;PSYCHO;8095300
+species;Psychotria 'dracula';PSYCDR;;2919963
+species;Psychotria 'ondulada';PSYCON;;2923890
+species;Psychotria 'robin';PSYCRO;;2922399
+species;Psychotria anemothyrsa;;;2921799
+species;Psychotria borjensis;PSYCBO;;2923810
+species;Psychotria guianensis;;;9623404
+species;Psychotria herzogii;;;2921004
+species;Psychotria huampamiensis;PSYCHU;;8860949
+species;Psychotria m***;PSYCMI;;2919963
+species;Psychotria micrantha;;;2923258
+species;Psychotria poeppigiana;PSYCPO;;7866160
+species;Psychotria polyphlebia;PSYCP1;;5336708
+species;Psychotria remota;PSYCRE;;2920637
+species;Psychotria sp. D;PSYC_D;;2919963
+species;Psychotria sp. E;PSYC_E;PSYCBR;10232993
+species;Psychotria sp. F;PSYC_F;;2894778
+species;Psychotria sp. G;PSYC_G;;2919963
+species;Psychotria sp. H;PSYC_H;;2919963
+species;Psychotria sp. Q;RUB_Q;;2919963
+species;Psychotria sp. U;PSYC_U;;2919963
+species;Psychotria sp. V;PSYC_V;;2919963
+species;Psychotria sp. X;PSYC_X;;2919963
+species;Psychotria stenostachya;PSYCST;;9332072
+species;Psychotria trivialis;;;2920086
+species;Psychotria viridis;PSYCVI;;2921300
+species;Psychotria williamsii;;;2922367
+species;Pterocarpus 'rhor';PTERRH;;5349322
+species;Pterocarpus amazonum;;;5349269
+species;Pterocarpus santalinoides;;;5349244
+species;Punjuba killipii;;;2977828
+species;Qualea paraensis;QUALPA;;4030655
+species;Quararibea 'sesiblanca';QUARSE;;3152231
+species;Quararibea amazonica;;;4073535
+species;Quararibea guianensis;;;4073119
+species;Quararibea wittii;;;4073580
+species;Quiina 'grande';QUIIG1;QUIIGR;7285768
+species;Quiina amazonica;;;3986470
+species;Quiina blackii;;;3986518
+species;Quiina cruegeriana;;;3986526
+species;Quiina florida;QUIIFL;;3986487
+species;Quiina grandifolia;;;3986524
+species;Quiina jenmanii;QUIIJE;LACUJE;7939053
+species;Quiina macrophylla;;;8288718
+species;Quiina obovata;;;3986449
+species;Randia 'gorki';RANDGO;;5339445
+species;Randia hondensis;;;5339485
+species;Randia sp. A;RAND_A;;5339385
+species;Raritebe palicoureoides;;;2896795
+species;Rauvolfia 'vertichica';RAUVVE;RAUVPR;7580047
+species;Rauvolfia leptophylla;;;7316931
+species;Remijia chelomaphylla;;;2909665
+species;Retrophyllum rospigliosii;;;2687731
+species;Rhamnidium elaeocarpum;;;3874704
+species;Rhigospira quadrangularis;;;3615482
+species;Rhodostemonodaphne crenaticupula;;;4179257
+species;Rhodostemonodaphne grandis;;;4179161
+species;Rhodostemonodaphne juruensis;RHODJU;;4179152
+species;Rhodostemonodaphne kunthiana;RHODKU;;4179128
+species;Rhodostemonodaphne licanioides;RHODLI;;4179082
+species;Rhodostemonodaphne longipetiolata;;;4179062
+species;Rhodostemonodaphne napoensis;;;4178940
+species;Rhodostemonodaphne praeclara;;;4178881
+species;Rhodostemonodaphne sordida;;;4178784
+species;Rhodostemonodaphne synandra;;;4178747
+species;Rhynchosia sp. A;RHYN_A;;2947992
+species;Richeria grandis;;;3079144
+species;Richeria racemosa;RICHRA;;7066948
+species;Rinorea apiculata;RINOAP;;10967984
+species;Rinorea lindeniana;RINOLI;;7296368
+species;Rinorea viridifolia;RINOVI;;4076980
+species;Rinoreocarpus ulei;;;4076764
+species;Roentgenia sp. A;ROEN_A;;3172515
+species;Rollinia 'flacaglabra';ANNOFL;ROLLFL;3155252
+species;Rollinia 'palida';ROLLPA;ROLLDO;5541645
+species;Rollinia chrysocarpa;ROLLCH;;5541619
+species;Rollinia cuspidata;ROLLCU;;5541639
+species;Rollinia pittieri-Annona papilionella;ROLLPI;;5541609
+species;Rosenbergiodendron longiflorum;;;2904214
+species;Roupala montana;;;7831077
+species;Rourea adenophora;;;3686515
+species;Rourea cuspidata;;;7326611
+species;Rourea sp. A;ROUR_A;;3032534
+species;Ruagea insignis;RUAGIN;;3851374
+species;Rudgea 'micro';RUDGM1;;2910457
+species;Rudgea 'mini';RUDGMI;RUDGJA;2910777
+species;Rudgea cornifolia;;;2910497
+species;Rudgea crassipetiolata;;;3848400
+species;Rudgea cryptantha;;;2910526
+species;Rudgea guianensis;;;2910553
+species;Rudgea yasuniana;;;10807045
+species;Ruizodendron ovale;RUIZOV;;3154066
+species;Ruizterania cassiquiarensis;;;4030492
+species;Ruizterania urceolata;;;4030702
+species;Ryania speciosa;RYANSP;;7342747
+species;Sabicea panamensis;;;2900333
+species;Sacoglottis amazonica;;;3649109
+species;Sacoglottis guianensis;;;7320147
+species;Sagotia brachysepala;;;5377876
+species;Sagotia racemosa;SAGORA;;5377870
+species;Salacia 'atenucrasa';SALAAT;;3169160
+species;Salacia 'supernervi';SALASU;;3169160
+species;Salacia cordata;;;5579800
+species;Salacia impressifolia;;;5579512
+species;Salacia macrantha;;;5580333
+species;Sanango racemosum;;;4055793
+species;Sapium 'primero';SAPIPR;;5379830
+species;Sapium 'redonda';SAPIRE;;5379830
+species;Sapium ciliatum;;;5380010
+species;Sapium glandulosum;;;5379918
+species;Sapium laurifolium;;;5379846
+species;Sapium marmieri;;;5379839
+species;Sapium stylare;;;5379890
+species;Sarcaulus 'romolerouxii';SARCRO;;2886224
+species;Sarcaulus 'smed';SARCSM;SARCBR;2886233
+species;Sarcaulus oblatus;;;2886225
+species;Sarcaulus vestitus;SARCVE;;2886227
+species;Sarcaulus wurdackii;;;2886226
+species;Saurauia adenodonta;;;3644527
+species;Saurauia herthae;;;7270684
+species;Saurauia prainiana;;;7270805
+species;Schefflera morototoni;SCH2MO;SCHEMO;3038523
+species;Schizocalyx peruvianus;;;7379073
+species;Schizolobium parahyba;SCHIPA;;2945453
+species;Schlegelia spruceana;SCHLSP;;3172466
+species;Schoenobiblus daphnoides;;;3567577
+species;Schoenobiblus peruviana;;;7645206
+species;Sciodaphyllum diplodactylum;;;11407595
+species;Selaginella sp.;SELA1_A;;2688177
+species;Senegalia hayesii;;;2981234
+species;Senegalia paniculata;;;3795941
+species;Senegalia polyphylla;;;2980360
+species;Senegalia tubulifera;;;3795803
+species;Senna bacillaris;;;2957751
+species;Senna macrophylla;;;2957131
+species;Senna macrophylla;SENNMA;;2957136
+species;Senna multijuga;;;2957158
+species;Senna ruiziana;;;2957621
+species;Senna sp. B;SENN_B;;2956904
+species;Senna trolliiflora;SENNTR;;2957866
+species;Septotheca tessmannii;;;4073163
+species;Serjania sp. C;SERJ_C;;5421120
+species;Serjania sp. E;SERJ_E;;5421120
+species;Serjania sp. F;SERJ_F;;5577883
+species;Serjania sp. T;SERJ_T;;5421120
+species;Sicydium sp. A;SICY_A;;3624707
+species;Simaba guianensis;;;7329562
+species;Simaba orinocensis;;;3709147
+species;Simaba paraensis;SIM1PA;SIMAPA;9438218
+species;Simaba polyphylla;SIM1PO;SIMAPO;3709105
+species;Simarouba amara;SIM2AM;SIMRAM;7720664
+species;Simira 'rube';SIM3RU;SIMIRU;5335279
+species;Simira cordifolia;SIM3CO;SIMICO;5335251
+species;Simira erythroxylon;;;5335271
+species;Simira wurdackii;;;5335257
+species;Siolmatra pentaphylla;SIOLPE;;3623186
+species;Siparuna 'bigll3A';SIPABI;;7264484
+species;Siparuna 't-stelae';SIPAT3;SIPATT;3782358
+species;Siparuna aspera;;;3782734
+species;Siparuna cervicornis;SIPACE;;3782391
+species;Siparuna cristata;;;7264504
+species;Siparuna cuspidata;SIPACU;;3783134
+species;Siparuna decipiens;SIPADE;;3783065
+species;Siparuna grandiflora;;;3782467
+species;Siparuna guianensis;;;7264535
+species;Siparuna harlingii;;;3782363
+species;Siparuna macrotepala;;;3782954
+species;Siparuna reginae;;;3783050
+species;Siparuna schimpffii;;;3782767
+species;Sloanea 'chocoplatalmen'-Sloanea synandra;SLOACH;SLOASY;5651143
+species;Sloanea 'gigapulvi';SLOAG1;SLOAGI;3152097
+species;Sloanea 'granredonda';SLOAG3;SLOAGD;3152097
+species;Sloanea 'guia';SLOAG4;SLOAGU;7291059
+species;Sloanea 'nervi';SLOANE;;3152097
+species;Sloanea 'oak';SLOAOA;;3152097
+species;Sloanea 'robustipeq';SLOARO;;3152097
+species;Sloanea 'stipulon';SLOAST;SLOAFR;5651245
+species;Sloanea 'tomentosa';SLOATO;;8102626
+species;Sloanea brachytepala;;;5651034
+species;Sloanea castanocarpa;;;5651010
+species;Sloanea durissima;;;5651320
+species;Sloanea eichleri;;;7291085
+species;Sloanea erismoides;;;5651289
+species;Sloanea floribunda;;;5651261
+species;Sloanea froesii;;;5651239
+species;Sloanea grandiflora;;;5651212
+species;Sloanea hirsuta;;;5651175
+species;Sloanea kappleriana;;;5651155
+species;Sloanea laevigata;;;5651146
+species;Sloanea laurifolia;;;5651127
+species;Sloanea laxiflora;;;5651126
+species;Sloanea macrophylla;;;8399874
+species;Sloanea meianthera;;;5651046
+species;Sloanea multinervis;;;9467760
+species;Sloanea obtusifolia;;;5650996
+species;Sloanea rufa;;;5651195
+species;Sloanea spathulata;;;5651163
+species;Sloanea terniflora;;;5651141
+species;Sloanea tuerckheimii;;;5651128
+species;Sloanea usurpatrix;;;5651125
+species;Smilax sp. A;SMIL_A;;2740627
+species;Sobralia sp. A;SOBR_A;;2797375
+species;Socratea exorrhiza;SOCREX;;2732453
+species;Solanaceae sp. AA;SOL_AA;;7717
+species;Solanaceae sp. M;SOL_M;;2928997
+species;Solanaceae sp. O;SOL_O;;2928997
+species;Solanaceae sp. T;SOL_T;;7717
+species;Solanaceae sp. V;SOL_V;;2928997
+species;Solanaceae spp. (partes indet. a sp.);SOL_PIN;;7717
+species;Solanum altissimum;SOLAAL;;2931846
+species;Solanum anisophyllum;;;2929169
+species;Solanum appressum;;;2929904
+species;Solanum barbeyanum;SOLABA;;2931769
+species;Solanum bellum;;;2930819
+species;Solanum endopogon;;;2931820
+species;Solanum grandiflorum;SOLAGD;;2929153
+species;Solanum hypermegethes;;;3798638
+species;Solanum leptopodum;SOLALE;;2931427
+species;Solanum leucopogon;SOL1LE;;2930322
+species;Solanum malletii;SOLAMA;;2931024
+species;Solanum nudum;;;2931480
+species;Solanum occultum;;;2930066
+species;Solanum oppositifolium;;;2931919
+species;Solanum oxyphyllum;;;2930419
+species;Solanum riparium;;;2932018
+species;Solanum robustifrons;;;2931617
+species;Solanum rugosum;;;2929481
+species;Solanum schlechtendalianum;;;2932884
+species;Solanum sessile;;;2930479
+species;Solanum splendens;;;9478958
+species;Solanum sycophanta;;;2931039
+species;Sorocea guilleminiana;;;3762938
+species;Sorocea hirtella;SOROHI;SOROPU;3762690
+species;Sorocea muriculata;SOROMU;;7262387
+species;Sorocea oligotricha;SOROOL;SOROPU;3762675
+species;Sorocea pubivena;;;7262377
+species;Sorocea sarcocarpa;;;3762633
+species;Sorocea steinbachii;SOROST;;3764462
+species;Souroubea sp. A;SOU1_A;;7275871
+species;Sphaeropteris quindiuensis;;;5529551
+species;Sphinctanthus maculatus;;;2893764
+species;Spondias mombin;;;3190593
+species;Spondias mombin;SPONMO;;8185571
+species;Spondias purpurea;;;3190598
+species;Stephanopodium angulatum;;;4195804
+species;Stephanopodium peruvianum;;;4196121
+species;Sterculia apeibophylla;STERA1;STERAP;7745281
+species;Sterculia apetala;STERA2;STERAT;5406679
+species;Sterculia colombiana;STERCO;;8250451
+species;Sterculia frondosa;STERFR;;8394990
+species;Sterculia guapayensis;;;7368715
+species;Sterculia peruviana;;;8292123
+species;Sterculia pruriens;;;6029413
+species;Sterculia rugosa;;;7371341
+species;Sterculia speciosa;;;5547455
+species;Sterculia tessmannii;;;7700900
+species;Sterigmapetalum obovatum;;;3874166
+species;Stigmaphyllon adenodon;STIGAD;;3191310
+species;Stromanthe sp. A;STRO_A;;2761017
+species;Strychnos 'crasaretic';STR1C4;;3169589
+species;Strychnos 'miconioide';STR1MI;;3169589
+species;Strychnos darienensis;;;5645381
+species;Strychnos erichsonii;;;7671232
+species;Strychnos jobertiana;;;5645742
+species;Strychnos panamensis;;;7289427
+species;Strychnos ramentifera;;;5645642
+species;Stryphnodendron porcatum;;;2951713
+species;Stylogyne bracteolata;;;3722177
+species;Stylogyne longifolia;STYLLO;;3721913
+species;Stylogyne serpentina;;;3721676
+species;Styrax guyanensis;STYRGU;;5541247
+species;Styrax macrophyllus;;;8370894
+species;Styrax pavonii;;;5541365
+species;Swartzia amplifolia;;;5352001
+species;Swartzia arborescens;SWARAR;;5352087
+species;Swartzia benthamiana;;;5351848
+species;Swartzia benthamiana;SWARBE;;5351850
+species;Swartzia bombycina;;;5352098
+species;Swartzia calva;;;5351901
+species;Swartzia cardiosperma;;;5352042
+species;Swartzia cardiosperma;SWARCA;;10740764
+species;Swartzia leptopetala;;;5351907
+species;Swartzia macrosema;;;5351898
+species;Swartzia multijuga;SWARMU;;5351959
+species;Swartzia myrtifolia;;;5352005
+species;Swartzia polyphylla;;;5351880
+species;Swartzia racemosa;;;5352126
+species;Swartzia reticulata;;;5351935
+species;Swartzia simplex;;;5352047
+species;Swartzia simplex;SWARSI;;5352049
+species;Swietenia macrophylla;;;3190484
+species;Syagrus sancona;;;5293840
+species;Syagrus smithii;;;5293874
+species;Symmeria paniculata;;;7291273
+species;Symphonia globulifera;SYMPGL;SYMHGL;8185162
+species;Symplocos arechea;;;3643345
+species;Syngonium sp. A;SYN1_A;;2867833
+species;Syngonium sp. B;SYN1_B;;2867833
+species;Tabebuia ochracea;;;7880545
+species;Tabebuia serratifolia;;;7353404
+species;Tabernaemontana amygdalifolia;;;3169631
+species;Tabernaemontana cymosa;;;3617922
+species;Tabernaemontana macrocalyx;;;3616223
+species;Tabernaemontana markgrafiana;;;3616123
+species;Tabernaemontana maxima;;;3616083
+species;Tabernaemontana muricata;;;3615806
+species;Tabernaemontana sananho;TAB2SA;TABRSA;3614389
+species;Tabernaemontana siphilitica;;;3621931
+species;Tabernaemontana undulata;;;3621389
+species;Tachigali chrysophylla;;;3969491
+species;Tachigali formicarum;TACHFO;;2945126
+species;Tachigali macbridei;;;3932295
+species;Tachigali paraensis;;;3932247
+species;Tachigali paraensis;TACHPA;;8382610
+species;Tachigali setifera;;;3932197
+species;Talisia 'novogranatensis';TALINO;MELCNG;3788341
+species;Talisia cerasina;TALICE;;3788434
+species;Talisia croatii;;;3788402
+species;Talisia megaphylla;;;7506722
+species;Talisia microphylla;;;3788125
+species;Talisia princeps;;;3787985
+species;Tapirira guianensis;TAPIGU;;7321555
+species;Tapirira myrianrha;;;7321556
+species;Tapirira obtusa;;;3659992
+species;Tapirira retusa;;;3659893
+species;Tapura amazonica;;;7309881
+species;Tapura coriacea;;;4195662
+species;Tapura guianensis;;;4196016
+species;Tapura juruana;TAPUJU;;4195950
+species;Tapura magnifolia;;;4195869
+species;Tapura peruviana;TAPUPE;;7309870
+species;Telitoxicum krukovii;TELIKR;;3829749
+species;Terminalia 'ob';TERMOB;;3189387
+species;Terminalia congesta;;;9578164
+species;Terminalia dichotoma;;;8141997
+species;Terminalia duckei;;;9246280
+species;Terminalia guyanensis;;;3698961
+species;Terminalia macrophylla;;;9578576
+species;Terminalia oblonga;;;3189396
+species;Terminalia parvifolia;;;9428917
+species;Terminalia pulcherrima;;;9277842
+species;Terminalia sp. A;TERM_A;;8153963
+species;Terminalia sp. B;TERM_B;;3189387
+species;Terminalia suaveolens;;;9312547
+species;Terminalia tetraphylla;;;9307101
+species;Terminalia viridiflora;;;9595924
+species;Tessaria integrifolia;;;3114910
+species;Tessmannianthus heterostemon;TESSHE;;3866056
+species;Tetracera volubilis;;;8420425
+species;Tetracera willdenowiana;TET1WI;;7303983
+species;Tetragastris panamensis;TET2PA;TETGPA;7286863
+species;Tetrameranthus globulifer;;;8223337
+species;Tetrapterys sp. A;TET3_A;;3191303
+species;Tetrapterys sp. B;TET3_B;;3191303
+species;Tetrapterys sp. D;TET3_D;;3191303
+species;Tetrapterys sp. I;TET3_I;;3191303
+species;Tetrathylacium macrophyllum;TET4MA;TETTMA;7274105
+species;Tetrorchidium andinum;;;3062931
+species;Tetrorchidium macrophyllum;TET5MA;TETRMC;3062937
+species;Tetrorchidium rubrivenium;;;3062925
+species;Theobroma bicolor;;;3152209
+species;Theobroma cacao;;;3152205
+species;Theobroma glaucum;;;3669722
+species;Theobroma grandiflorum;;;3152208
+species;Theobroma speciosum;THEOSP;;7657303
+species;Theobroma subincanum;THEOSU;;4939555
+species;Thinouia sp. F;THIN_F;;3787794
+species;Thinouia sp. H;THIN_H;;3787785
+species;Thinouia sp. J;THIN_J;;7264997
+species;Thyrsodium spruceanum;;;3659586
+species;Ticorea diandra;;;3835773
+species;Tococa caquetana;TOCOCA;;10880797
+species;Tocoyena 'burnham';TOCOBU;;2898256
+species;Tontelea 'redondagrande';TONTRE;;5579681
+species;Toulicia reticulata;;;3786285
+species;Tournefortia sp. B;TOUR_B;;2925828
+species;Tournefortia ulei;TOURUL;;10851762
+species;Tournefortida 'tace';TOURTA;;2925828
+species;Tovomita 'arbol';TOVOAR;TOVOAL;7329865
+species;Tovomita calophyllophylla;;;3711775
+species;Tovomita hopkinsii;;;8875594
+species;Tovomita umbellata;;;3710848
+species;Toxosiphon carinatus;;;3835094
+species;Toxosiphon trifoliatus;;;3835052
+species;Trattinnickia aspera;TRATAS;;3992670
+species;Trattinnickia burserifolia;;;7286746
+species;Trattinnickia glaziovii;;;3992504
+species;Trattinnickia lawrancei;;;8034797
+species;Trattinnickia peruviana;;;3994303
+species;Trema micranthum;;;2984501
+species;Trichilia 'cip';TRI2CI;TRICCI;3190490
+species;Trichilia 'densapunta';TRI2DE;TRICDE;3190490
+species;Trichilia 'miniraquis';TRI2M3;TRICMN;3190490
+species;Trichilia adolfii;TRI2AD;TRICAD;3852221
+species;Trichilia cipo;;;3851379
+species;Trichilia elegans;;;7271353
+species;Trichilia elsae;TRI2EL;TRICEL;3850939
+species;Trichilia euneura;;;3850854
+species;Trichilia laxipaniculata;TRI2LA;TRICLA;3849845
+species;Trichilia maynasiana;TRI2M1;TRICMA;3849551
+species;Trichilia micrantha;TRI2M2;TRICMI;3852930
+species;Trichilia obovata;TRI2OB;TRICOB;3852514
+species;Trichilia pachypoda;;;3852323
+species;Trichilia pallida;TRI2PA;TRICPA;3190491
+species;Trichilia pittieri;;;3852028
+species;Trichilia pleeana;;;3852019
+species;Trichilia poeppigii;TRI2PO;TRICPO;7271459
+species;Trichilia quadrijuga;TRI2QU;TRICQU;7271413
+species;Trichilia rubra;;;3851449
+species;Trichilia septentrionalis;TRI2SE;TRICSE;3851153
+species;Trichilia solitudinis;TRI2SO;TRICSO;3850994
+species;Trichilia stipitata;;;3850858
+species;Trichostigma octandrum;TRI5OC;;5383980
+species;Trigynaea duckei;;;9181920
+species;Trigynaea lagaropoda;;;3154839
+species;Trigynaea triplinervis;TRI3TR;TRIGTR;3154853
+species;Triplaris americana;;;4038608
+species;Triplaris americana;TRI4AM;TRIPDU;4038383
+species;Triplaris cumingiana;;;4038399
+species;Triplaris weigeltiana;;;4037419
+species;Trophis racemosa;;;2984648
+species;Trymatococcus amazonicum;TRYMAM;;11724343
+species;Turpinia occidentalis;TURPOC;;5421358
+species;Uncaria sp. A;UNCA_A;;5338267
+species;Unonopsis 'venefalso';UNONVE;;3157823
+species;Unonopsis floribunda;UNONFL;;3157782
+species;Unonopsis magnifolia;;;3157793
+species;Unonopsis peruviana;;;3157804
+species;Unonopsis sp. C;UNON_C;;3157765
+species;Unonopsis spectabilis;;;3157817
+species;Unonopsis stipitata;;;3157780
+species;Urera baccifera;;;7411905
+species;Urera caracasana;;;2984335
+species;Urera simplex;;;4098366
+species;Vantanea guianensis;VANTGU;;3649222
+species;Vantanea parviflora;;;7320149
+species;Vatairea erythrocarpa;;;2965130
+species;Vatairea fusca;;;2965116
+species;Vatairea guianensis;;;2965124
+species;Vataireopsis iglesiasii;VATAIG;;2965593
+species;Verbenaceae sp. A;VER_A;AEGIEL;3892888
+species;Verbenaceae sp. C;VER_C;;3893132
+species;Verbenaceae sp. PA;VER_PA;;6689
+species;Verbenaceae sp. PA (plantula);VRB_PA;;6689
+species;Vernonanthura patens;;;3124739
+species;Viburnum toronis;;;3857277
+species;Virola 'microfuzzy';VIROMI;;3152843
+species;Virola 'pavo';VIROPA;;3744236
+species;Virola calophylla;;;3152847
+species;Virola decorticans;;;3743497
+species;Virola divergens;;;3743485
+species;Virola dixonii;VIRODI;;3743473
+species;Virola duckei;VIRODU;;3743458
+species;Virola elongata;VIROEL;;7171876
+species;Virola flexuosa;VIROFL;;3743391
+species;Virola mollissima;;;3743067
+species;Virola multinervia;;;3743027
+species;Virola obovata;VIROOB;;3742984
+species;Virola parvifolia;;;3744248
+species;Virola peruviana;;;7333773
+species;Virola sebifera;;;3152846
+species;Virola surinamensis;VIROSU;;3152848
+species;Vismia baccifera;VISMBA;;8113584
+species;Vismia cayennensis;;;3189576
+species;Vismia ferruginea;;;7679156
+species;Vismia floribunda;VISMFL;;3714212
+species;Vismia gracilis;;;3714157
+species;Vismia lauriformis;;;3713883
+species;Vismia macrophylla;VISMMA;;7798391
+species;Vismia obtusa;;;3713726
+species;Vismia pozuzoensis;;;3713643
+species;Vismia sandwithii;;;3713560
+species;Vismia sprucei;;;3713497
+species;Vitex 'glabra';VITEGL;VITESC;3903015
+species;Vitex cymosa;;;7309596
+species;Vitex gigantea;;;7309552
+species;Vitex orinocensis;;;7309336
+species;Vitex pseudolea;;;3903497
+species;Vitex triflora;VITETR;;7309189
+species;Vochysia biloba;;;4030704
+species;Vochysia braceliniae;VOCHBR;;4030673
+species;Vochysia ferruginea;;;7378543
+species;Vochysia grandis;;;4030425
+species;Vochysia guianensis;;;4030836
+species;Vochysia leguiana;;;4030518
+species;Vochysia lomatophylla;;;4030465
+species;Vochysia punctata;;;4030766
+species;Vochysia venulosa;;;4030427
+species;Vochysia vismiifolia;;;7288386
+species;Vouarana anomala;;;3785412
+species;Warszewiczia coccinea;;;5340116
+species;Warszewiczia cordata;WARSCO;;5340130
+species;Warszewiczia schwackei;;;5340126
+species;Wettinia maynensis;WETTMA;;2737000
+species;Wittmackanthus stanleyanus;WITTST;;2903398
+species;Xylopia 'ligu';XYL1LI;XYLOLI;3157040
+species;Xylopia aromatica;;;3157126
+species;Xylopia calophylla;;;3157206
+species;Xylopia cuspidata;XYL1CU;XYLOCU;3157048
+species;Xylopia excellens;;;3157060
+species;Xylopia ligustrifolia;;;3157016
+species;Xylopia multiflora;;;3157190
+species;Xylopia neglecta;;;3157030
+species;Xylopia nitida;;;7845581
+species;Xylosma benthamii;;;7835337
+species;Xylosma tessmannii;;;3878857
+species;Yasunia sessiliflora;;;8075855
+species;Zanthoxylum 'brillante';ZANTBR;;3190076
+species;Zanthoxylum 'margland';ZANTMA;;3190076
+species;Zanthoxylum acuminatum;;;3833649
+species;Zanthoxylum caribaeum;;;3190118
+species;Zanthoxylum compactum;;;3832117
+species;Zanthoxylum ekmanii;;;3831433
+species;Zanthoxylum formiciferum;;;3831132
+species;Zanthoxylum martinicense;;;3190119
+species;Zanthoxylum riedelianum;;;3834649
+species;Zanthoxylum sp. B;ZANT_B;;3190076
+species;Zanthoxylum sp. C;ZANT_C;;3190076
+species;Zanthoxylum sp. D;ZANT_D;;3190076
+species;Zanthoxylum sp. E;ZANT_E;;3190076
+species;Zanthoxylum sprucei;;;3834097
+species;Zinowiewia australis;;;3790925
+species;Zizyphus cinnamomum;ZIZYCI;ZIZICI;8994554
+species;Zygia 'mediana';ZYGIME;;2939650
+species;Zygia cataractae;;;5347431
+species;Zygia coccinea;;;5347370
+species;Zygia dinizii;;;5580495
+species;Zygia heteroneura;ZYGIHE;;5347420
+species;Zygia inaequalis;;;5347357
+species;Zygia juruana;;;5347445
+species;Zygia lathetica;;;5580489
+species;Zygia latifolia;;;5347411
+species;Zygia longifolia;;;5347452
+species;uniden 'atenumembra';ZZHIAT;;2514
+species;uniden 'cordata';ZZLAC5;PLEUCO;10738820
+species;uniden 'laurita';ZZLAL2;OCOTLA;3034076
+species;uniden 'medpubinervi';ZZLAM1;ZZLAME;6688
+species;uniden 'membraobov';ZZLAM2;OCOTME;3034076
+species;uniden 'ovalo';ZZHIOV;ZZHIOL;3169160
+species;uniden 'smedpubicost';ZZMYS6;ZZMYSP;5014
+species;uniden 'vertipub';ZZMYVE;MYRCVE;6306297
+species;uniden. 'granverde';ZZLAG5;ZZLAGV;6688
+species;uniden. 'lisagroovy';ZZLAL4;ZZLALS;6688
+genus;Abarema;;;2977807
+genus;Abuta;;;7268654
+genus;Acacia;;;2978223
+genus;Acalypha;;;3055964
+genus;Acanthosyris;;;7265275
+genus;Acidoton;;;5380354
+genus;Adelobotrys;;;3860441
+genus;Adenaria;;;7286104
+genus;Adenocalymma;;;10767005
+genus;Adolphoduckea;;;10931308
+genus;Aechmea;;;2697812
+genus;Aegiphila;;;9156446
+genus;Agonandra;;;8219051
+genus;Agouticarpa;;;2898476
+genus;Aiouea;;;3034063
+genus;Aiphanes;;;2738638
+genus;Albizia;;;2972897
+genus;Alchornea;;;3055345
+genus;Alchorneopsis;;;7410955
+genus;Alibertia;;;2896652
+genus;Allantoma;;;3082998
+genus;Allomarkgrafia;;;7316765
+genus;Allophylus;;;3189992
+genus;Alseis;;;2894134
+genus;Alsophila;;;2650312
+genus;Amaioua;;;2901120
+genus;Amanoa;;;3080039
+genus;Ammandra;;;2733623
+genus;Ampelocera;;;7303603
+genus;Amphilophium;;;3172588
+genus;Amyris;;;3190177
+genus;Anacardium;;;5421367
+genus;Anaxagorea;;;8275519
+genus;Andira;;;7858091
+genus;Anemopaegma;;;3172463
+genus;Angostura;;;7911749
+genus;Aniba;;;3034086
+genus;Annona;;;3155252
+genus;Anthodiscus;;;3231310
+genus;Anthodon;;;3231386
+genus;Anthurium;;;2872218
+genus;Aparisthmium;;;3072467
+genus;Apeiba;;;3152049
+genus;Aphandra;;;2738043
+genus;Aptandra;;;7326472
+genus;Apuleia;;;2955914
+genus;Arawakia;;;10036167
+genus;Ardisia;;;3169458
+genus;Aristolochia;;;2873978
+genus;Arrabidaea;;;3233562
+genus;Aspidosperma;;;7316607
+genus;Asplundia;;;2860937
+genus;Astrocaryum;;;2738048
+genus;Astronium;;;7321564
+genus;Attalea;;;2732664
+genus;Bactris;;;2732906
+genus;Balizia;;;9596304
+genus;Banara;;;2874154
+genus;Banisteriopsis;;;7618041
+genus;Bathysa;;;2909696
+genus;Batocarpus;;;6358620
+genus;Bauhinia;;;2952935
+genus;Begonia;;;2874710
+genus;Beilschmiedia;;;3034072
+genus;Bellucia;;;3866386
+genus;Besleria;;;6365035
+genus;Bignonia;;;3172515
+genus;Billia;;;7323128
+genus;Bixa;;;2874862
+genus;Blakea;;;3231475
+genus;Blechnum;;;2651523
+genus;Boehmeria;;;2984344
+genus;Borojoa;;;2896652
+genus;Bribria;;;10977818
+genus;Brosimum;;;2984656
+genus;Brownea;;;2970433
+genus;Browneopsis;;;2944236
+genus;Brunfelsia;;;2932910
+genus;Buchenavia;;;3189387
+genus;Bunchosia;;;7404976
+genus;Byrsonima;;;3191347
+genus;Byttneria;;;7445609
+genus;Cabralea;;;7271426
+genus;Caesalpinia;;;2958443
+genus;Calatola;;;7314407
+genus;Calliandra;;;2981784
+genus;Callicarpa;;;2925549
+genus;Callichlamys;;;3233574
+genus;Calophyllum;;;3189443
+genus;Calycolpus;;;3177606
+genus;Calycophyllum;;;2903995
+genus;Calyptranthes;;;3181245
+genus;Campomanesia;;;3180879
+genus;Capirona;;;2909262
+genus;Capparidastrum;;;6370671
+genus;Capparis;;;3054191
+genus;Caraipa;;;7330048
+genus;Carica;;;2874482
+genus;Cariniana;;;3083017
+genus;Carpotroche;;;7274050
+genus;Caryocar;;;3189661
+genus;Caryodaphnopsis;;;7304487
+genus;Caryodendron;;;3055896
+genus;Casearia;;;2874105
+genus;Cassia;;;2963414
+genus;Cassipourea;;;3086519
+genus;Castilla;;;2984557
+genus;Cathedra;;;3232586
+genus;Catostemma;;;7296117
+genus;Cavanillesia;;;7296146
+genus;Cayaponia;;;2874613
+genus;Cecropia;;;2984472
+genus;Cedrela;;;3190510
+genus;Cedrelinga;;;2976173
+genus;Ceiba;;;3152218
+genus;Celtis;;;2984479
+genus;Centrolobium;;;2945568
+genus;Centronia;;;3231552
+genus;Centropogon;;;7815589
+genus;Cespedesia;;;7326758
+genus;Cestrum;;;2928784
+genus;Chaunochiton;;;7326509
+genus;Cheiloclinium;;;7265392
+genus;Chelyocarpus;;;2731952
+genus;Chimarrhis;;;2918950
+genus;Chiococca;;;2907380
+genus;Chionanthus;;;7906922
+genus;Chlorocardium;;;7304319
+genus;Chomelia;;;2903121
+genus;Chrysochlamys;;;3231115
+genus;Chrysophyllum;;;2885576
+genus;Ciliosemina;;;2898323
+genus;Cinchona;;;2901235
+genus;Cinchonopsis;;;2891953
+genus;Cinnamomum;;;3033980
+genus;Cissampelos;;;3033936
+genus;Cissus;;;3039160
+genus;Citharexylum;;;7853269
+genus;Citronella;;;7314391
+genus;Cladocolea;;;3232632
+genus;Clarisia;;;3234568
+genus;Clavija;;;7313189
+genus;Clerodendrum;;;2925347
+genus;Clidemia;;;3188558
+genus;Clitoria;;;2946499
+genus;Clusia;;;3189424
+genus;Coccoloba;;;2888822
+genus;Cochlospermum;;;2874864
+genus;Colubrina;;;3039524
+genus;Columnea;;;3172890
+genus;Combretum;;;2986357
+genus;Commelina;;;2763939
+genus;Compsoneura;;;3231414
+genus;Conceveiba;;;3074933
+genus;Condaminea;;;2908490
+genus;Connarus;;;3032531
+genus;Corchorus;;;3032212
+genus;Cordia;;;2900865
+genus;Cordiera;;;2903362
+genus;Cornutia;;;2925661
+genus;Cossarea;;;2904739
+genus;Costus;;;2756771
+genus;Couepia;;;2984768
+genus;Couma;;;7316606
+genus;Couratari;;;3083098
+genus;Couroupita;;;3082553
+genus;Coussapoa;;;7316389
+genus;Coussarea;;;2904739
+genus;Coutarea;;;2893702
+genus;Cremastosperma;;;3154020
+genus;Crepidospermum;;;7286748
+genus;Croton;;;3057454
+genus;Crudia;;;2974579
+genus;Cryptocarya;;;3011993
+genus;Cuatresia;;;7299697
+genus;Cuervea;;;7265630
+genus;Cupania;;;3189959
+genus;Cyathea;;;2650273
+genus;Cybianthus;;;3169407
+genus;Cymbopetalum;;;3157828
+genus;Cymbopogon;;;2705264
+genus;Cynanchum;;;3170354
+genus;Cyperus;;;2713455
+genus;Dacryodes;;;3190454
+genus;Dahlstedtia;;;2960229
+genus;Dalbergia;;;2968358
+genus;Damburneya;;;7304488
+genus;Daphnopsis;;;3188467
+genus;Davilla;;;3234608
+genus;Deguelia;;;7577914
+genus;Dendrobangia;;;7314371
+genus;Dendropanax;;;3034954
+genus;Desmoncus;;;2738753
+genus;Dialium;;;2970932
+genus;Dicella;;;3231254
+genus;Dichapetalum;;;7309866
+genus;Dichorisandra;;;2763579
+genus;Diclinanona;;;3158298
+genus;Dicranostyles;;;7324361
+genus;Dictyoloma;;;7268850
+genus;Didymopanax;;;6419087
+genus;Dieffenbachia;;;2869330
+genus;Dilkea;;;7313332
+genus;Dimerocostus;;;2756978
+genus;Dioclea;;;2974376
+genus;Dioscorea;;;2754367
+genus;Diospyros;;;3030169
+genus;Diploon;;;2883949
+genus;Diplopterys;;;7284911
+genus;Diplotropis;;;2960676
+genus;Dipteryx;;;2947121
+genus;Disciphania;;;7268753
+genus;Discophora;;;3234385
+genus;Distictella;;;3172588
+genus;Dolichandra;;;6401165
+genus;Doliocarpus;;;3083497
+genus;Dracontium;;;7392210
+genus;Drymonia;;;3233484
+genus;Drypetes;;;3075615
+genus;Duguetia;;;3157467
+genus;Dulacia;;;8205552
+genus;Duroia;;;2892076
+genus;Dussia;;;2968226
+genus;Dystovomita;;;7329965
+genus;Ecclinusa;;;2887353
+genus;Ectopopterys;;;7285756
+genus;Elaeoluma;;;2886342
+genus;Endlicheria;;;7304104
+genus;Entada;;;2976182
+genus;Enterolobioum;;;2961142
+genus;Enterolobium;;;2961142
+genus;Epiphyllum;;;3084180
+genus;Eriotheca;;;7296175
+genus;Erisma;;;3231629
+genus;Ertela;;;7268971
+genus;Erythrina;;;2945830
+genus;Erythrochiton;;;3232943
+genus;Erythroxylum;;;2873937
+genus;Eschweilera;;;3083183
+genus;Esenbeckia;;;3190391
+genus;Eugenia;;;3177662
+genus;Euterpe;;;7906352
+genus;Evodianthus;;;2861088
+genus;Exostema;;;2911000
+genus;Faramea;;;2897889
+genus;Ferdinandusa;;;2907987
+genus;Fevillea;;;2874554
+genus;Ficus;;;2984588
+genus;Forsteronia;;;8171331
+genus;Fridericia;;;3233562
+genus;Froesia;;;7285769
+genus;Fusaea;;;3158135
+genus;Fusispermum;;;7296394
+genus;Galipea;;;3190389
+genus;Garcinia;;;3189556
+genus;Gaulettia;;;9611517
+genus;Geissanthus;;;7330862
+genus;Genipa;;;2895591
+genus;Geonoma;;;2734029
+genus;Gitara;;;3062858
+genus;Gloeospermum;;;7296352
+genus;Glycydendron;;;3061259
+genus;Gmelina;;;2925650
+genus;Gnetum;;;2653091
+genus;Gonzalagunia;;;2896440
+genus;Gordonia;;;3189631
+genus;Gouania;;;3039434
+genus;Graffenrieda;;;7398997
+genus;Grias;;;3082326
+genus;Guadua;;;4127579
+genus;Guapira;;;3086054
+genus;Guarea;;;3190499
+genus;Guatteria;;;3155604
+genus;Guazuma;;;3152194
+genus;Guettarda;;;2894616
+genus;Gurania;;;7317515
+genus;Gustavia;;;3082580
+genus;Gymnosporia;;;7265395
+genus;Gyranthera;;;7296137
+genus;Hamelia;;;2902033
+genus;Handroanthus;;;6401269
+genus;Hasseltia;;;3231177
+genus;Havetiopsis;;;7329959
+genus;Haydenoxylon;;;7754677
+genus;Heisteria;;;3232590
+genus;Heliconia;;;2760545
+genus;Helicostylis;;;7262603
+genus;Heliocarpus;;;3152062
+genus;Heliotropium;;;2925766
+genus;Henriettea;;;3188527
+genus;Henriettella;;;3188527
+genus;Herrania;;;7322892
+genus;Heteropsis;;;2867803
+genus;Heteropterys;;;3191290
+genus;Hevea;;;3071157
+genus;Hieronyma;;;7570851
+genus;Hillia;;;2916438
+genus;Himatanthus;;;7317357
+genus;Hippocratea;;;3169011
+genus;Hippotis;;;2901965
+genus;Hiraea;;;3191288
+genus;Hirtella;;;2944960
+genus;Homalium;;;2874142
+genus;Homalolepis;;;7329598
+genus;Huberodendron;;;7296129
+genus;Huertea;;;7326537
+genus;Hura;;;3071143
+genus;Hydrangea;;;2985983
+genus;Hydrochorea;;;2977474
+genus;Hyeronima;;;3919231
+genus;Hylenaea;;;7265702
+genus;Hymenaea;;;2950720
+genus;Hymenolobium;;;7783451
+genus;Hymenopus;;;9714684
+genus;Hyospathe;;;2736704
+genus;Ilex;;;10792217
+genus;Inga;;;2965936
+genus;Iochroma;;;6402978
+genus;Ipomoea;;;2928509
+genus;Iriartea;;;2739058
+genus;Iryanthera;;;3743006
+genus;Ischnosiphon;;;2761017
+genus;Isertia;;;2903511
+genus;Ixora;;;2905224
+genus;Jacaranda;;;3172498
+genus;Jacaratia;;;7269679
+genus;Joosia;;;2901093
+genus;Jubelina;;;7285074
+genus;Jupunba;;;7266089
+genus;Klarobelia;;;3157872
+genus;Kotchubaea;;;2893775
+genus;Kutchubaea;;;2893775
+genus;Lacistema;;;3075381
+genus;Lacmellea;;;7316922
+genus;Lacunaria;;;3231148
+genus;Ladenbergia;;;2908647
+genus;Laetia;;;8901623
+genus;Lafoensia;;;7286250
+genus;Laxoplumeria;;;7316641
+genus;Lecointea;;;2965103
+genus;Lecythis;;;3082348
+genus;Leonia;;;3231302
+genus;Leptobalanus;;;9798427
+genus;Leretia;;;3596539
+genus;Licania;;;2985250
+genus;Licaria;;;3033969
+genus;Lindackeria;;;7274185
+genus;Lippia;;;2925383
+genus;Lonchocarpus;;;2968975
+genus;Lozania;;;3075434
+genus;Ludovia;;;5293109
+genus;Luehea;;;3152076
+genus;Lueheopsis;;;7311106
+genus;Lunania;;;2874167
+genus;Lycianthes;;;2928971
+genus;Mabea;;;3071743
+genus;Macbrideina;;;2904937
+genus;Macfadyena;;;6401165
+genus;Machaerium;;;2959589
+genus;Maclura;;;2984579
+genus;Macrocnemum;;;2895624
+genus;Macrolobium;;;7743878
+genus;Macropsychanthus;;;2974520
+genus;Magnolia;;;2888195
+genus;Malanea;;;2906349
+genus;Malouetia;;;7317134
+genus;Mandevilla;;;3169658
+genus;Manihot;;;3060685
+genus;Manilkara;;;2885024
+genus;Mansoa;;;3172602
+genus;Maprounea;;;3054655
+genus;Maquira;;;7262473
+genus;Maranta;;;2757347
+genus;Marcgravia;;;3189414
+genus;Margaritaria;;;8016408
+genus;Marila;;;3189554
+genus;Maripa;;;3234444
+genus;Markea;;;7299864
+genus;Marlierea;;;8154796
+genus;Marmaroxylon;;;2939650
+genus;Mascagnia;;;7284941
+genus;Matayba;;;3190011
+genus;Matisia;;;7296118
+genus;Mauria;;;3233141
+genus;Mauritia;;;8413640
+genus;Mauritiella;;;8246057
+genus;Mayna;;;7274118
+genus;Maytenus;;;3169095
+genus;Melia;;;3190496
+genus;Melicoccus;;;3189989
+genus;Melicocus;;;3189989
+genus;Melinis;;;2702502
+genus;Meliosma;;;3033959
+genus;Melothria;;;2874549
+genus;Memora;;;6401106
+genus;Mendoncia;;;7263432
+genus;Mendonica;;;7263432
+genus;Mendonicia;;;7263432
+genus;Mespilodaphne;;;7304101
+genus;Metalepis;;;3170354
+genus;Metteniusa;;;7314358
+genus;Mezilaurus;;;7529619
+genus;Miconia;;;3188558
+genus;Micrandra;;;5378802
+genus;Microchloa;;;2703588
+genus;Microdesmia;;;9705633
+genus;Micropholis;;;2887381
+genus;Mikania;;;7722389
+genus;Mimosa;;;2969235
+genus;Minquartia;;;7326522
+genus;Mollia;;;3233956
+genus;Mollinedia;;;3034105
+genus;Monolena;;;3857610
+genus;Monstera;;;2868125
+genus;Monteverdia;;;7265474
+genus;Moquilea;;;7335164
+genus;Moronobea;;;7329955
+genus;Mosannona;;;3158155
+genus;Mouriri;;;3188623
+genus;Moutabea;;;4051440
+genus;Mucuna;;;2951351
+genus;Myrcia;;;3173889
+genus;Myrciaria;;;3186407
+genus;Myriocarpa;;;3234510
+genus;Myroxylon;;;7362006
+genus;Myroxylum;;;3973814
+genus;Naucleopsis;;;7262533
+genus;Nealchornea;;;3062050
+genus;Nectandra;;;3034018
+genus;Neea;;;3086079
+genus;Neosprucea;;;7274195
+genus;Norantea;;;7275870
+genus;Notopleura;;;2901654
+genus;Oblivia;;;3104405
+genus;Ochroma;;;3152238
+genus;Ocotea;;;3034076
+genus;Odontadenia;;;7316739
+genus;Odontocarya;;;7268633
+genus;Odontodenia;;;7316739
+genus;Oenocarpus;;;2735438
+genus;Olmedia;;;3766294
+genus;Omphalea;;;3062195
+genus;Ophiocaryon;;;10721532
+genus;Ormosia;;;2960439
+genus;Oryctanthus;;;7288086
+genus;Ossaea;;;3188626
+genus;Osteophloeum;;;3742996
+genus;Otoba;;;7333703
+genus;Ouratea;;;3189667
+genus;Oxandra;;;3154735
+genus;Pachira;;;3152234
+genus;Palicourea;;;2898662
+genus;Parablechnum;;;7296866
+genus;Paradrymonia;;;3233476
+genus;Paradrypetes;;;7276072
+genus;Parahancornia;;;7317324
+genus;Parathesis;;;3169397
+genus;Parinari;;;2984937
+genus;Parkia;;;2943936
+genus;Passiflora;;;2874172
+genus;Patinoa;;;7296155
+genus;Paullinia;;;3189948
+genus;Pausandra;;;3075099
+genus;Pentagonia;;;2893500
+genus;Pentaplaris;;;7296152
+genus;Peperomia;;;3086367
+genus;Pera;;;3231319
+genus;Perebea;;;7262669
+genus;Peritassa;;;7265649
+genus;Perrottetia;;;6008745
+genus;Persea;;;3034041
+genus;Petrea;;;2925535
+genus;Philodendron;;;2861312
+genus;Pholidostachys;;;4930249
+genus;Phoradendron;;;2889864
+genus;Phragmotheca;;;3234070
+genus;Phyllanthus;;;3061139
+genus;Phytelephas;;;2736285
+genus;Phytolacca;;;3084013
+genus;Phytyolacca;;;3084013
+genus;Picramnia;;;8118842
+genus;Picrasma;;;3190671
+genus;Pinzona;;;3083489
+genus;Piparea;;;7274133
+genus;Piper;;;3075433
+genus;Piptadenia;;;2951753
+genus;Piptocoma;;;3122102
+genus;Pithecoctinium;;;3172473
+genus;Platymiscium;;;2944717
+genus;Pleuranthodendron;;;7311194
+genus;Pleurothyrium;;;10738820
+genus;Plinia;;;3173680
+genus;Plukenetia;;;3070698
+genus;Podocalyx;;;3075158
+genus;Porcelia;;;3156211
+genus;Posoqueria;;;2893876
+genus;Potalia;;;7289361
+genus;Poulsenia;;;3234567
+genus;Pourouma;;;7316388
+genus;Pouteria;;;2884049
+genus;Pradosia;;;2883827
+genus;Preslianthus;;;8108711
+genus;Prestoea;;;2738937
+genus;Pristimera;;;3169112
+genus;Protium;;;7286732
+genus;Prunus;;;3020559
+genus;Pseudobombax;;;3152211
+genus;Pseudolmedia;;;2984542
+genus;Pseudomalmea;;;3153990
+genus;Pseudopiptadenia;;;2952898
+genus;Pseudosamanea;;;8107622
+genus;Pseudosenefeldera;;;3071113
+genus;Pseudoxandra;;;3158193
+genus;Psittacanthus;;;7287854
+genus;Psychotria;;;2919963
+genus;Pterocarpus;;;5349236
+genus;Punjuba;;;7266077
+genus;Qualea;;;7288308
+genus;Quararibea;;;3152231
+genus;Quiina;;;7285768
+genus;Randia;;;2911655
+genus;Raritebe;;;2896794
+genus;Rauvolfia;;;3169769
+genus;Remijia;;;2909612
+genus;Retrophyllum;;;2687720
+genus;Rhamnidium;;;7273600
+genus;Rhigospira;;;7316660
+genus;Rhodostemonodaphne;;;7304348
+genus;Rhynchosia;;;2947992
+genus;Richeria;;;3075271
+genus;Rinorea;;;7296208
+genus;Rinoreocarpus;;;7296599
+genus;Roentgenia;;;3172515
+genus;Rollinia;;;3155252
+genus;Rosenbergiodendron;;;8244725
+genus;Roupala;;;7286930
+genus;Rourea;;;3032534
+genus;Ruagea;;;7271362
+genus;Rudgea;;;2910457
+genus;Ruizodendron;;;3154065
+genus;Ruizterania;;;7288310
+genus;Ryania;;;3231223
+genus;Sabicea;;;2900141
+genus;Sacoglottis;;;7320134
+genus;Sagotia;;;5939732
+genus;Salacia;;;3169160
+genus;Sanango;;;6387493
+genus;Sapium;;;5379830
+genus;Sarcaulus;;;2886224
+genus;Sarcomphalus;;;8301375
+genus;Saurauia;;;7270665
+genus;Schefflera;;;3037700
+genus;Schizocalyx;;;7270984
+genus;Schizolobium;;;2945452
+genus;Schlegelia;;;3172466
+genus;Schnella;;;7278569
+genus;Schoenobiblus;;;7311257
+genus;Schoepfia;;;2889813
+genus;Sciadotenia;;;7268706
+genus;Sciodaphyllum;;;7314478
+genus;Securidaca;;;3191472
+genus;Selaginella;;;2688177
+genus;Senegalia;;;7989631
+genus;Senna;;;2956904
+genus;Septotheca;;;7296130
+genus;Serjania;;;5421120
+genus;Sicydium;;;8052497
+genus;Simaba;;;7329561
+genus;Simarouba;;;3190668
+genus;Simira;;;2894913
+genus;Siolmatra;;;7317597
+genus;Siparuna;;;7264484
+genus;Sloanea;;;3152097
+genus;Smilax;;;2740627
+genus;Sobralia;;;2797375
+genus;Socratea;;;2732448
+genus;Solanum;;;2928997
+genus;Sorocea;;;7262353
+genus;Souroubea;;;7275871
+genus;Sphaeropteris;;;2650270
+genus;Sphinctanthus;;;2893759
+genus;Spondias;;;3190592
+genus;Stephanopodium;;;7309869
+genus;Sterculia;;;3152129
+genus;Sterigmapetalum;;;7273564
+genus;Stigmaphyllon;;;3191310
+genus;Stromanthe;;;2761248
+genus;Strychnos;;;3169589
+genus;Stryphnodendron;;;2951701
+genus;Stylogyne;;;3169452
+genus;Styrax;;;3032925
+genus;Swartzia;;;2950920
+genus;Swietenia;;;3190483
+genus;Syagrus;;;2737041
+genus;Symmeria;;;7291272
+genus;Symphonia;;;8233185
+genus;Symplocos;;;3032996
+genus;Syngonium;;;2867833
+genus;Tabebuia;;;7935410
+genus;Tabernaemontana;;;3169624
+genus;Tachigali;;;2945125
+genus;Talisia;;;3189946
+genus;Tanaecium;;;7298714
+genus;Tapirira;;;7321529
+genus;Tapura;;;7309868
+genus;Tassadia;;;7311668
+genus;Telitoxicum;;;7268678
+genus;Terminalia;;;3189387
+genus;Tessaria;;;3114904
+genus;Tessmannianthus;;;3866049
+genus;Tetracera;;;3234607
+genus;Tetragastris;;;3190462
+genus;Tetrameranthus;;;3156234
+genus;Tetrapterys;;;3191303
+genus;Tetrathylacium;;;7274104
+genus;Tetrorchidium;;;3062897
+genus;Theobroma;;;2984934
+genus;Thinouia;;;7264997
+genus;Thyrsodium;;;7321509
+genus;Ticorea;;;7480378
+genus;Tococa;;;3188558
+genus;Tocoyena;;;2898227
+genus;Tontelea;;;7550998
+genus;Toulicia;;;7264936
+genus;Tournefortia;;;2925828
+genus;Tournefortida;;;2925828
+genus;Tovomita;;;7329865
+genus;Toxosiphon;;;7269262
+genus;Trattinnickia;;;7286734
+genus;Trema;;;2984500
+genus;Trichilia;;;3190490
+genus;Trichodrymonia;;;6365186
+genus;Trichostigma;;;3083999
+genus;Trigynaea;;;3154838
+genus;Triplaris;;;6390747
+genus;Trophis;;;10808815
+genus;Trymatococcus;;;2984656
+genus;Turpinia;;;3190468
+genus;Tynanthus;;;3172598
+genus;Uncaria;;;2906635
+genus;Unonopsis;;;3157765
+genus;Urera;;;2984329
+genus;Vantanea;;;7158977
+genus;Vasconcellea;;;7106306
+genus;Vatairea;;;2965112
+genus;Vataireopsis;;;2965587
+genus;Vernonanthura;;;3110435
+genus;Viburnum;;;2888580
+genus;Virola;;;3152843
+genus;Vismia;;;3189574
+genus;Vitex;;;2925556
+genus;Vochysia;;;8225540
+genus;Vouarana;;;7264833
+genus;Warszewiczia;;;2917365
+genus;Wettinia;;;2736938
+genus;Wittmackanthus;;;2903397
+genus;Xylopia;;;3157015
+genus;Xylosma;;;2874117
+genus;Yasunia;;;8255303
+genus;Zanthoxylum;;;3190076
+genus;Zinowiewia;;;7265394
+genus;Ziziphus;;;3039411
+genus;Zizyphus;;;11784496
+genus;Zygia;;;2939650
+family;Acanthaceae;;;2393
+family;Achariaceae;;;3231308
+family;Actinidiaceae;;;2385
+family;Anacardiaceae;;;2398
+family;Annonaceae;;;9291
+family;Apiaceae;;;6720
+family;Apocynaceae;;;6701
+family;Aptandraceae;;;4924613
+family;Aquifoliaceae;;;6716
+family;Araceae;;;6979
+family;Araliaceae;;;8800
+family;Arecaceae;;;7681
+family;Aristolochiaceae;;;3066
+family;Asclepiadaceae;;;6700
+family;Asteraceae;;;3065
+family;Begoniaceae;;;6638
+family;Bignoniaceae;;;6655
+family;Bixaceae;;;6637
+family;Blechnaceae;;;2374
+family;Bombacaceae;;;6685
+family;Boraginaceae;;;2498
+family;Bromeliaceae;;;3740
+family;Burseraceae;;;6659
+family;Cactaceae;;;2519
+family;Calophyllaceae;;;4907584
+family;Campanulaceae;;;8801
+family;Cannabaceae;;;2384
+family;Capparaceae;;;3111
+family;Capparidaceae;;;3111
+family;Cardiopteridaceae;;;3233863
+family;Caricaceae;;;6636
+family;Caryocaraceae;;;6647
+family;Cecropiaceae;;;2383
+family;Celastraceae;;;6715
+family;Cervantesiaceae;;;4934723
+family;Chrysobalanaceae;;;9111
+family;Clusiaceae;;;6646
+family;Cochlospermaceae;;;3702383
+family;Combretaceae;;;2431
+family;Commelinaceae;;;2763195
+family;Connaraceae;;;6669
+family;Convolvulaceae;;;2389
+family;Cordiaceae;;;4930453
+family;Costaceae;;;4492
+family;Coulaceae;;;4928321
+family;Cucurbitaceae;;;6634
+family;Cyatheaceae;;;6624
+family;Cyclanthaceae;;;7703
+family;Cyperaceae;;;7708
+family;Dichapetalaceae;;;3231311
+family;Dilleniaceae;;;2511
+family;Dioscoreaceae;;;7694
+family;Dipentodontaceae;;;4160293
+family;Ebenaceae;;;6709
+family;Elaeocarpaceae;;;2435
+family;Erythropalaceae;;;4924615
+family;Erythroxylaceae;;;6686
+family;Euphorbiaceae;;;4691
+family;Fabaceae;;;5386
+family;Fabaceae-Caesalpiniodeae;;;5386
+family;Fabaceae-Mimosoideae;;;5386
+family;Fabaceae-Papilionoideae;;;5386
+family;Flacourtiaceae;;;9725603
+family;Gentianaceae;;;2503
+family;Gesneriaceae;;;6654
+family;Gnetaceae;;;6755
+family;Heliconiaceae;;;4677
+family;Heliotropiaceae;;;4930387
+family;Hippocrateaceae;;;2514
+family;Humiriaceae;;;3231239
+family;Hydrangeaceae;;;6667
+family;Hypericaceae;;;4900406
+family;Icacinaceae;;;2513
+family;Lacistemataceae;;;7524
+family;Lamiaceae;;;2497
+family;Lauraceae;;;6688
+family;Lecythidaceae;;;3990
+family;Loganiaceae;;;2502
+family;Loranthaceae;;;6663
+family;Lythraceae;;;6684
+family;Magnoliaceae;;;4690
+family;Malpighiaceae;;;6676
+family;Malvaceae;;;6685
+family;Marantaceae;;;8784
+family;Marcgraviaceae;;;6643
+family;Melastomataceae;;;6683
+family;Meliaceae;;;2397
+family;Menispermaceae;;;2411
+family;Metteniusaceae;;;4898632
+family;Monimiaceae;;;2494
+family;Moraceae;;;6640
+family;Myristicaceae;;;2439
+family;Myrsinaceae;;;6674
+family;Myrtaceae;;;5014
+family;Nyctaginaceae;;;6718
+family;Ochnaceae;;;6642
+family;Olacaceae;;;6662
+family;Oleaceae;;;6652
+family;Opiliaceae;;;3232649
+family;Orchidaceae;;;7689
+family;Passifloraceae;;;2378
+family;Peraceae;;;4896765
+family;Petiveriaceae;;;4923867
+family;Phyllanthaceae;;;8807
+family;Phytolaccaceae;;;2516
+family;Picramniaceae;;;3694522
+family;Picrodendraceae;;;4693
+family;Piperaceae;;;6678
+family;Poaceae;;;3073
+family;Podocarpaceae;;;8830
+family;Polygalaceae;;;2417
+family;Polygonaceae;;;2416
+family;Primulaceae;;;6674
+family;Proteaceae;;;2414
+family;Putranjivaceae;;;8808
+family;Quiinaceae;;;3986433
+family;Rhamnaceae;;;2407
+family;Rhizophoraceae;;;6671
+family;Rosaceae;;;5015
+family;Rubiaceae;;;8798
+family;Rutaceae;;;2396
+family;Sabiaceae;;;2409
+family;Salicaceae;;;6664
+family;Santalaceae;;;6661
+family;Sapindaceae;;;6657
+family;Sapotaceae;;;8802
+family;Schlegeliaceae;;;3609121
+family;Schoepfiaceae;;;4894246
+family;Selaginellaceae;;;6724
+family;Simaroubaceae;;;2395
+family;Siparunaceae;;;4893899
+family;Smilacaceae;;;7702
+family;Solanaceae;;;7717
+family;Staphyleaceae;;;6656
+family;Stemonuraceae;;;4087082
+family;Sterculiaceae;;;2434
+family;Styracaceae;;;2507
+family;Symplocaceae;;;6708
+family;Tapisciaceae;;;3643030
+family;Theaceae;;;3189597
+family;Theophrastaceae;;;6674
+family;Thymelaeaceae;;;2428
+family;Tiliaceae;;;2433
+family;Ulmaceae;;;2382
+family;Urticaceae;;;6639
+family;Verbenaceae;;;6689
+family;Viburnaceae;;;4924416
+family;Violaceae;;;6631
+family;Viscaceae;;;2399
+family;Vitaceae;;;6672
+family;Vochysiaceae;;;3231623

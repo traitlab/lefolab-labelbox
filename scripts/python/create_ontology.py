@@ -186,6 +186,18 @@ def build_taxon_options(rows: list[dict], cache: dict, cfg) -> list[dict]:
     return options
 
 
+def build_explicit_options(rows: list[dict], cfg) -> list[dict]:
+    # Rows already list every species/genus/family: no GBIF lookup, no dedupe by GBIF ID
+    options = []
+    for row in rows:
+        gbif_id = row.get(cfg.COL_GBIF_ID, "").strip()
+        if not gbif_id.isdigit():
+            logger.warning(f"Invalid {cfg.COL_GBIF_ID} '{gbif_id}' for row: {row.get(cfg.COL_BINOMIAL, '?')} — skipping")
+            continue
+        options.append({"type": row[cfg.COL_TYPE], "label": build_species_label(row, cfg), "value": gbif_id})
+    return options
+
+
 def save_list(options: list[dict], cfg) -> None:
     output_path = project_root / cfg.OUTPUT_DIR
     output_path.mkdir(parents=True, exist_ok=True)
@@ -235,16 +247,18 @@ def main() -> None:
 
     cfg = load_config(config_path)
 
-    cache_path = project_root / cfg.GBIF_CACHE_FILE
-    cache = load_cache(cache_path)
-
     logger.info(f"Loading species list from {cfg.INPUT_CSV}")
     rows = load_species_rows(cfg)
     logger.info(f"{len(rows)} rows loaded")
 
-    logger.info("Resolving GBIF IDs for species, genera, and families…")
-    options = build_taxon_options(rows, cache, cfg)
-    save_cache(cache, cache_path)
+    if getattr(cfg, "COL_TYPE", None):
+        options = build_explicit_options(rows, cfg)
+    else:
+        cache_path = project_root / cfg.GBIF_CACHE_FILE
+        cache = load_cache(cache_path)
+        logger.info("Resolving GBIF IDs for species, genera, and families…")
+        options = build_taxon_options(rows, cache, cfg)
+        save_cache(cache, cache_path)
 
     species_count = sum(1 for o in options if o["type"] == "species")
     genus_count = sum(1 for o in options if o["type"] == "genus")
