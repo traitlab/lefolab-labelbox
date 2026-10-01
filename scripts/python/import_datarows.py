@@ -180,10 +180,7 @@ for i, closeup_file in enumerate(closeup_files):
     asset["row_data"] = f"{folder_url}/{closeup_file}"
     
     # Use file name as unique global_key
-    # Strip the mission prefix so the key stays <folder>/<image> as before,
-    # not the full drone_missions/<year>/<mission>/<folder>/<image> path.
-    file = closeup_file[len(prefix) + 1:] if closeup_file.startswith(prefix + "/") else closeup_file.split('/', 1)[-1]
-    asset["global_key"] = file
+    asset["global_key"] = os.path.basename(closeup_file)
     
     # Metadata fields : mission
     asset["metadata_fields"][0]["value"] = f"{mission}" 
