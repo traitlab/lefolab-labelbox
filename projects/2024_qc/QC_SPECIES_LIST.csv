@@ -1,0 +1,463 @@
+﻿type;name;code1;code2;gbif_id
+genus;Abies;;;2684876
+species;Abies balsamea-Sapin baumier;;;2685383
+genus;Acer;;;3189834
+species;Acer ginnala-Érable de l'Amour;;;4925890
+species;Acer negundo-Érable à Giguère;;;3189866
+species;Acer nigrum-Érable noir;;;3189854
+species;Acer pensylvanicum-Érable de Pennsylvanie;;;3189836
+species;Acer platanoides-Érable de Norvège;;;3189846
+species;Acer rubrum-Érable rouge;;;3189883
+species;Acer saccharinum-Érable argenté;;;3189837
+species;Acer saccharum-Érable à sucre;;;3189859
+species;Acer spicatum-Érable à épis;;;3189848
+genus;Aesculus;;;3189801
+species;Aesculus hippocastanum-Marronnier d'Inde;;;3189815
+genus;Ailanthus;;;3190652
+species;Ailanthus altissima-Ailante glanduleux;;;3190653
+genus;Alnus;;;2876099
+species;Alnus alnobetula-Aulne vert;;;8956987
+species;Alnus incana-Aulne blanc;;;9148577
+species;Alnus serrulata-Aulne tendre;;;2876528
+genus;Amelanchier;;;3023817
+species;Amelanchier amabilis-Amélanchier gracieux;;;3023840
+species;Amelanchier arborea-Amélanchier arborescent;;;3024052
+species;Amelanchier bartramiana-Amélanchier de Bartram;;;3024074
+species;Amelanchier canadensis-Amélanchier du Canada;;;3023833
+species;Amelanchier fernaldii-Amélanchier de Fernald;;;3023833
+species;Amelanchier gaspensis-Amélanchier de Gaspésie;;;3023841
+species;Amelanchier humilis-Amélanchier bas;;;3023903
+species;Amelanchier interior-Amélanchier de l'intérieur;;;3024097
+species;Amelanchier intermedia-Amélanchier intermédiaire;;;3024070
+species;Amelanchier laevis-Amélanchier glabre;;;3023832
+species;Amelanchier sanguinea-Amélanchier sanguin;;;3023840
+species;Amelanchier spicata-Amélanchier en épis;;;3023903
+genus;Amorpha;;;2965599
+species;Amorpha fruticosa-Faux-indigo commun;;;5357407
+family;Anacardiaceae;;;2398
+genus;Andromeda;;;2882786
+species;Andromeda polifolia-Andromède à feuilles de polium;;;5333413
+family;Aquifoliaceae;;;6716
+genus;Arctostaphylos;;;2882486
+species;Arctostaphylos uva-Ursi-raisin d'ours;;;2882580
+genus;Arctous;;;7134933
+species;Arctous alpina-Busserole alpine;;;8317978
+species;Arctous rubra-Busserole rouge;;;2882596
+genus;Aronia;;;2988529
+species;Aronia arbutifolia-Aronie à feuilles d'arbousier;;;5363629
+species;Aronia melanocarpa-Aronie à fruits noirs;;;5363627
+family;Berberidaceae;;;6673
+genus;Betula;;;2875008
+species;Betula alleghaniensis-Bouleau jaune;;;5331779
+species;Betula cordifolia-Bouleau à feuilles cordées;;;5332147
+species;Betula glandulosa-Bouleau glanduleux;;;5331640
+species;Betula michauxii-Bouleau de Michaux;;;5332206
+species;Betula minor-Bouleau mineur;;;5331584
+species;Betula papyrifera-Bouleau à papier;;;5332120
+species;Betula populifolia-Bouleau gris;;;8184083
+species;Betula pumila-Bouleau nain boréal;;;5331824
+family;Betulaceae;;;4688
+genus;Calluna;;;2882481
+species;Calluna vulgaris-Bruyère commune;;;2882482
+family;Cannabaceae;;;2384
+family;Caprifoliaceae;;;6710
+genus;Caragana;;;7884007
+species;Caragana arborescens-Caragana arborescent;;;2943190
+genus;Carpinus;;;2875770
+species;Carpinus caroliniana-Charme de Caroline;;;2875842
+genus;Carya;;;3054287
+species;Carya cordiformis-Caryer cordiforme;;;3054299
+species;Carya ovata-Caryer ovale;;;3054296
+genus;Cassiope;;;2882766
+species;Cassiope tetragona-Cassiope tétragone;;;5333401
+genus;Ceanothus;;;3039297
+species;Ceanothus americanus-Céanothe d'Amérique;;;3039318
+species;Ceanothus herbaceus-Céanothe à feuilles étroites;;;3039322
+family;Celastraceae;;;6715
+genus;Celtis;;;2984479
+species;Celtis occidentalis-Micocoulier occidental;;;2984481
+genus;Cephalanthus;;;2923932
+species;Cephalanthus occidentalis-Céphalanthe occidental;;;2923947
+genus;Chamaedaphne;;;8388331
+species;Chamaedaphne calyculata-Cassandre caliculé;;;5333436
+genus;Comptonia;;;8464883
+species;Comptonia peregrina-Comptonie voyageuse;;;5414197
+genus;Corema;;;2888371
+species;Corema conradii-Corème de Conrad;;;8426404
+family;Cornaceae;;;6713
+genus;Cornus;;;3082226
+species;Cornus alternifolia-Cornouiller à feuilles alternes;;;3082242
+species;Cornus obliqua-Cornouiller oblique;;;3082259
+species;Cornus racemosa-Cornouiller à grappes;;;3082264
+species;Cornus rugosa-Cornouiller rugueux;;;3082245
+species;Cornus sericea-Cornouiller hart-rouge;;;3082244
+genus;Corylus;;;2875967
+species;Corylus americana-Noisetier d'Amérique;;;2876060
+species;Corylus cornuta-Noisetier à long bec;;;2876032
+genus;Cotoneaster;;;3025563
+species;Cotoneaster lucidus-Cotonéaster à feuilles aiguës;;;3025770
+genus;Crataegus;;;3013395
+species;Crataegus brainerdii-Aubépine de Brainerd;;;3014505
+species;Crataegus canadensis-Aubépine du Canada;;;3015560
+species;Crataegus chrysocarpa-Aubépine dorée;;;3015853
+species;Crataegus coccinea-Aubépine écarlate;;;7790614
+species;Crataegus coccinioides-Aubépine dilatée;;;3014860
+species;Crataegus crus-Galli-aubépine ergot-de-coq;;;3013404
+species;Crataegus flabellata-Aubépine flabelliforme;;;3014366
+species;Crataegus fluviatilis-Aubépine fluviatile;;;3014900
+species;Crataegus holmesiana-Aubépine de Holmes;;;3014062
+species;Crataegus irrasa-Aubépine pubérulente;;;3015911
+species;Crataegus lemingtonensis-Aubépine de Lemington;;;3015864
+species;Crataegus lumaria-Aubépine ronce;;;3013663
+species;Crataegus macracantha-Aubépine à épines longues;;;3013570
+species;Crataegus macrosperma-Aubépine à lobes aigus;;;3014896
+species;Crataegus mollis-Aubépine duveteuse;;;3015562
+species;Crataegus monogyna-Aubépine monogyne;;;9220780
+species;Crataegus pruinosa-Aubépine givrée;;;7790552
+species;Crataegus punctata-Aubépine ponctuée;;;3014805
+species;Crataegus scabrida-Aubépine scabre;;;3014505
+species;Crataegus schuettei-Aubépine de Schuette;;;3014267
+species;Crataegus submollis-Aubépine subsoyeuse;;;3015560
+species;Crataegus suborbiculata-Aubépine suborbiculaire;;;3014833
+species;Crataegus succulenta-Aubépine succulente;;;3016137
+family;Cupressaceae;;;8144
+genus;Dalibarda;;;3024994
+genus;Daphne;;;3188453
+species;Daphne mezereum-Bois joli;;;5420852
+genus;Dasiphora;;;3029309
+species;Dasiphora fruticosa-Potentille frutescente;;;5370380
+genus;Decodon;;;3188728
+species;Decodon verticillatus-Décodon verticillé;;;5420916
+genus;Diervilla;;;2888707
+species;Diervilla lonicera-Dièreville chèvrefeuille;;;2888711
+genus;Dirca;;;3188461
+species;Dirca palustris-Dirca des marais;;;3188462
+genus;Dryas;;;3000739
+species;Dryas drummondii-Dryade de Drummond;;;5364173
+species;Dryas integrifolia-Dryade à feuilles entières;;;5364129
+family;Elaeagnaceae;;;2408
+genus;Elaeagnus;;;3039266
+species;Elaeagnus angustifolia-Olivier de Bohême;;;3039269
+species;Elaeagnus commutata-Chalef argenté;;;3039274
+genus;Empetrum;;;2888367
+species;Empetrum atropurpureum-Camarine noire-pourprée;;;4013040
+species;Empetrum eamesii-Camarine d'Eames;;;2888368
+species;Empetrum nigrum-Camarine noire;;;8925249
+genus;Endotropis;;;5428550
+species;Endotropis alnifolia-Nerprun à feuilles d'aulne;;;9266494
+family;Ericaceae;;;2505
+genus;Euonymus;;;3169115
+species;Euonymus alatus-Fusain ailé;;;3169120
+species;Euonymus europaeus-Fusain d'Europe;;;3169131
+family;Fabaceae;;;5386
+family;Fagaceae;;;4689
+genus;Fagus;;;2874875
+species;Fagus grandifolia-Hêtre à grandes feuilles;;;2882274
+genus;Flueggea;;;3079251
+species;Flueggea suffruticosa-Fluguéa d'Orient;;;5382858
+genus;Frangula;;;3039453
+species;Frangula alnus-Nerprun bourdaine;;;3039454
+genus;Fraxinus;;;3172323
+species;Fraxinus americana-Frêne blanc;;;3172327
+species;Fraxinus nigra-Frêne noir;;;3172369
+species;Fraxinus pennsylvanica-Frêne rouge;;;3172348
+genus;Gaylussacia;;;2882726
+species;Gaylussacia baccata-Gaylussaquier à fruits bacciformes;;;2882739
+species;Gaylussacia bigeloviana-Gaylussaquier de Bigelow;;;4168397
+genus;Genista;;;2940025
+species;Genista tinctoria-Genêt des teinturiers;;;5347612
+family;Grossulariaceae;;;2403
+family;Hamamelidaceae;;;2500
+genus;Hamamelis;;;3152826
+species;Hamamelis virginiana-Hamamélis de Virginie;;;3152827
+genus;Harrimanella;;;2882788
+species;Harrimanella hypnoides-Cassiope hypnoïde;;;2882793
+genus;Hippophae;;;3039284
+species;Hippophae rhamnoides-Argousier faux-nerprun;;;3039285
+family;Hydrangeaceae;;;6667
+family;Hypericaceae;;;4900406
+genus;Hypericum;;;3189452
+species;Hypericum kalmianum-Millepertuis de Kalm;;;3189461
+genus;Ilex;;;10792217
+species;Ilex mucronata-Némopanthe mucroné;;;5534659
+species;Ilex verticillata-Houx verticillé;;;5414267
+family;Juglandaceae;;;2499
+genus;Juglans;;;3054350
+species;Juglans cinerea-Noyer cendré;;;3054352
+species;Juglans nigra-Noyer noir;;;3054357
+genus;Juniperus;;;2684359
+species;Juniperus communis-Genévrier commun;;;2684709
+species;Juniperus horizontalis-Genévrier horizontal;;;2684410
+species;Juniperus virginiana-Genévrier de Virginie;;;2684391
+genus;Kalmia;;;2882989
+species;Kalmia angustifolia-Kalmia à feuilles étroites;;;2883007
+species;Kalmia polifolia-Kalmia à feuilles d'andromède;;;2882990
+species;Kalmia procumbens-Azalée des Alpes;;;7601217
+genus;Larix;;;2686156
+species;Larix decidua-Mélèze d'Europe;;;2686212
+species;Larix laricina-Mélèze laricin;;;2686231
+genus;Ligustrum;;;3172289
+species;Ligustrum vulgare-Troène commun;;;3172300
+genus;Lonicera;;;2888645
+species;Lonicera caerulea-Chèvrefeuille à fruits bleus;;;5334269
+species;Lonicera canadensis-Chèvrefeuille du Canada;;;5334256
+species;Lonicera dioica-Chèvrefeuille dioïque;;;5334261
+species;Lonicera hirsuta-Chèvrefeuille hirsute;;;5334248
+species;Lonicera involucrata-Chèvrefeuille involucré;;;5334253
+species;Lonicera morrowii-Chèvrefeuille de Morrow;;;5334275
+species;Lonicera oblongifolia-Chèvrefeuille à feuilles oblongues;;;5334236
+species;Lonicera reticulata-Chèvrefeuille réticulé;;;5334271
+species;Lonicera ruprechtiana-Chèvrefeuille de Ruprecht;;;5334254
+species;Lonicera sempervirens-Chèvrefeuille toujours vert;;;5334239
+species;Lonicera tatarica-Chèvrefeuille de Tartarie;;;5334242
+species;Lonicera xylosteum-Chèvrefeuille à balais;;;5334259
+genus;Lycium;;;2928808
+species;Lycium barbarum-Lyciet de Barbarie;;;2928835
+family;Lythraceae;;;6684
+genus;Mahonia;;;3033842
+species;Mahonia aquifolium-Mahonia à feuilles de houx;;;3033865
+genus;Malus;;;3001068
+species;Malus domestica-Pommier commun;;;3001244
+family;Malvaceae;;;6685
+family;Moraceae;;;6640
+genus;Morella;;;7780807
+species;Morella pensylvanica-Cirier de Pennsylvanie;;;3169001
+genus;Morus;;;2984545
+species;Morus alba-Mûrier blanc;;;5361889
+genus;Myrica;;;5938218
+species;Myrica gale-Myrique baumier;;;5414202
+family;Myricaceae;;;2432
+family;Oleaceae;;;6652
+genus;Ostrya;;;8091875
+species;Ostrya virginiana-Ostryer de Virginie;;;5332289
+genus;Philadelphus;;;2985996
+species;Philadelphus coronarius-Seringa commun;;;2986045
+family;Phyllanthaceae;;;8807
+genus;Phyllodoce;;;2882672
+species;Phyllodoce caerulea-Phyllodoce bleue;;;5333379
+genus;Physocarpus;;;7903731
+species;Physocarpus opulifolius-Physocarpe à feuilles d'obier;;;2988354
+genus;Picea;;;7606064
+species;Picea abies-Épinette de Norvège;;;5284884
+species;Picea glauca-Épinette blanche;;;5284745
+species;Picea mariana-Épinette noire;;;5284802
+species;Picea rubens-Épinette rouge;;;5284717
+family;Pinaceae;;;3925
+genus;Pinus;;;2684241
+species;Pinus banksiana-Pin gris;;;5285533
+species;Pinus mugo-Pin mugo;;;5285385
+species;Pinus nigra-Pin noir d'Autriche;;;5284809
+species;Pinus resinosa-Pin rouge;;;5285067
+species;Pinus rigida-Pin rigide;;;5285635
+species;Pinus strobus-Pin blanc;;;5284982
+species;Pinus sylvestris-Pin sylvestre;;;5285637
+family;Platanaceae;;;6693
+genus;Platanus;;;3152811
+species;Platanus occidentalis-Platane occidental;;;3152820
+family;Polygonaceae;;;2416
+genus;Populus;;;3040183
+species;Populus alba-Peuplier blanc;;;3040233
+species;Populus balsamifera-Peuplier baumier;;;3040184
+species;Populus deltoides-Peuplier deltoïde;;;3040232
+species;Populus grandidentata-Peuplier à grandes dents;;;3040210
+species;Populus nigra-Peuplier noir;;;3040227
+species;Populus tremula-Peuplier tremble;;;3040249
+species;Populus tremuloides-Peuplier faux-tremble;;;3040215
+genus;Prunus;;;3020559
+species;Prunus americana-Prunier d'Amérique;;;3021106
+species;Prunus cerasus-Cerisier acide;;;3021922
+species;Prunus domestica-Prunier domestique;;;7931731
+species;Prunus nigra-Prunier noir;;;3021170
+species;Prunus padus-Cerisier à grappes d'Europe;;;3021037
+species;Prunus pensylvanica-Cerisier de Pennsylvanie;;;8202030
+species;Prunus pumila-Cerisier nain;;;3021605
+species;Prunus serotina-Cerisier tardif;;;3021850
+species;Prunus virginiana-Cerisier de Virginie;;;3022668
+genus;Ptelea;;;3189970
+species;Ptelea trifoliata-Ptéléa trifolié;;;3190411
+genus;Quercus;;;2877951
+species;Quercus alba-Chêne blanc;;;2879737
+species;Quercus bicolor-Chêne bicolore;;;2878470
+species;Quercus macrocarpa-Chêne à gros fruits;;;2878213
+species;Quercus rubra-Chêne rouge;;;2880539
+genus;Reynoutria;;;8420120
+species;Reynoutria japonica-Renouée du Japon;;;2889173
+species;Reynoutria sachalinensis-Renouée de Sakhaline;;;2889088
+family;Rhamnaceae;;;2407
+genus;Rhamnus;;;3039471
+species;Rhamnus cathartica-Nerprun cathartique;;;3039491
+genus;Rhododendron;;;2883026
+species;Rhododendron canadense-Rhododendron du Canada;;;2883070
+species;Rhododendron groenlandicum-Thé du Labrador;;;2882984
+species;Rhododendron lapponicum-Rhododendron de Laponie;;;2883075
+species;Rhododendron tomentosum-Petit thé du Labrador;;;6400569
+genus;Rhus;;;3190534
+species;Rhus aromatica-Sumac aromatique;;;3190558
+species;Rhus typhina-Sumac vinaigrier;;;3190538
+genus;Ribes;;;2986095
+species;Ribes americanum-Gadellier d'Amérique;;;2986121
+species;Ribes aureum-Gadellier doré;;;2986111
+species;Ribes cynosbati-Groseillier des chiens;;;2986152
+species;Ribes glandulosum-Gadellier glanduleux;;;2986208
+species;Ribes hirtellum-Groseillier hérissé;;;2986164
+species;Ribes hudsonianum-Gadellier de la baie d'Hudson;;;2986140
+species;Ribes lacustre-Gadellier lacustre;;;2986194
+species;Ribes nigrum-Gadellier noir;;;2986192
+species;Ribes oxyacanthoides-Groseillier du Nord;;;2986124
+species;Ribes rubrum-Gadellier rouge;;;2986097
+species;Ribes triste-Gadellier amer;;;2986159
+species;Ribes uva-Crispa-groseillier à maquereau;;;2986185
+genus;Robinia;;;2952066
+species;Robinia pseudoacacia-Robinier faux-acacia;;;5352251
+species;Robinia viscosa-Robinier visqueux;;;5352245
+genus;Rosa;;;8395064
+species;Rosa acicularis-Rosier aciculaire;;;3002193
+species;Rosa blanda-Rosier inerme;;;3002372
+species;Rosa canina-Rosier des chiens;;;3002461
+species;Rosa carolina-Rosier de Caroline;;;3006171
+species;Rosa cinnamomea-Rosier cannelle;;;8239898
+species;Rosa gallica-Rosier de France;;;3002530
+species;Rosa glauca-Rosier glauque;;;3003709
+species;Rosa multiflora-Rosier multiflore;;;3003244
+species;Rosa nitida-Rosier brillant;;;3011247
+species;Rosa palustris-Rosier palustre;;;3004297
+species;Rosa rubiginosa-Rosier églantier;;;8174785
+species;Rosa rugosa-Rosier rugueux;;;3003979
+species;Rosa spinosissima-Rosier pimprenelle;;;3002333
+species;Rosa virginiana-Rosier de Virginie;;;9382645
+species;Rosa woodsii-Rosier de Woods;;;3004072
+family;Rosaceae;;;5015
+family;Rubiaceae;;;8798
+genus;Rubus;;;2988638
+species;Rubus allegheniensis-Ronce des Alléghanys;;;8235931
+species;Rubus bifrons-Ronce discolore;;;2995779
+species;Rubus canadensis-Ronce du Canada;;;2991408
+species;Rubus flagellaris-Ronce à flagelles;;;2992071
+species;Rubus hispidus-Ronce hispide;;;2991369
+species;Rubus idaeus-Framboisier rouge;;;2993094
+species;Rubus illecebrosus-Framboisier fraisier;;;2995508
+species;Rubus occidentalis-Framboisier noir;;;2991466
+species;Rubus odoratus-Ronce odorante;;;2994912
+species;Rubus pensilvanicus-Ronce de Pennsylvanie;;;2989061
+species;Rubus repens-Dalibarde rampante;;;2999946
+species;Rubus setosus-Ronce sétuleuse;;;7769228
+family;Rutaceae;;;2396
+family;Salicaceae;;;6664
+genus;Salix;;;3039576
+species;Salix alaxensis-Saule feutré;;;5373017
+species;Salix alba-Saule blanc;;;5372513
+species;Salix amygdaloides-Saule à feuilles de pêcher;;;5372892
+species;Salix arbusculoides-Saule arbustif;;;8081789
+species;Salix arctica-Saule arctique;;;5372665
+species;Salix arctophila-Saule arctophile;;;5373032
+species;Salix argyrocarpa-Saule à fruits argentés;;;5372851
+species;Salix ballii-Saule de Ball;;;5372646
+species;Salix bebbiana-Saule de Bebb;;;5373055
+species;Salix brachycarpa-Saule à fruits courts;;;5372878
+species;Salix calcicola-Saule calcicole;;;5372773
+species;Salix candida-Saule tomenteux;;;5372888
+species;Salix chlorolepis-Saule à bractées vertes;;;5372983
+species;Salix cordata-Saule à feuilles cordées;;;5372629
+species;Salix daphnoides-Saule faux-daphné;;;9153437
+species;Salix discolor-Saule discolore;;;5372785
+species;Salix elaeagnos-Saule drapé;;;5372655
+species;Salix eriocephala-Saule à tête laineuse;;;5372614
+species;Salix fragilis-Saule cassant;;;5372829
+species;Salix glauca-Saule glauque;;;5372963
+species;Salix herbacea-Saule herbacé;;;5373083
+species;Salix humilis-Saule humble;;;5372870
+species;Salix interior-Saule de l'intérieur;;;5372917
+species;Salix lucida-Saule brillant;;;5372604
+species;Salix maccalliana-Saule de McCalla;;;5372977
+species;Salix myricoides-Saule faux-myrique;;;3039668
+species;Salix nigra-Saule noir;;;5372854
+species;Salix pedicellaris-Saule pédicellé;;;5372725
+species;Salix pellita-Saule satiné;;;5372688
+species;Salix pentandra-Saule laurier;;;5372647
+species;Salix petiolaris-Saule à long pétiole;;;5372524
+species;Salix planifolia-Saule à feuilles planes;;;5372987
+species;Salix pseudomonticola-Saule pseudomonticole;;;5372820
+species;Salix purpurea-Saule pourpre;;;5372800
+species;Salix pyrifolia-Saule à feuilles de poirier;;;5372764
+species;Salix reticulata-Saule réticulé;;;5372693
+species;Salix sericea-Saule soyeux;;;5372606
+species;Salix serissima-Saule très tardif;;;5372979
+species;Salix triandra-Saule à trois étamines;;;7103891
+species;Salix uva-Ursi-saule raisin-d'ours;;;5373043
+species;Salix vestita-Saule pubescent;;;5372969
+species;Salix viminalis-Saule des vanniers;;;5372933
+genus;Sambucus;;;2888721
+species;Sambucus canadensis-Sureau blanc;;;6369819
+species;Sambucus racemosa-Sureau à grappes;;;2888723
+family;Sapindaceae;;;6657
+genus;Shepherdia;;;3039276
+species;Shepherdia argentea-Shépherdie argentée;;;5372429
+species;Shepherdia canadensis-Shépherdie du Canada;;;5372427
+family;Simaroubaceae;;;2395
+family;Solanaceae;;;7717
+genus;Sorbaria;;;8241021
+species;Sorbaria sorbifolia-Sorbaire à feuilles de sorbier;;;3012089
+genus;Sorbus;;;3012146
+species;Sorbus americana-Sorbier d'Amérique;;;7779378
+species;Sorbus aucuparia-Sorbier des oiseleurs;;;3012167
+species;Sorbus decora-Sorbier plaisant;;;3012350
+genus;Spiraea;;;3026392
+species;Spiraea alba-Spirée blanche;;;3026585
+species;Spiraea tomentosa-Spirée tomenteuse;;;3026819
+genus;Staphylea;;;3190465
+species;Staphylea trifolia-Staphylier à trois folioles;;;3190467
+family;Staphyleaceae;;;6656
+genus;Symphoricarpos;;;7892576
+species;Symphoricarpos albus-Symphorine blanche;;;8012439
+species;Symphoricarpos occidentalis-Symphorine de l'Ouest;;;2888632
+genus;Syringa;;;3172235
+species;Syringa vulgaris-Lilas commun;;;5415039
+family;Taxaceae;;;4863
+genus;Taxus;;;2684902
+species;Taxus canadensis-If du Canada;;;5284570
+genus;Thuja;;;2684168
+species;Thuja occidentalis-Thuya occidental;;;2684178
+genus;Thymelaea;;;7766225
+species;Thymelaea passerina-Passerine annuelle;;;5420850
+family;Thymelaeaceae;;;2428
+genus;Tilia;;;3152041
+species;Tilia americana-Tilleul d'Amérique;;;3152042
+species;Tilia platyphyllos-Tilleul à grandes feuilles;;;3152048
+genus;Toxicodendron;;;8686559
+species;Toxicodendron radicans-Herbe à puce;;;3190628
+species;Toxicodendron vernix-Sumac à vernis;;;3190626
+genus;Tsuga;;;8527396
+species;Tsuga canadensis-Pruche du Canada;;;2687182
+family;Ulmaceae;;;2382
+genus;Ulmus;;;2984510
+species;Ulmus americana-Orme d'Amérique;;;5361872
+species;Ulmus pumila-Orme de Sibérie;;;5361877
+species;Ulmus rubra-Orme rouge;;;5361867
+species;Ulmus thomasii-Orme liège;;;5361875
+genus;Vaccinium;;;2882813
+species;Vaccinium angustifolium-Bleuet à feuilles étroites;;;2882868
+species;Vaccinium boreale-Bleuet boréal;;;8147903
+species;Vaccinium cespitosum-Airelle gazonnante;;;2882861
+species;Vaccinium corymbosum-Bleuet en corymbe;;;2882849
+species;Vaccinium macrocarpon-Canneberge à gros fruits;;;2882841
+species;Vaccinium microcarpum-Canneberge à petits fruits;;;8344892
+species;Vaccinium myrtilloides-Bleuet fausse-myrtille;;;2882880
+species;Vaccinium ovalifolium-Airelle à feuilles ovées;;;2882894
+species;Vaccinium oxycoccos-Canneberge commune;;;2882940
+species;Vaccinium uliginosum-Airelle des marécages;;;8073364
+species;Vaccinium vitis-Idaea-airelle rouge;;;2882835
+family;Viburnaceae;;;4924416
+genus;Viburnum;;;2888580
+species;Viburnum acerifolium-Viorne à feuilles d'érable;;;2888596
+species;Viburnum cassinoides-Viorne cassinoïde;;;6369862
+species;Viburnum dentatum-Viorne dentée;;;2888594
+species;Viburnum edule-Viorne comestible;;;2888613
+species;Viburnum lantana-Viorne mancienne;;;2888615
+species;Viburnum lantanoides-Viorne bois-d'orignal;;;2888601
+species;Viburnum lentago-Viorne flexible;;;2888586
+species;Viburnum opulus-Viorne obier;;;2888605
+species;Viburnum rafinesqueanum-Viorne de Rafinesque;;;4925723
+genus;Weigela;;;2888729
+species;Weigela floribunda-Weigélia floribond;;;8011733
+genus;Zanthoxylum;;;3190076
+species;Zanthoxylum americanum-Clavalier d'Amérique;;;3190089
