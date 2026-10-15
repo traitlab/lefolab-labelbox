@@ -33,6 +33,7 @@ client = get_client()
 parser = argparse.ArgumentParser(description="Import data rows into Labelbox.")
 parser.add_argument("--mission", required=True, help="Mission ID of the pictures to import.")
 parser.add_argument("--project", help="Project ID of the mission. Based on Fulcrum project and used for dataset name")
+parser.add_argument("--bucket", help="Arbutus bucket of the mission (default: project with hyphens).")
 args = parser.parse_args()
 
 mission = args.mission
@@ -58,7 +59,7 @@ else:
 
 # Per-project bucket (no underscores allowed) and object prefix on Arbutus:
 # <project-with-hyphens>/drone_missions/<yyyy>/<mission>/...
-project_bucket = project.replace("_", "-")
+project_bucket = args.bucket or project.replace("_", "-")
 year = mission[:4]
 prefix = f"drone_missions/{year}/{mission}"
 

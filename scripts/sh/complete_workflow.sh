@@ -70,7 +70,7 @@ for MISSION in "${MISSIONS[@]}"; do
     fi
 
     log_message "Copying data from lefodata to Arbutus for $MISSION"
-    PROJECT_BUCKET="${LABELBOX_PROJECT//_/-}"
+    PROJECT_BUCKET="${LABELBOX_BUCKET:-${LABELBOX_PROJECT//_/-}}"
     rclone --config "${PROJECT_ROOT}/rclone_newArbutus.conf" copy /mnt/nfs/lefodata/data/drone_missions/$YEAR/$MISSION/ ArbutusBuckets:$PROJECT_BUCKET/drone_missions/$YEAR/$MISSION -c
     check_command "rclone copy for $MISSION"
     log_message "Data copied to Arbutus for $MISSION"
@@ -84,7 +84,7 @@ for MISSION in "${MISSIONS[@]}"; do
     else
         LABELBOX_PROJECT_ARG=""
     fi
-    python "${PROJECT_ROOT}/scripts/python/import_datarows.py" --mission "$MISSION" $LABELBOX_PROJECT_ARG
+    python "${PROJECT_ROOT}/scripts/python/import_datarows.py" --mission "$MISSION" $LABELBOX_PROJECT_ARG --bucket "$PROJECT_BUCKET"
     check_command "import_datarows.py for $MISSION"
     log_message "Data rows imported for $MISSION in Labelbox"
 
@@ -114,6 +114,13 @@ for MISSION in "${MISSIONS[@]}"; do
     python "${PROJECT_ROOT}/scripts/python/send_to_annotate.py" --mission_id "$MISSION" --project "$LABELBOX_PROJECT"
     check_command "send_to_annotate.py for $MISSION"
     log_message "Data rows sent for $MISSION to $LABELBOX_PROJECT"
+
+    if [ "$PLANTNET_PREDICTIONS" = true ]; then
+        log_message "Importing Pl@ntNet prelabels for $MISSION in $LABELBOX_PROJECT"
+        python "${PROJECT_ROOT}/scripts/python/import_plantnet_predictions.py" --mission "$MISSION" --project "$LABELBOX_PROJECT"
+        check_command "import_plantnet_predictions.py for $MISSION"
+        log_message "Pl@ntNet prelabels imported for $MISSION"
+    fi
 
     conda deactivate
 
