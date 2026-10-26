@@ -1,0 +1,612 @@
+---
+title: "Matching Boca de las Vinoramas 2026 species names to WCVP"
+author: "Antoine Caron-Guay"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Match WCVP names with species name
+
+**Input:** species list from Boca de las Vinoramas, Baja California Sur (2026)
+
+**Workflow:**
+
+1. Match species names against WCVP (World Checklist of Vascular Plants)
+
+2. Identify and review potential mismatches:
+
+   - A mismatch occurs when WCVP returns a name different from the original lookup name
+   - Most mismatches arise from minor spelling differences between the original names
+     and WCVP entries. Others occur because some infraspecies are not in WCVP. Rarer
+     mismatches occur when WCVP fuzzy matching points to the wrong name entirely.
+
+3. Correct identified mismatches and save list with WCVP columns
+
+**Output:**
+
+- `_WCVP13` — original species list columns plus WCVP matched and accepted name columns
+- `_WCVP13_CHANGES` — species where the original name differs from the WCVP accepted name
+- `_WCVP13_GBIF` — above with GBIF taxon IDs added for both the matched and accepted names
+
+```{r libraries, echo=TRUE, message=FALSE, warning=FALSE, results="hide"}
+
+# installing wcvp
+#install.packages("remotes")
+#library(remotes)
+#remotes::install_github("matildabrown/rWCVP")
+
+rm(list=ls())
+
+library(readr)
+library("dplyr")
+library("tidyr")
+library("stringr")
+suppressPackageStartupMessages({
+  library(rWCVP)
+  library(rWCVPdata)
+})
+library(TNRS)
+library(DT)
+library(stringi)
+library(rgbif)
+
+
+citation("rWCVPdata") # according to this, this is using version 13.
+
+options(DT.options = list(scrollX = TRUE, pageLength = 15))
+```
+
+```{r globalvars}
+# Load WCVP backbone
+wcvp_names <- rWCVPdata::wcvp_names
+
+# INPUT PATHS
+original_list_path <- "projects/baja_guaiacum/Species_List_Boca_Vinoramas_2026.csv"
+
+# Extract file name without extension
+original_list_name <- tools::file_path_sans_ext(basename(original_list_path))
+
+# OUTPUT PATHS
+out_wcvp_list <- paste0("projects/baja_guaiacum/", original_list_name, "_WCVP13", ".csv")
+out_wcvp_changes_list <- paste0("projects/baja_guaiacum/", original_list_name, "_WCVP13_CHANGES", ".csv")
+out_wcvp_gbif_list <- paste0("projects/baja_guaiacum/", original_list_name, "_WCVP13_GBIF", ".csv")
+```
+
+
+## Prepare datasets
+
+```{r preparedata}
+
+origlist <- read_csv(original_list_path)
+
+# modify this depending on the original dataset.
+origlist <- origlist %>%
+  rename(
+    orig_name = "scientific_name",
+  ) %>%
+  mutate(
+    orig_name = ifelse(is.na(orig_name) | str_squish(orig_name) == "", NA, str_squish(orig_name)),
+
+    # extract genus and species from original name
+    orig_genus = word(orig_name, 1),
+    orig_species = word(orig_name, 2),
+    orig_infraspecies_rank = word(orig_name, 3),
+    orig_infraspecies = word(orig_name, 4),
+
+    # create binomial name column. Keeping the prefix "X" and "sp. aff."
+    orig_binomial = str_squish(
+      paste0(orig_genus, " ", orig_species)
+  )) %>%
+  filter(!is.na(orig_name)) %>%
+  select(species_id, orig_name, orig_binomial, orig_genus, orig_species, orig_infraspecies_rank, orig_infraspecies, common_name, synonym, target_species, id_confidence) %>%
+  arrange(orig_name)
+
+
+# find duplicates
+dups <- origlist %>% group_by(orig_name) %>% filter(n() > 1) %>% select(orig_name)
+
+if(nrow(dups) > 0){
+  knitr::kable(dups, caption="Duplicated names in original")
+}
+
+knitr::kable(origlist, caption="Complete original list")
+```
+
+Working with `r nrow(origlist)` species.
+
+### Match WCVP names
+
+```{r mergewcvp}
+# Helper function to merge and format accepted names from WCVP backbone
+matchaccepted_names <- function(matcheswcvp, wcvp_backbone){
+  matcheswcvp %>%
+    left_join(
+      wcvp_backbone %>%
+        select(
+          plant_name_id,
+          # rename immediately
+          wcvp_accepted_ipni_id  = ipni_id,
+          wcvp_accepted_powo_id  = powo_id,
+          wcvp_accepted_family   = family,
+          wcvp_accepted_name_rank = taxon_rank,
+          wcvp_accepted_name_status = taxon_status,
+          wcvp_lifeform_description = lifeform_description,
+
+          # rename after the mutate for readability
+          genus, species, infraspecific_rank, infraspecies,
+          parenthetical_author, primary_author
+        ),
+      by = c("wcvp_accepted_id" = "plant_name_id")
+    ) %>%
+    mutate(
+      wcvp_accepted_name = case_when(
+        is.na(species) | species == "" ~ genus,
+        !is.na(infraspecies) & infraspecies != "" ~ paste(genus, species, infraspecific_rank, infraspecies),
+        TRUE ~ paste(genus, species)
+      ),
+
+      wcvp_accepted_authority =
+        paste0(
+          ifelse(!is.na(parenthetical_author), paste0("(", parenthetical_author, ") "),""),
+          coalesce(primary_author, "")
+        )
+    ) %>%
+    rename(
+      wcvp_accepted_author = primary_author,
+      wcvp_accepted_name_genus = genus,
+      wcvp_accepted_name_species = species,
+      wcvp_accepted_name_infraspecific_rank = infraspecific_rank,
+      wcvp_accepted_name_infraspecies = infraspecies
+    )
+}
+
+# --- 1. Run Match ---
+matchresult <- wcvp_match_names(subset(origlist), wcvp_names, name_col = "orig_name")
+
+
+# --- 2. Sanity Checks & Duplicate Resolution ---
+# Ensure all species are accounted for
+
+# Identify names that mapped to multiple 'Accepted' records
+manyaccepted <- matchresult %>%
+  group_by(orig_name) %>%
+  filter(sum(wcvp_status == "Accepted", na.rm = TRUE) > 1) %>%
+  ungroup()
+
+# If duplicates exist, force use of the original ID to avoid grouping explosion
+if (nrow(manyaccepted) > 0) {
+  matchresult <- matchresult %>%
+    mutate(wcvp_accepted_id = ifelse(orig_name %in% manyaccepted$orig_name, wcvp_id, wcvp_accepted_id))
+}
+
+# --- 3. Clean Match Results (1 row per species) ---
+matchresult_clean <- matchresult %>%
+  mutate(
+    status_priority = case_when(
+      wcvp_status == "Accepted"     ~ 1,
+      wcvp_status == "Synonym"      ~ 2,
+      wcvp_status == "Illegitimate" ~ 3,
+      wcvp_status == "Unplaced"     ~ 4,
+      TRUE                          ~ 5
+    )
+  ) %>%
+  group_by(orig_name) %>%
+  slice_min(status_priority, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  matchaccepted_names(wcvp_names)
+```
+
+
+### Review mismatches
+
+```{r spot_mismatch}
+
+mismatches <- matchresult_clean %>%
+  filter(orig_name != wcvp_name | is.na(wcvp_name) | is.na(wcvp_accepted_name)) %>%
+  mutate(
+    # parse WCVP name parts
+    wcvp_genus = word(wcvp_name, 1),
+    wcvp_species = word(wcvp_name, 2),
+    wcvp_infraspecies_rank = word(wcvp_name, 3),
+    wcvp_infraspecies = word(wcvp_name, 4),
+
+    # flag component-level mismatches
+    genus_mismatch = !is.na(orig_genus) &
+                      (orig_genus != wcvp_genus | is.na(wcvp_genus)),
+    species_mismatch = !is.na(orig_species) &
+                        (orig_species != wcvp_species | is.na(wcvp_species)),
+    infraspecies_rank_mismatch = !is.na(orig_infraspecies_rank) &
+                                  (orig_infraspecies_rank != wcvp_infraspecies_rank |
+                                   is.na(wcvp_infraspecies_rank)),
+    infraspecies_mismatch = !is.na(orig_infraspecies) &
+                             (orig_infraspecies != wcvp_infraspecies |
+                              is.na(wcvp_infraspecies))
+  )
+
+
+printmismatches <- mismatches %>%
+  select(
+    orig_name, wcvp_name, wcvp_accepted_name, match_similarity,
+    genus_mismatch, species_mismatch, infraspecies_rank_mismatch, infraspecies_mismatch
+  ) %>%
+  arrange(match_similarity)
+
+datatable(printmismatches)
+
+
+colsprint = c("orig_name", "wcvp_name","wcvp_accepted_name")
+```
+
+#### Case 1:
+
+```{r printmisses}
+# names that did not match exactly
+mismatchcase1 <- mismatches %>% filter(orig_name != wcvp_name)
+
+datatable( mismatchcase1 %>% select(all_of(colsprint)),
+           caption="full name mismatched")
+```
+
+In these cases the original spelling differs slightly from the name matched in WCVP.
+
+<!-- #### Case 2:
+
+```{r case2}
+# full name matched except infraspecies rank
+mismatchcase2 <- mismatches %>% filter( infraspecies_rank_mismatch & !genus_mismatch & !species_mismatch & !infraspecies_mismatch)
+
+datatable( mismatchcase2 %>% select(all_of(colsprint)),
+           caption="full name matched except infraspecies rank")
+```
+
+The mismatch is a difference only in infraspecific rank. The WCVP accepted name is used for the full match. -->
+
+<!-- #### Case 4:
+
+```{r case4}
+# genus, species, and rank matched but infraspecies did not
+mismatchcase4 <- mismatches %>% filter( !genus_mismatch & !species_mismatch & infraspecies_mismatch & !infraspecies_rank_mismatch)
+
+datatable( mismatchcase4 %>% select(all_of(colsprint)), caption="genus, species and infraspecific rank matched but infraspecies name did not ")
+```
+
+In these cases the subspecies did not match in WCVP. The binomial name is used instead (infraspecies dropped). -->
+
+<!-- #### Other cases:
+
+```{r case5}
+# species not covered by the previous cases
+missrest <- mismatches %>%
+  filter(!orig_name %in% c(mismatchcase1$orig_name, mismatchcase2$orig_name, mismatchcase4$orig_name))
+
+datatable( missrest %>% select(all_of(colsprint)), caption="Species not considered in previous cases")
+```
+ -->
+
+#### Mismatch summary
+
+The following WCVP columns will be retained in the output.
+
+```{r wcvpcolumns}
+
+# WCVP columns to retain in the final output
+wcvp_columns <- c(
+        # columns of matched name
+        "wcvp_name", "wcvp_authors", "wcvp_rank", "wcvp_status", "wcvp_id", "wcvp_ipni_id", "match_similarity",
+
+        # columns of accepted name
+        "wcvp_accepted_id","wcvp_accepted_powo_id", "wcvp_accepted_ipni_id",
+        "wcvp_accepted_name", "wcvp_accepted_name_genus",  "wcvp_accepted_name_species",
+        "wcvp_accepted_name_rank", "wcvp_accepted_family",
+        "wcvp_accepted_name_infraspecific_rank", "wcvp_accepted_name_infraspecies",
+        "wcvp_accepted_author", "wcvp_accepted_authority",
+        "wcvp_lifeform_description"
+        )
+```
+
+```{r fixingmismatches}
+datatable(mismatches %>% select(orig_name, wcvp_name, wcvp_accepted_name),
+          caption="Species after setting the wcvp matched name to a closer match")
+```
+
+
+## Joining mismatch fixes to the main list
+
+```{r matcheshandling}
+
+# --- 4. Handle matches ---
+
+# apply mismatch corrections back to the matched results
+inc <- with(matchresult_clean, orig_name %in% mismatches$orig_name)
+if (any(inc, na.rm = TRUE)) {
+  corrections <- mismatches %>%
+    select(all_of(c("orig_name", wcvp_columns)))
+
+  matchresult_clean <- rows_update(matchresult_clean, corrections,
+                                   by = "orig_name")
+}
+
+
+# --- 5. Final Join and Rename ---
+# join WCVP columns onto the original species list
+processlist <- origlist %>%
+  left_join(matchresult_clean %>%
+              select(all_of(c("orig_name", wcvp_columns))),
+            by = "orig_name") %>%
+  rename(
+    # rename matched columns
+    wcvp_matched_name = wcvp_name,
+    wcvp_matched_authors = wcvp_authors,
+    wcvp_matched_rank = wcvp_rank,
+    wcvp_matched_status=wcvp_status,
+    wcvp_matched_plant_name_id = wcvp_id,
+    wcvp_matched_ipni_id = wcvp_ipni_id,
+
+    wcvp_accepted_plant_name_id =  wcvp_accepted_id,
+
+
+  ) %>%
+  mutate(
+  origmatches = orig_name == wcvp_matched_name
+  )
+
+# Review Results
+knitr::kable(processlist %>% count(wcvp_matched_status))
+
+knitr::kable(subset(processlist,
+             is.na(wcvp_accepted_name) | !wcvp_matched_status %in% c("Accepted", "Synonym") ) %>%
+        select(orig_name,wcvp_matched_status,wcvp_accepted_name),
+      caption = "Species not listed as Accepted or Synonym in WCVP")
+
+
+# Species matched only to the genus level
+
+onlygenus_match <- processlist %>%
+  filter((is.na(word(orig_name,2)) | word(orig_name,2) == "" ) |
+           (!is.na(wcvp_accepted_name) & is.na(word(wcvp_accepted_name,2)))) %>% select(orig_name, wcvp_matched_name, wcvp_accepted_name)
+
+knitr::kable(onlygenus_match, caption="Species that matched only to genus ")
+```
+
+
+## Save output of all species
+
+Showing columns saved in the final dataset:
+
+```{r saveoutput}
+
+# Save species list with WCVP columns
+processlist <- processlist %>% mutate(across(everything(), ~replace_na(., "")))
+write_csv(processlist, out_wcvp_list)
+
+print(paste(colnames(processlist), collapse=", "))
+```
+
+Saved `r nrow(processlist)` species with their names verified with WCVP.
+
+
+## Save output of all changes
+
+Taxa where the original name differs from the WCVP accepted name are saved as a separate file.
+
+```{r saveoutput_changes}
+
+list_wcvp_changes <- processlist %>% filter(orig_name != wcvp_accepted_name)
+
+# Save species with name changes
+list_wcvp_changes <- list_wcvp_changes %>% mutate(across(everything(), ~replace_na(., "")))
+write_csv(list_wcvp_changes, out_wcvp_changes_list)
+```
+
+Saved `r nrow(list_wcvp_changes)` species where the original name differs from the WCVP accepted name.
+
+
+# Add GBIF ID
+
+GBIF IDs are queried using the WCVP matched name, which is expected to produce an exact match.
+
+```{r addgbifid}
+
+process_list_path <- out_wcvp_list
+
+processlist <- read_csv(process_list_path)
+
+processlist <- processlist %>%
+  mutate(row_id = row_number())
+
+
+datatable(processlist %>%
+  filter(is.na(wcvp_matched_name)) %>%
+  select(orig_name),
+  caption="Current name does not have WCVP match")
+
+
+# Build name input from WCVP matched name
+names_for_gbif <- processlist %>%
+  filter(!is.na(wcvp_matched_name)) %>%
+  distinct(wcvp_matched_name, .keep_all = TRUE) %>%
+  mutate(full_name_auth = paste(wcvp_matched_name, coalesce(wcvp_matched_authors, ""))) %>%
+  rename(scientificName = full_name_auth)
+
+# Query GBIF backbone
+gbif_backbone_matched <- name_backbone_checklist(names_for_gbif, kingdom = "Plantae")
+
+# Check match quality
+gbif_match_summary <- gbif_backbone_matched %>%
+  count(matchType)
+
+print(gbif_match_summary)
+
+# How many got a usable GBIF ID?
+gbif_backbone_matched %>%
+  summarise(
+    total = n(),
+    exact_match = sum(matchType == "EXACT", na.rm = TRUE),
+    fuzzy_match = sum(matchType == "FUZZY", na.rm = TRUE),
+    no_match    = sum(matchType == "NONE", na.rm = TRUE)
+  )
+
+gbif_backbone_matched <- gbif_backbone_matched %>%
+  group_by(verbatim_name) %>%
+  mutate(
+    match_priority = case_when(
+      matchType == "EXACT" ~ 1,
+      matchType == "HIGHERRANK" ~ 2,
+      matchType == "VARIANT" ~ 3,
+      TRUE ~ 4
+    )
+  ) %>%
+  arrange(match_priority, desc(confidence)) %>%
+  slice(1) %>%
+  ungroup()
+
+
+# non-exact matches (Variant or higher rank)
+datatable(gbif_backbone_matched %>%
+            filter(!matchType %in% c("EXACT")) %>%
+            select(verbatim_name, scientificName),
+          caption="Species not matching exactly (verbatim refers to the fileds in the original list)")
+
+datatable(gbif_backbone_matched %>%
+            filter(!status %in% c("ACCEPTED")) %>%
+            select(usageKey, verbatim_orig_name, scientificName, matchType, verbatim_wcvp_matched_status, status,  verbatim_wcvp_accepted_name, acceptedScientificName),
+          caption="Species current name in the list is not accepted according to GBIF (verbatim refers to the fileds in the original list)")
+```
+
+The matched name may be a synonym — WCVP v13 indicates this as well. It is retained as the current name in the list.
+
+The GBIF taxon key and scientific name are added as columns for the matched name.
+
+```{r addgbifmatchednames}
+processlist <- processlist %>%
+  mutate(
+    row_id = as.character(row_id)
+  ) %>%
+  left_join(
+    gbif_backbone_matched %>%
+      select(
+        row_id = verbatim_row_id,
+        wcvp_matched_name_gbif_id = usageKey,
+        wcvp_matched_name_gbif_scientificName = scientificName,
+        wcvp_matched_name_gbif_matchtype = matchType,
+        wcvp_matched_name_gbif_status = status,
+        wcvp_matched_name_gbif_acceptedScientificName = acceptedScientificName
+      ),
+    by = "row_id"
+  )
+
+
+# species without a GBIF match for the matched name
+datatable(processlist %>% filter(is.na(wcvp_matched_name_gbif_id)) %>% select(orig_name, wcvp_matched_name))
+```
+
+
+The same lookup is performed for the **accepted name.**
+
+```{r addgbifidaccepted}
+datatable(processlist %>%
+  filter(is.na(wcvp_accepted_name)) %>%
+  select(orig_name),
+  caption="Current name does not have WCVP accepted name")
+
+
+# Build name input from WCVP accepted name
+names_for_gbif <- processlist %>%
+  filter(!is.na(wcvp_accepted_name)) %>%
+  mutate(full_name_auth = paste(wcvp_accepted_name, coalesce(wcvp_accepted_authority, ""))) %>%
+  rename(scientificName = full_name_auth)
+
+# Query GBIF backbone
+gbif_backbone_accepted <- name_backbone_checklist(names_for_gbif, kingdom = "Plantae")
+
+# Check match quality
+gbif_match_summary <- gbif_backbone_accepted %>%
+  count(matchType)
+
+print(gbif_match_summary)
+
+# How many got a usable GBIF ID?
+gbif_backbone_accepted %>%
+  summarise(
+    total = n(),
+    exact_match = sum(matchType == "EXACT", na.rm = TRUE),
+    fuzzy_match = sum(matchType == "FUZZY", na.rm = TRUE),
+    no_match    = sum(matchType == "NONE", na.rm = TRUE)
+  )
+
+
+gbif_backbone_accepted <- gbif_backbone_accepted %>%
+  group_by(verbatim_name) %>%
+  mutate(
+    match_priority = case_when(
+      matchType == "EXACT" ~ 1,
+      matchType == "HIGHERRANK" ~ 2,
+      matchType == "VARIANT" ~ 3,
+      TRUE ~ 4
+    )
+  ) %>%
+  arrange(match_priority, desc(confidence)) %>%
+  slice(1) %>%
+  ungroup()
+
+# non-exact matches (Variant or higher rank)
+datatable(gbif_backbone_accepted %>%
+            filter(!matchType %in% c("EXACT")) %>%
+            select(verbatim_name, scientificName),
+          caption="Species not matching exactly (verbatim refers to the fileds in the original list)")
+
+datatable(gbif_backbone_accepted %>%
+            filter(!status %in% c("ACCEPTED")) %>%
+            select(verbatim_orig_name, verbatim_wcvp_matched_status, status, verbatim_wcvp_accepted_name=verbatim_name, acceptedScientificName),
+          caption="Species WCVP accepted name in the list is not accepted according to GBIF (verbatim refers to the fileds in the original list)")
+```
+
+Note that the WCVP accepted name can itself be a synonym according to GBIF, since GBIF aggregates names from multiple sources. The GBIF accepted name is added as an additional column.
+
+The GBIF taxon key and scientific name are added as columns for the accepted name.
+
+```{r addgbifacceptednames}
+processlist <- processlist %>%
+  mutate(full_name_auth = paste(wcvp_accepted_name, coalesce(wcvp_accepted_authority, ""))) %>%
+  left_join(
+    gbif_backbone_accepted %>%
+      select(
+        full_name_auth = verbatim_name,
+        wcvp_accepted_name_gbif_id = usageKey,
+        wcvp_accepted_name_gbif_scientificName = scientificName,
+        wcvp_accepted_name_gbif_matchtype = matchType,
+        wcvp_accepted_name_gbif_status = status,
+        wcvp_accepted_name_gbif_acceptedScientificName = acceptedScientificName
+      ),
+    by = "full_name_auth"
+  ) %>%
+  select(-full_name_auth)
+```
+
+Species without a GBIF match for either the matched or accepted name:
+
+```{r missinggbifid}
+datatable(processlist %>%
+            filter(is.na(wcvp_matched_name_gbif_id) | is.na(wcvp_accepted_name_gbif_id)) %>%
+            select(orig_name, wcvp_matched_name, wcvp_accepted_name),
+          caption="Species withouth a GBIF id"
+            )
+```
+
+
+## Save output of all species with GBIF IDs
+
+Showing columns saved in the final dataset:
+
+```{r saveoutput_gbif}
+
+# Save species list with WCVP and GBIF columns
+processlist <- processlist %>% mutate(across(everything(), ~replace_na(., "")))
+write_csv(processlist, out_wcvp_gbif_list)
+
+print(paste(colnames(processlist), collapse=", "))
+```

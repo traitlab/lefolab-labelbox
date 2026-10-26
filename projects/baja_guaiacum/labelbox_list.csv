@@ -1,0 +1,68 @@
+type,label,value
+species,Adelia brandegeei,9XM9
+species,Antigonon leptopus,67K5R
+species,Baccharis sarothroides,K7NF
+species,Bursera epinnata,68TSG
+species,Bursera microphylla,NYGP
+species,Cnidoscolus palmeri,WJK3
+species,Cryptostegia grandiflora,VK823
+species,Cylindropuntia cholla,6C59G
+species,Cyrtocarpa edullis,33LGH
+species,Diospyros intricata,6CWYZ
+species,Ebenopsis confinis,9CRR2
+species,Erythrina flabelliformis,6H3ZQ
+species,Euphorbia californica,3CN7C
+species,Ficus palmeri,VLXFH
+species,Forchhammeria watsonii,6JDGZ
+species,Fouquieria diguetii,6JJX4
+species,Guaiacum unijugum,3HHVK
+species,Jatropha cinerea,3QN7G
+species,Jatropha vernicosa,6NDWQ
+species,Lysiloma candidum,6R2ZG
+species,Maytenus phyllanthoides,738K3
+species,Pachycereus pecten-aboriginum,75GNZ
+species,Pachycereus pringlei,6TGMD
+species,Parkinsonia florida,4DN6R
+species,Parkinsonia microphylla,4DN6S
+species,Stenocereus thurberi,4ZWMC
+species,Vachellia farnesiana,7F8WF
+species,Washingtonia robusta,5BV46
+genus,Adelia,8VT9D
+genus,Antigonon,XLJ
+genus,Baccharis,372Q
+genus,Bursera,62HRS
+genus,Cnidoscolus,8VWCB
+genus,Cryptostegia,3WTJ
+genus,Cylindropuntia,3YBJ
+genus,Cyrtocarpa,3YWM
+genus,Diospyros,8VWZ8
+genus,Ebenopsis,9CKN3
+genus,Erythrina,9CKRG
+genus,Euphorbia,8VRY5
+genus,Ficus,4JYX
+genus,Forchhammeria,4KQY
+genus,Fouquieria,4KWR
+genus,Guaiacum,636GR
+genus,Jatropha,8VYKR
+genus,Lysiloma,9CL8V
+genus,Maytenus,5M9R
+genus,Pachycereus,63JJ9
+genus,Parkinsonia,9CLM5
+genus,Stenocereus,7MJ7
+genus,Vachellia,85LM
+genus,Washingtonia,8W4NW
+family,Anacardiaceae,6CK
+family,Apocynaceae,6L2
+family,Arecaceae,6234D
+family,Asteraceae,622TP
+family,Burseraceae,7GV
+family,Cactaceae,7HS
+family,Celastraceae,622JV
+family,Ebenaceae,N7WNP
+family,Euphorbiaceae,N7XM4
+family,Fabaceae,623QT
+family,Fouquieriaceae,62457
+family,Moraceae,CXM
+family,Polygonaceae,627KD
+family,Resedaceae,FLK
+family,Zygophyllaceae,J39
