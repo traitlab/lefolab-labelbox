@@ -32,12 +32,12 @@ def save_cache(cache: dict, cache_path: Path) -> None:
         json.dump(cache, f, ensure_ascii=False, indent=2)
 
 
-def resolve_gbif(name: str, rank: str, cache: dict, cfg) -> int | None:
+def resolve_gbif(name: str, rank: str, cache: dict, cfg) -> str | None:
     key = f"{name}|{rank}"
     if key in cache:
         return cache[key]
 
-    params = {"name": name, "rank": rank}
+    params = {"checklistKey": cfg.GBIF_CHECKLIST_KEY, "scientificName": name, "taxonRank": rank}
     if cfg.GBIF_PHYLUM:
         params["phylum"] = cfg.GBIF_PHYLUM
 
@@ -46,8 +46,8 @@ def resolve_gbif(name: str, rank: str, cache: dict, cfg) -> int | None:
             r = requests.get(cfg.GBIF_MATCH_URL, params=params, timeout=10)
             r.raise_for_status()
             data = r.json()
-            if data.get("matchType") == "EXACT":
-                usage_key = data.get("usageKey")
+            if data.get("diagnostics", {}).get("matchType") == "EXACT":
+                usage_key = data["usage"]["key"]
                 cache[key] = usage_key
                 return usage_key
             else:
@@ -115,7 +115,7 @@ def extract_families(rows: list[dict], cfg) -> list[str]:
     return sorted(families)
 
 
-def prompt_manual_gbif_id(name: str, rank: str, suggestion: str | None, cache: dict) -> int | None:
+def prompt_manual_gbif_id(name: str, rank: str, suggestion: str | None, cache: dict) -> str | None:
     hint = f" (e.g. search GBIF for '{suggestion}')" if suggestion else ""
     print(f"\n  No exact GBIF match for {rank.lower()} '{name}'{hint}.")
     while True:
@@ -124,11 +124,10 @@ def prompt_manual_gbif_id(name: str, rank: str, suggestion: str | None, cache: d
         except (EOFError, KeyboardInterrupt):
             print()
             return None
-        if raw.isdigit():
-            gbif_id = int(raw)
-            cache[f"{name}|{rank}"] = gbif_id
-            return gbif_id
-        print("  Invalid input — please enter a numeric ID.")
+        if raw.isalnum():
+            cache[f"{name}|{rank}"] = raw
+            return raw
+        print("  Invalid input — please enter an alphanumeric ID.")
 
 
 def build_taxon_options(rows: list[dict], cache: dict, cfg) -> list[dict]:
@@ -137,19 +136,14 @@ def build_taxon_options(rows: list[dict], cache: dict, cfg) -> list[dict]:
 
     # Species
     for row in rows:
-        gbif_id_raw = row.get(cfg.COL_GBIF_ID, "").strip()
-        if not gbif_id_raw:
+        gbif_id = row.get(cfg.COL_GBIF_ID, "").strip()
+        if not gbif_id:
             logger.warning(f"Missing {cfg.COL_GBIF_ID} for row: {row.get(cfg.COL_BINOMIAL, '?')} — skipping")
-            continue
-        try:
-            gbif_id = int(gbif_id_raw)
-        except ValueError:
-            logger.warning(f"Non-integer {cfg.COL_GBIF_ID} '{gbif_id_raw}' for {row.get(cfg.COL_BINOMIAL, '?')} — skipping")
             continue
         if gbif_id in seen_ids:
             continue
         seen_ids.add(gbif_id)
-        options.append({"type": "species", "label": build_species_label(row, cfg), "value": str(gbif_id)})
+        options.append({"type": "species", "label": build_species_label(row, cfg), "value": gbif_id})
 
     # Genera
     for genus in extract_genera(rows, cfg):
@@ -165,7 +159,7 @@ def build_taxon_options(rows: list[dict], cache: dict, cfg) -> list[dict]:
         if gbif_id in seen_ids:
             logger.warning(f"Genus '{genus}' GBIF ID {gbif_id} already used by a species entry — adding also as genus")
         seen_ids.add(gbif_id)
-        options.append({"type": "genus", "label": genus, "value": str(gbif_id)})
+        options.append({"type": "genus", "label": genus, "value": gbif_id})
 
     # Families
     for family in extract_families(rows, cfg):
@@ -181,7 +175,7 @@ def build_taxon_options(rows: list[dict], cache: dict, cfg) -> list[dict]:
         if gbif_id in seen_ids:
             logger.warning(f"Family '{family}' GBIF ID {gbif_id} already used by a prior entry — adding also as family")
         seen_ids.add(gbif_id)
-        options.append({"type": "family", "label": family, "value": str(gbif_id)})
+        options.append({"type": "family", "label": family, "value": gbif_id})
 
     return options
 
@@ -191,7 +185,7 @@ def build_explicit_options(rows: list[dict], cfg) -> list[dict]:
     options = []
     for row in rows:
         gbif_id = row.get(cfg.COL_GBIF_ID, "").strip()
-        if not gbif_id.isdigit():
+        if not gbif_id.isalnum():
             logger.warning(f"Invalid {cfg.COL_GBIF_ID} '{gbif_id}' for row: {row.get(cfg.COL_BINOMIAL, '?')} — skipping")
             continue
         options.append({"type": row[cfg.COL_TYPE], "label": build_species_label(row, cfg), "value": gbif_id})
