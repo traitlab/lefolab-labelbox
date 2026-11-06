@@ -8,7 +8,7 @@ import sys
 from botocore import UNSIGNED
 from botocore.client import Config
 
-from _common import get_client, setup_logging
+from _common import confirm_drop_unmatched, get_client, pair_pictures, setup_logging
 
 logger = setup_logging()
 
@@ -34,6 +34,7 @@ parser = argparse.ArgumentParser(description="Import data rows into Labelbox.")
 parser.add_argument("--mission", required=True, help="Mission ID of the pictures to import.")
 parser.add_argument("--project", help="Project ID of the mission. Based on Fulcrum project and used for dataset name")
 parser.add_argument("--bucket", help="Arbutus bucket of the mission (default: project with hyphens).")
+parser.add_argument("--drop-unmatched", action="store_true", help="Drop unmatched pictures without asking.")
 args = parser.parse_args()
 
 mission = args.mission
@@ -106,45 +107,9 @@ except Exception as e:
 # Construct folder URL for generating asset URLs
 folder_url = f"{ALLIANCECAN_URL}/{project_bucket}"
 
-# Print the result
-logger.info(f"{len(file_keys)} pictures found for this mission : {mission}")
-
-# Filter for close-up pictures (detect naming convention)
-closeup_files = [key for key in file_keys if "tele" in key]
-if closeup_files:
-    exclusion_keyword = "tele"
-    logger.info(f"{len(closeup_files)} close-up pictures (tele) found for this mission : {mission}")
-
-else:
-    closeup_files = [key for key in file_keys if "zoom" in key]
-    if closeup_files:
-        exclusion_keyword = "zoom"
-        logger.info("Using legacy naming convention (zoom).")
-        logger.info(f"{len(closeup_files)} close-up pictures (zoom) found for this mission : {mission}")
-    else:
-        logger.error(f"No close-up pictures found for this mission : {mission}")
-        sys.exit(1)
-
-# Verify that wide (and med) picture counts match close-up count
-if exclusion_keyword == "tele":
-    wide_files_all = [key for key in file_keys if "wide" in key.lower()]
-else:
-    # Legacy zoom: wide files have no keyword, so exclude zoom and med
-    wide_files_all = [key for key in file_keys if "zoom" not in key.lower() and "med" not in key.lower()]
-
-med_files_all = [key for key in file_keys if "med" in key.lower()]
-
-logger.info(f"{len(wide_files_all)} wide pictures found for this mission : {mission}")
-
-if len(wide_files_all) != len(closeup_files):
-    logger.error(f"Picture count mismatch: {len(closeup_files)} close-up vs {len(wide_files_all)} wide pictures.")
-    sys.exit(1)
-
-if med_files_all:
-    logger.info(f"{len(med_files_all)} med pictures found for this mission : {mission}")
-    if len(med_files_all) != len(closeup_files):
-        logger.error(f"Picture count mismatch: {len(closeup_files)} close-up vs {len(med_files_all)} med pictures.")
-        sys.exit(1)
+pairs, mismatch = pair_pictures(file_keys, mission)
+if mismatch and not args.drop_unmatched:
+    confirm_drop_unmatched(mission)
 
 # Import data rows into Labelbox dataset named after the project
 # Check if the dataset already exists
@@ -173,7 +138,7 @@ assets_template = {
 # Create a list of assets
 assets = []
 
-for i, closeup_file in enumerate(closeup_files):
+for closeup_file, wide_file, med_file, polygon_id in pairs:
     # Make a copy of the template for each asset
     asset = copy.deepcopy(assets_template)
     
@@ -186,15 +151,6 @@ for i, closeup_file in enumerate(closeup_files):
     # Metadata fields : mission
     asset["metadata_fields"][0]["value"] = f"{mission}" 
     
-    # Extract the polygon id and determine matching file suffixes
-    if exclusion_keyword == "tele":
-        polygon_id = closeup_file.split('_')[-1].lower().replace('tele.jpg', '')
-        wide_file_end = f"_{polygon_id}wide.JPG"
-    else:
-        # Legacy naming convention (zoom)
-        polygon_id = closeup_file.split('_')[-1].lower().replace('zoom.jpg', '')
-        wide_file_end = f"_{polygon_id}.JPG"
-    
     # Metadata fields : polygon_id
     asset["metadata_fields"][1]["value"] = f"{polygon_id}" 
     
@@ -204,33 +160,10 @@ for i, closeup_file in enumerate(closeup_files):
     
     asset["attachments"][1]["value"] = map_url
     
-    # Find the corresponding wide file from file_keys
-    wide_file = None
-    matching_wide_files = [key for key in file_keys if wide_file_end in key and exclusion_keyword not in key]
-    
-    if len(matching_wide_files) > 1:
-        logger.error(f"Multiple wide pictures found for {closeup_file}: {matching_wide_files}. Exiting.")
-        sys.exit(1)
+    # Attach the wide file
+    asset["attachments"][0]["value"] = f"{folder_url}/{wide_file}"
 
-    wide_file = matching_wide_files[0] if matching_wide_files else None
-    
-    # If a wide file is found, set the attachment value
-    if wide_file:
-        asset["attachments"][0]["value"] = f"{folder_url}/{wide_file}"
-    else:
-        logger.error(f"No wide file found for {closeup_file}. Exiting.")
-        sys.exit(1)
-
-    # Find the corresponding med file (optional)
-    med_file_end = f"_{polygon_id}med.JPG"
-    matching_med_files = [key for key in file_keys if med_file_end in key]
-
-    if len(matching_med_files) > 1:
-        logger.error(f"Multiple med pictures found for {closeup_file}: {matching_med_files}. Exiting.")
-        sys.exit(1)
-
-    med_file = matching_med_files[0] if matching_med_files else None
-
+    # Attach the med file (optional)
     if med_file:
         asset["attachments"].insert(1, {"type": "IMAGE", "value": f"{folder_url}/{med_file}", "name": "med"})
 

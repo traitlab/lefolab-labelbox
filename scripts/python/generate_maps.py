@@ -1,15 +1,12 @@
 import argparse
 import boto3
 import branca.colormap as bcm
-import exifread
 import folium
 import logging
 import matplotlib.colors as colors
 import numpy as np
 import os
 import rasterio
-import requests
-import rioxarray
 import sys
 import time
 
@@ -18,178 +15,121 @@ from botocore.client import Config
 from dotenv import load_dotenv
 from folium import Element
 from folium import IFrame
-from io import BytesIO
 from matplotlib import colormaps
 from pathlib import Path
 from pyproj import Transformer
-from rasterio.transform import rowcol
 
-def get_bounding_box_from_raster(raster_path):
+from _common import get_coordinates_from_image_url
+
+# Longest side (px) of the overlay embedded in each map
+OVERLAY_MAX_SIZE = 2048
+
+LEGEND_CSS = """
+<style>
+.legend.leaflet-control text.caption {
+    font-size: 16px;
+    font-weight: bold;
+    fill: white !important;
+}
+.legend.leaflet-control .tick text {
+    font-size: 14px;
+    fill: white;
+    font-weight: bold;
+}
+</style>
+"""
+
+def find_dsm(conrad_path, site_name, mapping_mission=None):
     """
-    Fetch the bounding box of a raster file and convert to decimal degrees.
+    Find the DSM of the given mapping mission, or of the most recent mapping mission of the site.
+
+    Args:
+        conrad_path (str): Root of the Conrad data (contains metashape/YYYY/<mapping_mission>).
+        site_name (str): Site keyword (second segment of the mission_id).
+        mapping_mission (str, optional): Explicit mapping mission name.
+
+    Returns:
+        str or None: Path to the DSM GeoTIFF (COG preferred), or None if not found.
+    """
+    pattern = mapping_mission or f"*_{site_name}_*"
+    folders = sorted(Path(conrad_path, 'metashape').glob(f"*/{pattern}"), key=lambda p: p.name, reverse=True)
+    for folder in folders:
+        for suffix in ('_dsm.cog.tif', '_dsm.tif'):
+            dsm = folder / f"{folder.name}{suffix}"
+            if dsm.exists():
+                return str(dsm)
+    return None
+
+def load_overlay(raster_path, caption):
+    """
+    Render a downsampled elevation raster as a turbo-coloured overlay with its legend.
+
+    Args:
+        raster_path (str): Path to the elevation GeoTIFF.
+        caption (str): Legend caption.
+
+    Returns:
+        dict: path, image (RGBA uint8), bounds ([[south, west], [north, east]]) and colormap.
+    """
+    with rasterio.open(raster_path) as src:
+        scale = max(1, max(src.width, src.height) / OVERLAY_MAX_SIZE)
+        data = src.read(1, masked=True, out_shape=(int(src.height / scale), int(src.width / scale)))
+        transformer = Transformer.from_crs(src.crs, "EPSG:4326", always_xy=True)
+        west, south = transformer.transform(src.bounds.left, src.bounds.bottom)
+        east, north = transformer.transform(src.bounds.right, src.bounds.top)
+
+    data = np.ma.masked_invalid(data)
+    vmin, vmax = float(data.min()), float(data.max())
+    cmap = colormaps.get_cmap('turbo')
+    norm = colors.Normalize(vmin=vmin, vmax=vmax)
+
+    image = cmap(norm(data.filled(vmin)))
+    image[..., 3] = ~np.ma.getmaskarray(data)
+
+    colormap = bcm.StepColormap(
+        colors=[cmap(norm(v)) for v in np.linspace(vmin, vmax, 10)],
+        vmin=vmin, vmax=vmax,
+        caption=caption,
+        text_color='white'
+    )
+
+    return {
+        'path': raster_path,
+        'image': (image * 255).astype(np.uint8),
+        'bounds': [[south, west], [north, east]],
+        'colormap': colormap,
+    }
+
+def sample_raster(raster_path, lat, lon):
+    """
+    Get the raster value at a geographic location.
 
     Args:
         raster_path (str): Path to the raster file.
+        lat (float): Latitude in decimal degrees.
+        lon (float): Longitude in decimal degrees.
 
     Returns:
-        dict: The bounding box in decimal degrees with keys:
-              south_min_lat_y_deg, west_min_lon_x_deg,
-              north_max_lat_y_deg, east_max_lon_x_deg
+        float or None: Raster value, or None if outside the raster or nodata.
     """
-    logger = logging.getLogger('MapGenerator')
-
-    try:
-        with rasterio.open(raster_path) as src:
-            bounds = src.bounds
-            transformer = Transformer.from_crs(src.crs, "EPSG:4326", always_xy=True)
-            lon_min, lat_min = transformer.transform(bounds.left, bounds.bottom)
-            lon_max, lat_max = transformer.transform(bounds.right, bounds.top)
-
-            return {
-                'south_min_lat_y_deg': lat_min,
-                'west_min_lon_x_deg': lon_min,
-                'north_max_lat_y_deg': lat_max,
-                'east_max_lon_x_deg': lon_max
-            }
-    except Exception as e:
-        logger.error(f"Failed to read bounding box from raster '{raster_path}': {str(e)}")
-        raise
-
-def convert_to_decimal_degrees(value, ref):
-    """
-    Convert GPS coordinates to decimal degrees.
-
-    Args:
-        value: GPS coordinate value.
-        ref: GPS coordinate reference (N, S, E, W).
-
-    Returns:
-        float: Coordinate in decimal degrees.
-    """
-    if len(value.values) != 3:
-        raise ValueError("Malformed or incomplete EXIF data: GPS coordinate value does not contain exactly three elements")
-    d, m, s = [float(x.num) / float(x.den) for x in value.values]
-    decimal_degrees = d + (m / 60) + (s / 3600)
-    if ref.values and ref.values[0] in ['S', 'W']:
-        decimal_degrees = -decimal_degrees
-    return decimal_degrees
-
-def get_coordinates_from_image_url(picture_url):
-    """
-    Get latitude and longitude from the image metadata.
-
-    Args:
-        picture_url (str): URL of the image to process.
-
-    Returns:
-        tuple or None: (latitude, longitude) in decimal degrees if found, otherwise None.
-    """
-    logger = logging.getLogger('MapGenerator')
-
-    response = requests.get(picture_url)
-
-    if response.status_code == 200:
-        image_data = BytesIO(response.content)
-        tags = exifread.process_file(image_data)
-        latitude = tags.get('GPS GPSLatitude')
-        latitude_ref = tags.get('GPS GPSLatitudeRef')
-        longitude = tags.get('GPS GPSLongitude')
-        longitude_ref = tags.get('GPS GPSLongitudeRef')
-
-        if latitude and latitude_ref and longitude and longitude_ref:
-            latitude = convert_to_decimal_degrees(latitude, latitude_ref)
-            longitude = convert_to_decimal_degrees(longitude, longitude_ref)
-            return latitude, longitude
-        else:
-            logger.warning("Missing GPS EXIF tags in the image metadata.")
-            return None
-    else:
-        logger.error(f"Failed to fetch image. HTTP Status Code: {response.status_code}")
+    with rasterio.open(raster_path) as src:
+        x, y = Transformer.from_crs("EPSG:4326", src.crs, always_xy=True).transform(lon, lat)
+        value = next(src.sample([(x, y)], masked=True))[0]
+    if np.ma.is_masked(value) or np.isnan(value):
         return None
+    return float(value)
 
-def calculate_tree_height(lat, lon, dsm_path, dtm_path):
+def create_map(lat, lon, output_path, dsm_overlay, dtm_overlay=None):
     """
-    Calculate tree height at a specific geographic location using DSM and DTM.
+    Create an interactive map with a marker and a DTM or DSM overlay.
+    The DTM is used when available at the point (with tree height), otherwise the DSM.
 
     Args:
-        lat (float): Latitude of the point.
-        lon (float): Longitude of the point.
-        dsm_path (str): Path to the Digital Surface Model (DSM) GeoTIFF.
-        dtm_path (str): Path to the Digital Terrain Model (DTM) GeoTIFF.
-
-    Returns:
-        tuple: (tree_height, error_message) where tree_height is a float (None if calculation failed)
-               and error_message is a string (None if calculation succeeded).
-    """
-    logger = logging.getLogger('MapGenerator')
-
-    try:
-        logger.info(f"Calculating tree height at lat={lat:.8f}, lon={lon:.8f}")
-        with rasterio.open(dsm_path) as dsm, rasterio.open(dtm_path) as dtm:
-            dsm_crs = dsm.crs
-            transformer = Transformer.from_crs("EPSG:4326", dsm_crs, always_xy=True)
-            x_proj, y_proj = transformer.transform(lon, lat)
-            dsm_row, dsm_col = rowcol(dsm.transform, x_proj, y_proj)
-            dtm_row, dtm_col = rowcol(dtm.transform, x_proj, y_proj)
-            dsm_value = dsm.read(1)[dsm_row, dsm_col]
-            dtm_value = dtm.read(1)[dtm_row, dtm_col]
-            tree_height = dsm_value - dtm_value
-            logger.info(f"Calculated tree height: {tree_height:.2f}m")
-            return tree_height, None
-    except Exception as e:
-        logger.error(f"Failed to calculate tree height: {str(e)}")
-        return None, f"Failed to calculate tree height: {str(e)}"
-
-def is_point_in_raster(lat, lon, raster_path):
-    """
-    Check if coordinates fall within raster bounds and have valid data.
-
-    Args:
-        lat (float): Latitude in decimal degrees
-        lon (float): Longitude in decimal degrees
-        raster_path (str): Path to the raster file
-
-    Returns:
-        bool: True if coordinates are within bounds and have valid data
-    """
-    logger = logging.getLogger('MapGenerator')
-
-    try:
-        with rasterio.open(raster_path) as src:
-            transformer = Transformer.from_crs("EPSG:4326", src.crs, always_xy=True)
-            x_proj, y_proj = transformer.transform(lon, lat)
-            row, col = rowcol(src.transform, x_proj, y_proj)
-
-            if not (0 <= row < src.height and 0 <= col < src.width):
-                return False
-
-            value = src.read(1)[row, col]
-
-            if src.nodata is not None:
-                is_valid = value != src.nodata and not np.isnan(value)
-            else:
-                is_valid = not np.isnan(value)
-
-            return is_valid
-
-    except Exception as e:
-        logger.error(f"Error checking point in raster: {str(e)}")
-        return False
-
-def create_map(lat, lon, dsm_png_path, dtm_png_path, output_path, dsm_path=None, dtm_path=None):
-    """
-    Create an interactive map with a marker and optional DTM or DSM overlay.
-    If the point falls within DTM bounds, the DTM overlay is used and tree height is calculated.
-    Otherwise the DSM overview PNG is used as the overlay.
-
-    Args:
-        lat (float): Latitude of the center point.
-        lon (float): Longitude of the center point.
-        dsm_png_path (str): Path to the DSM overview PNG (used when DTM unavailable).
-        dtm_png_path (str): Path to the DTM overview PNG.
+        lat (float): Latitude of the marker.
+        lon (float): Longitude of the marker.
         output_path (str): Path to save the generated HTML file.
-        dsm_path (str, optional): Path to the DSM GeoTIFF (for height calculation and DSM overlay bounds).
-        dtm_path (str, optional): Path to the DTM GeoTIFF.
+        dsm_overlay (dict): DSM overlay from load_overlay.
+        dtm_overlay (dict, optional): DTM overlay from load_overlay.
     """
     logger = logging.getLogger('MapGenerator')
 
@@ -201,23 +141,20 @@ def create_map(lat, lon, dsm_png_path, dtm_png_path, output_path, dsm_path=None,
         attr="Esri"
     )
 
-    use_dtm_overlay = False
     popup_content = [
         f"<b>Lat:</b> {lat:.6f}°",
         f"<b>Lon:</b> {lon:.6f}°"
     ]
 
-    if dtm_path and is_point_in_raster(lat, lon, dtm_path):
-        use_dtm_overlay = True
-        if dsm_path:
-            tree_height, error = calculate_tree_height(lat, lon, dsm_path, dtm_path)
-            if tree_height is not None:
-                popup_content.append(f"<b>Tree height:</b> {tree_height:.2f} m")
-            else:
-                logger.error(f"Tree height calculation error: {error}")
-                raise ValueError(error)
-    else:
-        logger.info(f"Coordinates ({lat:.8f}, {lon:.8f}) are outside DTM bounds or DTM path is not provided.")
+    overlay = dsm_overlay
+    dtm_value = sample_raster(dtm_overlay['path'], lat, lon) if dtm_overlay else None
+    if dtm_value is not None:
+        overlay = dtm_overlay
+        dsm_value = sample_raster(dsm_overlay['path'], lat, lon)
+        if dsm_value is not None:
+            popup_content.append(f"<b>Tree height:</b> {dsm_value - dtm_value:.2f} m")
+        else:
+            logger.warning(f"No DSM value at ({lat:.8f}, {lon:.8f}), tree height not computed.")
 
     html = f"""
     <div style="width: 150px; height: 60px; overflow: hidden;">
@@ -229,88 +166,14 @@ def create_map(lat, lon, dsm_png_path, dtm_png_path, output_path, dsm_path=None,
     popup = folium.Popup(iframe)
     folium.Marker([lat, lon], popup=popup).add_to(m)
 
-    if not use_dtm_overlay:
-        if dsm_path and dsm_png_path and os.path.exists(str(dsm_png_path)):
-            dsm_bbox = get_bounding_box_from_raster(dsm_path)
-            dsm_bounds = [
-                [dsm_bbox['south_min_lat_y_deg'], dsm_bbox['west_min_lon_x_deg']],
-                [dsm_bbox['north_max_lat_y_deg'], dsm_bbox['east_max_lon_x_deg']],
-            ]
-            folium.raster_layers.ImageOverlay(
-                image=str(dsm_png_path),
-                bounds=dsm_bounds,
-                opacity=1,
-                interactive=False,
-            ).add_to(m)
-        else:
-            logger.info("No DSM overlay available for this point.")
-
-    if use_dtm_overlay:
-        try:
-            dtm_bbox = get_bounding_box_from_raster(dtm_path)
-            if not dtm_bbox:
-                logger.error("Could not get DTM bounds")
-                raise ValueError("Could not get DTM bounds")
-
-            dtm_bounds = [
-                [dtm_bbox['south_min_lat_y_deg'], dtm_bbox['west_min_lon_x_deg']],
-                [dtm_bbox['north_max_lat_y_deg'], dtm_bbox['east_max_lon_x_deg']]
-            ]
-
-            folium.raster_layers.ImageOverlay(
-                image=str(dtm_png_path),
-                bounds=dtm_bounds,
-                opacity=0.7,
-                name='DTM'
-            ).add_to(m)
-
-            dem = rioxarray.open_rasterio(dtm_path)
-            if 'x' in dem.dims and 'y' in dem.dims:
-                dem = dem.rename({'x': 'longitude', 'y': 'latitude'})
-            else:
-                logger.error(f"Unexpected dimension names in DTM file: {dem.dims}")
-                raise ValueError(f"Unexpected dimension names in DTM file: {dem.dims}")
-            arr_dem = dem.values
-
-            if dem.rio.nodata is not None:
-                masked = np.ma.masked_equal(arr_dem[0], dem.rio.nodata)
-            else:
-                logger.error("NoData value is not defined in the raster file.")
-                raise ValueError("NoData value is not defined in the raster file.")
-
-            valid_data = masked.compressed()
-            vmin = valid_data.min()
-            vmax = valid_data.max()
-
-            mpl_cmap = colormaps.get_cmap('turbo')
-            norm = colors.Normalize(vmin=vmin, vmax=vmax)
-            colormap = bcm.StepColormap(
-                colors=[mpl_cmap(norm(v)) for v in np.linspace(vmin, vmax, 10)],
-                vmin=vmin, vmax=vmax,
-                caption='Digital terrain model - Modelo digital de terreno (m)',
-                text_color='white'
-            )
-
-            custom_css = """
-            <style>
-            .legend.leaflet-control text.caption {
-                font-size: 16px;
-                font-weight: bold;
-                fill: white !important;
-            }
-            .legend.leaflet-control .tick text {
-                font-size: 14px;
-                fill: white;
-                font-weight: bold;
-            }
-            </style>
-            """
-
-            m.add_child(colormap)
-            m.get_root().html.add_child(Element(custom_css))
-
-        except Exception as e:
-            logger.error(f"Failed to add DTM overlay: {str(e)}")
+    folium.raster_layers.ImageOverlay(
+        image=overlay['image'],
+        bounds=overlay['bounds'],
+        opacity=0.7,
+        interactive=False,
+    ).add_to(m)
+    m.add_child(overlay['colormap'])
+    m.get_root().html.add_child(Element(LEGEND_CSS))
 
     m.save(output_path)
 
@@ -353,7 +216,7 @@ def setup_logging(mission_id, output_dir):
 
     return logger
 
-def main(mission_id, project_name):
+def main(mission_id, project_name, bucket=None, mapping_mission=None):
     """Main function to process a mission"""
     start_time = time.time()
 
@@ -367,55 +230,49 @@ def main(mission_id, project_name):
     load_dotenv(dotenv_path=project_root / '.env')
 
     ALLIANCECAN_URL = os.getenv("ALLIANCECAN_URL")
-    BUCKET_WPT = os.getenv("BUCKET_WPT")
+    CONRAD_PATH = os.getenv("CONRAD_PATH")
     AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
     AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
     if not ALLIANCECAN_URL:
         logger.error("ALLIANCECAN_URL environment variable is not set")
         raise ValueError("ALLIANCECAN_URL environment variable is not set")
-    if not BUCKET_WPT:
-        logger.error("BUCKET_WPT environment variable is not set")
-        raise ValueError("BUCKET_WPT environment variable is not set")
+    if not CONRAD_PATH:
+        logger.error("CONRAD_PATH environment variable is not set")
+        raise ValueError("CONRAD_PATH environment variable is not set")
     if not AWS_ACCESS_KEY_ID or not AWS_SECRET_ACCESS_KEY:
         logger.warning("AWS_ACCESS_KEY_ID and/or AWS_SECRET_ACCESS_KEY environment variables are not set. Assuming public bucket access.")
 
-    # DTM - project-level
-    dtm_tif = project_dir / f'{project_name}_dtm.tif'
-    dtm_path = str(dtm_tif) if dtm_tif.exists() else None
-    dtm_png_path = project_dir / f'{project_name}_dtm.overview.png'
+    # Drone site (second segment of mission_id)
+    site_name = mission_id.split('_')[1]
 
-    # DSM - site-specific (second segment of mission_id) or project-level fallback
-    parts = mission_id.split('_')
-    site_name = parts[1] if len(parts) > 1 else None
-    dsm_path = None
-    dsm_png_path = None
+    # DTM - site-level, else project-level
+    dtm_tifs = [project_dir / f'{site_name}_dtm.tif', project_dir / f'{project_name}_dtm.tif']
+    dtm_path = next((str(p) for p in dtm_tifs if p.exists()), None)
 
-    if site_name:
-        site_dsm_tif = project_dir / f'{site_name}_dsm.tif'
-        if site_dsm_tif.exists():
-            dsm_path = str(site_dsm_tif)
-            dsm_png_path = project_dir / f'{site_name}_dsm.overview.png'
+    # DSM - from the site's mapping mission
+    dsm_path = find_dsm(CONRAD_PATH, site_name, mapping_mission)
 
-    if dsm_path is None:
-        general_dsm_tif = project_dir / f'{project_name}_dsm.tif'
-        if general_dsm_tif.exists():
-            dsm_path = str(general_dsm_tif)
-            dsm_png_path = project_dir / f'{project_name}_dsm.overview.png'
+    if not dsm_path:
+        logger.error(f"No DSM found for site '{site_name}' in {CONRAD_PATH}/metashape. Specify a mapping mission manually.")
+        raise ValueError(f"No DSM available for mission {mission_id}")
+    logger.info(f"Using DSM: {dsm_path}")
+    logger.info(f"Using DTM: {dtm_path}" if dtm_path else f"No DTM found for site '{site_name}' or project '{project_name}'.")
 
-    if dtm_path:
-        logger.info(f"Using DTM: {dtm_path}")
-    else:
-        logger.info("No DTM found for this project.")
-    if dsm_path:
-        logger.info(f"Using DSM: {dsm_path}")
-    else:
-        logger.warning("No DSM found for this project.")
+    dsm_overlay = load_overlay(dsm_path, 'Digital surface model - Modelo digital de superficie (m)')
+    dtm_overlay = load_overlay(dtm_path, 'Digital terrain model - Modelo digital de terreno (m)') if dtm_path else None
+
+    # Per-project bucket (no underscores allowed): <bucket>/drone_missions/<yyyy>/<mission>/...
+    project_bucket = bucket or project_name.replace("_", "-")
+    prefix = f"drone_missions/{mission_id[:4]}/{mission_id}"
+
+    # The S3 API lives at the bare host; ALLIANCECAN_URL carries the Swift path for asset URLs
+    s3_endpoint = ALLIANCECAN_URL.split('/swift/')[0]
 
     if AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY:
         s3_client = boto3.client(
             's3',
-            endpoint_url=ALLIANCECAN_URL,
+            endpoint_url=s3_endpoint,
             aws_access_key_id=AWS_ACCESS_KEY_ID,
             aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
             config=Config(signature_version='s3v4')
@@ -423,13 +280,13 @@ def main(mission_id, project_name):
     else:
         s3_client = boto3.client(
             's3',
-            endpoint_url=ALLIANCECAN_URL,
+            endpoint_url=s3_endpoint,
             config=Config(signature_version=UNSIGNED)
         )
 
     try:
         paginator = s3_client.get_paginator('list_objects_v2')
-        pages = paginator.paginate(Bucket=BUCKET_WPT, Prefix=mission_id)
+        pages = paginator.paginate(Bucket=project_bucket, Prefix=prefix)
 
         file_keys = []
         for page in pages:
@@ -442,7 +299,7 @@ def main(mission_id, project_name):
         logger.error(f"Failed to retrieve files from S3 bucket: {e}")
         sys.exit(1)
 
-    folder_url = f"{ALLIANCECAN_URL}/{BUCKET_WPT}"
+    folder_url = f"{ALLIANCECAN_URL}/{project_bucket}"
 
     logger.info(f"{len(file_keys)} pictures found for this mission : {mission_id}")
 
@@ -457,6 +314,9 @@ def main(mission_id, project_name):
         else:
             logger.warning(f"No close-up pictures found for this mission : {mission_id}")
 
+    output_folder = f"{output_dir}/{mission_id}/labelbox/attachments"
+    os.makedirs(output_folder, exist_ok=True)
+
     maps_created = 0
     errors_occurred = 0
 
@@ -470,68 +330,45 @@ def main(mission_id, project_name):
             wide_file_end = f"_{polygon_id}.JPG"
             exclusion_keyword = "zoom"
 
-        wide_file = None
         matching_wide_files = [key for key in file_keys if wide_file_end in key and exclusion_keyword not in key]
 
         if len(matching_wide_files) > 1:
             logger.warning(f"Warning: Multiple wide pictures found for {closeup_file}: {matching_wide_files}. Using the first match.")
 
-        wide_file = matching_wide_files[0] if matching_wide_files else None
-
-        if not wide_file:
+        if not matching_wide_files:
             logger.warning(f"No wide file found for {closeup_file}")
-            break
+            errors_occurred += 1
+            continue
 
-        wide_picture_url = f'{folder_url}/{wide_file}'
-        wide_coordinates = get_coordinates_from_image_url(wide_picture_url)
-
-        if wide_coordinates:
-            lat, lon = wide_coordinates
-
-            max_attempts = 3
-            success = False
-            last_error = None
-
-            for attempt in range(max_attempts):
-                try:
-                    filename_with_extension = os.path.basename(closeup_file)
-                    filename = os.path.splitext(filename_with_extension)[0]
-
-                    output_folder = f"{output_dir}/{mission_id}/labelbox/attachments"
-                    os.makedirs(output_folder, exist_ok=True)
-
-                    output_file = f"{output_folder}/{filename}.html"
-
-                    create_map(lat, lon, dsm_png_path, dtm_png_path, output_file, dsm_path=dsm_path, dtm_path=dtm_path)
-
-                    logger.info(f"Created map: {output_file}")
-                    maps_created += 1
-                    success = True
-                    break
-                except Exception as e:
-                    last_error = e
-                    if attempt < max_attempts - 1:
-                        logger.warning(f"Attempt {attempt + 1} failed for {closeup_file}, retrying... ({str(e)})")
-                        time.sleep(10)
-
-            if not success:
-                logger.error(f"Error creating map for {closeup_file} after {max_attempts} attempts: {str(last_error)}")
-                errors_occurred += 1
-        else:
+        wide_coordinates = get_coordinates_from_image_url(f'{folder_url}/{matching_wide_files[0]}')
+        if not wide_coordinates:
             logger.warning(f"No coordinates found for {closeup_file}")
             errors_occurred += 1
+            continue
 
-    logger.info(f"Mission {mission_id} - Total maps created: {maps_created} in {time.time() - start_time:.1f} seconds")
-    logger.info(f"Mission {mission_id} - Total errors: {errors_occurred}")
+        lat, lon = wide_coordinates
+        filename = os.path.splitext(os.path.basename(closeup_file))[0]
+        output_file = f"{output_folder}/{filename}.html"
+
+        try:
+            create_map(lat, lon, output_file, dsm_overlay, dtm_overlay=dtm_overlay)
+            maps_created += 1
+        except Exception as e:
+            logger.error(f"Error creating map for {closeup_file}: {str(e)}")
+            errors_occurred += 1
+
+    logger.info(f"Mission {mission_id}: {maps_created} maps created, {errors_occurred} errors in {time.time() - start_time:.1f} s")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process drone close-up pictures mission data and create maps.')
     parser.add_argument('--mission_id', required=True, help='ID of the mission to process')
     parser.add_argument('--project_name', required=True, help='Project name (folder under projects/)')
+    parser.add_argument('--bucket', help='Arbutus bucket of the mission (default: project name with hyphens)')
+    parser.add_argument('--mapping_mission', help='Mapping mission to take the DSM from (default: most recent for the site)')
     args = parser.parse_args()
 
     try:
-        main(args.mission_id, args.project_name)
+        main(args.mission_id, args.project_name, args.bucket, args.mapping_mission)
     except Exception as e:
         logging.getLogger('MapGenerator').error(f"Fatal error: {str(e)}")
         sys.exit(1)

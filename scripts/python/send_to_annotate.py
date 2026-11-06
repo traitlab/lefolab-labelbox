@@ -1,5 +1,6 @@
 import argparse
 import labelbox as lb
+import re
 import sys
 
 from _common import get_client, resolve_project, setup_logging
@@ -58,13 +59,16 @@ if not data_row_ids:
 
 logger.info(f"{len(data_row_ids)} data rows found for mission '{mission_id}' in dataset '{project_name}'.")
 
-# Create batch in the annotation project
-batch = lb_project.create_batch(
-    name=mission_id,
-    data_rows=data_row_ids,
-    priority=3
-)
-logger.info(f"Batch created for {mission_id}: {batch.name}")
+# Create batch in the annotation project, unless it already exists (older batches have a _0000 suffix)
+if any(re.fullmatch(rf"{re.escape(mission_id)}(_\d{{4}})?", b.name) for b in lb_project.batches()):
+    logger.warning(f"Batch '{mission_id}' already exists in project '{project_name}', not creating it again.")
+else:
+    batch = lb_project.create_batch(
+        name=mission_id,
+        data_rows=data_row_ids,
+        priority=3
+    )
+    logger.info(f"Batch created for {mission_id}: {batch.name}")
 
 if args.workflow_step:
     queues = lb_project.task_queues()
