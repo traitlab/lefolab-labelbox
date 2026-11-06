@@ -27,20 +27,25 @@ PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 
 # Set paths
 OUTPUT_DIR="/data/sharing/AGOL/wpt_layers/"
-QUALIFIERS=("AmzFACE" "BCI" "Ducke" "Gault" "SBL" "StJoseph" "TBS" "Yasuni" "ZF2")
-AGOL_PROJECTS=("BCI" "Ducke" "TBS")
+BUCKETS=($(rclone --config "$PROJECT_ROOT/rclone_newArbutus.conf" lsd ArbutusBuckets: | awk '{print $NF}'))
+if [ ${#BUCKETS[@]} -eq 0 ]; then
+    error_message "No buckets listed from Arbutus"
+    exit 1
+fi
+# Temporary: AGOL project -> bucket layer
+declare -A AGOL_BUCKETS=([BCI]="2024_bci" [Ducke]="2025_ducke" [TBS]="2025_tiputini")
 MAX_WORKERS=24
 
 source /opt/miniconda3/bin/activate arbutus
 check_command "conda activate arbutus"
 
-for QUALIFIER in "${QUALIFIERS[@]}"; do
-    log_message "Processing waypoint missions for $QUALIFIER"
+for BUCKET in "${BUCKETS[@]}"; do
+    log_message "Processing waypoint missions for $BUCKET"
     python "$PROJECT_ROOT/scripts/python/arbutus2points.py" \
         --output_dir "$OUTPUT_DIR" \
-        --project_qualifier "$QUALIFIER" \
+        --project_bucket "$BUCKET" \
         --max_workers $MAX_WORKERS
-    check_command "arbutus2points.py for $QUALIFIER"
+    check_command "arbutus2points.py for $BUCKET"
 done
 
 conda deactivate
@@ -49,7 +54,10 @@ check_command "conda deactivate"
 source /opt/miniconda3/bin/activate AGOL
 check_command "conda activate AGOL"
 
-for AGOL_PROJECT in "${AGOL_PROJECTS[@]}"; do
+for AGOL_PROJECT in "${!AGOL_BUCKETS[@]}"; do
+    cp "$OUTPUT_DIR/${AGOL_BUCKETS[$AGOL_PROJECT]}_wpt.gpkg" "$OUTPUT_DIR/${AGOL_PROJECT}_wpt.gpkg"
+    check_command "copy ${AGOL_BUCKETS[$AGOL_PROJECT]}_wpt.gpkg to ${AGOL_PROJECT}_wpt.gpkg"
+
     log_message "Converting and zipping ${AGOL_PROJECT}_wpt.gpkg"
     python "$PROJECT_ROOT/scripts/python/gpkg2shp.py" "$OUTPUT_DIR/${AGOL_PROJECT}_wpt.gpkg" "$OUTPUT_DIR"
     check_command "gpkg2shp.py for $AGOL_PROJECT"
